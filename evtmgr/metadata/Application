@@ -1,0 +1,45 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Evt"
+        ],
+        "autoCreateViewport": true,
+        "name": "EvtMgr",
+        "controllers": [
+            "EvtMgr"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1587",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.QuickTips.init();\r",
+                    "Ext.getBody().mask('Loading...', 'x-loading-spinner', true);\r",
+                    "\r",
+                    "var EvtMgr = Ext.create('EvtMgr.view.EvtMgr', {\r",
+                    "    renderTo: Ext.getBody()\r",
+                    "});\r",
+                    "\r",
+                    "EvtMgr.show();"
+                ]
+            },
+            "designerId": "6afad2c9-baef-48f4-a666-dacc292351ee"
+        }
+    ]
+}

@@ -1,0 +1,692 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkMstFlt",
+        "designer|userAlias": "trkmstflt",
+        "border": null,
+        "height": 459,
+        "id": "TrkMstFlt",
+        "padding": null,
+        "width": 716,
+        "defaults": [
+            "[\r",
+            "    {\r",
+            "        labelWidth: 90,\r",
+            "        labelSeparator: ' '\r",
+            "    }\r",
+            "]\r",
+            "        "
+        ],
+        "layout": "fit",
+        "title": "Filter",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen4812",
+    "designerId": "4a7f4101-68cc-41c4-ba4c-3c137c553d6f",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "container|padding": null,
+                "designer|userClassName": "MyForm4",
+                "designer|displayName": "FltFrm",
+                "border": 0,
+                "padding": null,
+                "layout": "hbox",
+                "bodyPadding": 10,
+                "title": null,
+                "paramsAsHash": null
+            },
+            "designerId": "a7fbb34c-60a6-40ba-8bfd-d8e3020a4418",
+            "cn": [
+                {
+                    "type": "fieldcontainer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyFieldContainer2",
+                        "designer|displayName": "FltFld",
+                        "height": 120,
+                        "width": 400,
+                        "defaults": [
+                            "{\r",
+                            "    labelWidth: 90,\r",
+                            "    labelSeparator: ' '\r",
+                            "}"
+                        ],
+                        "layout": "vbox",
+                        "combineErrors": null,
+                        "combineLabels": null,
+                        "fieldLabel": null
+                    },
+                    "designerId": "d664d316-a625-4ade-8929-d08d9e8066c2",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField",
+                                "designer|displayName": "TrkIdn",
+                                "width": null,
+                                "inputType": null,
+                                "name": "TrkIdn",
+                                "fieldLabel": "Tracking Id",
+                                "labelSeparator": " ",
+                                "labelWidth": null
+                            },
+                            "designerId": "a180e947-de7f-48fe-8c03-c33b92961098"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "designer|displayName": "UsrNme",
+                                "name": "UsrNme",
+                                "fieldLabel": "User Name",
+                                "labelSeparator": null,
+                                "labelWidth": null
+                            },
+                            "designerId": "71ac89e6-5d72-4b3f-a0d5-9edc6a961617"
+                        },
+                        {
+                            "type": "fieldcontainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyFieldContainer",
+                                "designer|displayName": "DteRcv",
+                                "height": null,
+                                "layout": "hbox",
+                                "fieldLabel": "Date Received",
+                                "labelSeparator": null,
+                                "labelWidth": null
+                            },
+                            "designerId": "6221e5ac-4ee0-4d72-9c8c-86e2be3d950d",
+                            "cn": [
+                                {
+                                    "type": "datefield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "designer|userClassName": "MyDateField",
+                                        "designer|displayName": "DteRcvLow",
+                                        "name": "DteRcvLow",
+                                        "fieldLabel": null
+                                    },
+                                    "designerId": "25604c81-b44f-43a2-a3b0-cecd23a6525b"
+                                },
+                                {
+                                    "type": "datefield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "designer|userClassName": "MyDateField1",
+                                        "designer|displayName": "DteRcvHgh",
+                                        "margin": "0 0 0 10",
+                                        "name": "DteRcvHgh",
+                                        "fieldLabel": null
+                                    },
+                                    "designerId": "fffbeba5-dc71-4503-91c6-6c04e912d5b3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox",
+                                "designer|displayName": "CllSts",
+                                "disabled": false,
+                                "name": "CllSts",
+                                "fieldLabel": "Status",
+                                "labelSeparator": null,
+                                "labelWidth": null,
+                                "displayField": "CllSts",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "queryMode": "local",
+                                "store": "CllSts",
+                                "valueField": "CllSts"
+                            },
+                            "designerId": "f1c478f7-7f91-41c3-a73c-d3f5c5666f26"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox1",
+                                "designer|displayName": "CllTyp",
+                                "id": "fltCllTyp",
+                                "itemId": "CllTyp",
+                                "name": "CllTyp",
+                                "fieldLabel": "Type",
+                                "labelSeparator": null,
+                                "labelWidth": null,
+                                "displayField": "CllTyp",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "queryMode": "local",
+                                "store": "CllTyp",
+                                "valueField": "CllTyp"
+                            },
+                            "designerId": "756f520e-89d6-4906-88ba-02ec1702cf4c"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox2",
+                                "designer|displayName": "CllCtg",
+                                "disabled": true,
+                                "itemId": "CllCtg",
+                                "name": "CllCtg",
+                                "fieldLabel": "Category",
+                                "labelSeparator": null,
+                                "labelWidth": null,
+                                "displayField": "CllCtg",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "queryMode": "local",
+                                "store": "CllCtg",
+                                "valueField": "CllCtg"
+                            },
+                            "designerId": "1609a141-07b7-41cb-86c0-d183ef248eb6"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox3",
+                                "designer|displayName": "CllPri",
+                                "name": "CllPri",
+                                "fieldLabel": "Priority",
+                                "labelSeparator": null,
+                                "labelWidth": null,
+                                "displayField": "CllPri",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "queryMode": "local",
+                                "store": "CllPri",
+                                "valueField": null
+                            },
+                            "designerId": "07bc0be4-1694-4b3d-90d0-2c6092349406"
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox4",
+                                "designer|displayName": "CllCls",
+                                "name": "CllCls",
+                                "fieldLabel": "Class",
+                                "labelSeparator": null,
+                                "labelWidth": null,
+                                "displayField": "CllCls",
+                                "forceSelection": true,
+                                "multiSelect": true,
+                                "queryMode": "local",
+                                "store": "CllCls",
+                                "valueField": "CllCls"
+                            },
+                            "designerId": "8225544f-0b27-40fe-9c3a-a02fe778baff"
+                        },
+                        {
+                            "type": "checkboxgroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyCheckboxGroup",
+                                "designer|displayName": "Flags",
+                                "width": 400,
+                                "fieldLabel": " "
+                            },
+                            "designerId": "7fc6c5e5-e09e-4845-9648-b2b858ada8fc",
+                            "cn": [
+                                {
+                                    "type": "checkboxfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyCheckbox3",
+                                        "designer|displayName": "HasITR",
+                                        "name": "HasITR",
+                                        "fieldLabel": null,
+                                        "boxLabel": "has an ITR"
+                                    },
+                                    "designerId": "dbd1549d-89c2-4783-ba5c-23538db8c08e"
+                                },
+                                {
+                                    "type": "checkboxfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyCheckbox4",
+                                        "designer|displayName": "HasBln",
+                                        "name": "HasBln",
+                                        "fieldLabel": null,
+                                        "boxLabel": "has a Bulletin"
+                                    },
+                                    "designerId": "ae7dc864-d302-4d30-a07d-09f13315fe0d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fieldset",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyFieldSet1",
+                                "padding": 6,
+                                "defaults": [
+                                    "{\r",
+                                    "    labelWidth: 84,\r",
+                                    "    labelSeparator: ' '\r",
+                                    "}"
+                                ],
+                                "layout": "vbox",
+                                "title": "Assignment"
+                            },
+                            "designerId": "d3866b49-601d-488d-81a2-2d33cf111ce1",
+                            "cn": [
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "designer|userClassName": "MyComboBox7",
+                                        "designer|displayName": "CllAsgGrp",
+                                        "name": "GrpNme",
+                                        "fieldLabel": "Group",
+                                        "labelSeparator": null,
+                                        "labelWidth": null,
+                                        "displayField": "GrpNme",
+                                        "multiSelect": true,
+                                        "queryMode": "local",
+                                        "selectOnTab": false,
+                                        "store": "CllAsgGrp",
+                                        "valueField": "GrpNme"
+                                    },
+                                    "designerId": "3d3a9968-4361-4006-b827-c0d2c2d685ef"
+                                },
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": null,
+                                        "designer|userClassName": "MyComboBox5",
+                                        "designer|displayName": "CllAsg",
+                                        "disabled": true,
+                                        "itemId": null,
+                                        "name": "AsgNme",
+                                        "fieldLabel": "Person",
+                                        "labelSeparator": null,
+                                        "labelWidth": null,
+                                        "displayField": "AsgNme",
+                                        "multiSelect": true,
+                                        "queryMode": "local",
+                                        "selectOnTab": false,
+                                        "store": "CllAsg",
+                                        "valueField": "AsgNme"
+                                    },
+                                    "designerId": "3cea7dae-6627-40d7-9707-d5f7404f39fc"
+                                },
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "designer|userClassName": "MyComboBox7",
+                                        "designer|displayName": "CllAsgSts",
+                                        "name": "AsgSts",
+                                        "fieldLabel": "Status",
+                                        "labelSeparator": null,
+                                        "labelWidth": null,
+                                        "displayField": "AsgStsDsp",
+                                        "multiSelect": true,
+                                        "queryMode": "local",
+                                        "selectOnTab": false,
+                                        "store": "CllAsgSts",
+                                        "valueField": "AsgSts"
+                                    },
+                                    "designerId": "9b5177a6-4012-4ad2-affd-b58604b480ad"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "layout|margins": "",
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyFieldSet",
+                        "designer|displayName": "TxtCnt",
+                        "height": 327,
+                        "margin": "0 0 0 10",
+                        "padding": null,
+                        "layout": "vbox",
+                        "title": "Text Search"
+                    },
+                    "designerId": "4e88f0a4-fadd-4864-8dc8-e4fa49f316e4",
+                    "cn": [
+                        {
+                            "type": "textareafield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "formBind": null,
+                                "designer|userClassName": "MyTextArea2",
+                                "designer|displayName": "SchTxt",
+                                "border": null,
+                                "height": 188,
+                                "name": "SchTxt",
+                                "fieldLabel": null,
+                                "labelAlign": "top",
+                                "labelSeparator": null,
+                                "labelWidth": null
+                            },
+                            "designerId": "2021ddbb-1802-4aa4-b825-ec03198740d5"
+                        },
+                        {
+                            "type": "fieldcontainer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "container|align": "stretch",
+                                "designer|userClassName": "MyFieldContainer3",
+                                "designer|displayName": "SchOpt",
+                                "height": null,
+                                "width": 400,
+                                "layout": "hbox",
+                                "fieldLabel": null
+                            },
+                            "designerId": "9f88464d-e261-4c55-aba5-a040a3f0832f",
+                            "cn": [
+                                {
+                                    "type": "fieldcontainer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "container|align": "stretch",
+                                        "designer|userClassName": "MyFieldContainer1",
+                                        "designer|displayName": "SchOptLft",
+                                        "height": null,
+                                        "width": 400,
+                                        "layout": "vbox",
+                                        "fieldLabel": null,
+                                        "hideLabel": false,
+                                        "labelSeparator": " ",
+                                        "labelWidth": 75
+                                    },
+                                    "designerId": "0dff4085-eab6-418b-958e-a53347adcde5",
+                                    "cn": [
+                                        {
+                                            "type": "checkboxfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null,
+                                                "designer|userClassName": "MyCheckbox",
+                                                "designer|displayName": "SchDes",
+                                                "width": 90,
+                                                "name": "SchDes",
+                                                "fieldLabel": null,
+                                                "boxLabel": "Description"
+                                            },
+                                            "designerId": "b4a446dd-594a-4fd5-83c3-eb453d5b7ddd"
+                                        },
+                                        {
+                                            "type": "checkboxfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null,
+                                                "designer|userClassName": "MyCheckbox1",
+                                                "designer|displayName": "SchSln",
+                                                "margin": null,
+                                                "name": "SchSln",
+                                                "fieldLabel": null,
+                                                "boxLabel": "Solution"
+                                            },
+                                            "designerId": "767ae08e-03ac-4c8f-8d61-e4dcc6bd0968"
+                                        },
+                                        {
+                                            "type": "checkboxfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1,
+                                                "designer|userClassName": "MyCheckbox2",
+                                                "designer|displayName": "SchJrn",
+                                                "hidden": true,
+                                                "name": "SchJrn",
+                                                "fieldLabel": null,
+                                                "boxLabel": "Journal"
+                                            },
+                                            "designerId": "f9fa7b21-eb1b-4f3b-a03c-44df0a93f99d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "fieldcontainer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "layout|flex": 1,
+                                        "designer|userClassName": "MyFieldContainer4",
+                                        "designer|displayName": "SchOptRgt",
+                                        "height": null,
+                                        "width": 400,
+                                        "fieldLabel": null
+                                    },
+                                    "designerId": "70ee739b-2893-4513-893b-3030a19d19fc"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyComboBox8",
+                                "designer|displayName": "JrnTyp",
+                                "hidden": true,
+                                "fieldLabel": "Journal Type",
+                                "labelSeparator": " ",
+                                "labelWidth": 75,
+                                "store": "CllPri"
+                            },
+                            "designerId": "2cd84958-4486-4bdd-8bbe-ca34db09cccb"
+                        }
+                    ]
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "dock": "bottom",
+                        "designer|userClassName": "MyToolbar3",
+                        "designer|displayName": "Toolbar"
+                    },
+                    "designerId": "f08f44ca-fcb2-4c03-8521-7a31fd657eb9",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton3",
+                                "designer|displayName": "Apply",
+                                "text": "Apply"
+                            },
+                            "designerId": "0c6ed973-29f1-470b-8723-61b04cc49b51"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton",
+                                "designer|displayName": "Reset",
+                                "text": "Reset"
+                            },
+                            "designerId": "1b9e5277-a765-4b90-b4e6-ad9ffa6888e6"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton4",
+                                "designer|displayName": "Cancel",
+                                "text": "Cancel"
+                            },
+                            "designerId": "a6a53da1-ee37-4583-b610-193c79bd9e01"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

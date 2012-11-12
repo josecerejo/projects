@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkMstDtl",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "TrkMstDtl",
+        "model": "TrkMst"
+    },
+    "id": "ExtBox1-ext-gen2910",
+    "designerId": "55cdb12d-703c-4ed5-b177-0dd4f21333da",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/TrkMst.php"
+            },
+            "designerId": "b74c3810-07b5-46a5-8155-09090f8dc668",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "fc88d942-64f5-4337-9c3e-631e20e20c8e"
+                }
+            ]
+        }
+    ]
+}

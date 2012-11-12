@@ -1,0 +1,106 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobInfFle",
+        "designer|userAlias": "jobinffle",
+        "border": 0,
+        "title": "Files",
+        "store": "JobInfFle"
+    },
+    "id": "ExtBox1-ext-gen34360",
+    "designerId": "4350f5e8-be34-465c-9a8e-510053e58644",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView11"
+            },
+            "designerId": "48406948-8b72-459a-b114-c467bf3f0c4b"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn65",
+                "dataIndex": "FLENME",
+                "flex": 1,
+                "text": "File"
+            },
+            "designerId": "dfd5af2b-f551-49c7-90e3-894777b1b8ab"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn66",
+                "dataIndex": "FLELIB",
+                "flex": 1,
+                "text": "Library"
+            },
+            "designerId": "7e7055ac-0e58-45d9-a67a-211a29b668d5"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn67",
+                "dataIndex": "FLETYP",
+                "flex": 1,
+                "text": "Type"
+            },
+            "designerId": "4db1c589-cbf9-4d6b-bcd4-d8d73332b261"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn68",
+                "dataIndex": "RELRCDNBR",
+                "flex": 0.5,
+                "text": "RRN"
+            },
+            "designerId": "58507a72-2fa6-4e2a-9ddc-a867479b6e71"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn69",
+                "dataIndex": "REDCNT",
+                "flex": 0.5,
+                "text": "Read Count"
+            },
+            "designerId": "a21aa925-32ad-436f-b639-c78b46bb3de7"
+        }
+    ]
+}

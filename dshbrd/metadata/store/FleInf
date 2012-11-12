@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FleInf",
+        "autoLoad": true,
+        "autoSync": false,
+        "storeId": "FleInf",
+        "model": "FleInf"
+    },
+    "id": "ExtBox1-ext-gen26502",
+    "designerId": "f8edab1c-19bc-4a71-b791-3c075abbcfef",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/FleInf.php"
+            },
+            "designerId": "f164dad3-da9c-4eeb-aa78-702fd38cfac1",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "8fd7fd67-1eba-49e5-ba1b-33ce14cdc3a3"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AplPrf",
+        "autoLoad": true,
+        "autoSync": null,
+        "storeId": "AplPrf",
+        "model": "AplPrf"
+    },
+    "id": "ExtBox1-ext-gen61745",
+    "designerId": "9fcf36b1-b995-40a6-9e14-d5376199eb79",
+    "cn": [
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy",
+                "id": "PrfSet"
+            },
+            "designerId": "7d414314-c316-4d23-bd7e-ed24e3a8ae36"
+        }
+    ]
+}

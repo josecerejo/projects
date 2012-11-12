@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FleDrpInf",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "FleDrpInf",
+        "model": "FleDrpInf"
+    },
+    "id": "ExtBox1-ext-gen4870",
+    "designerId": "47ecb3e5-06b1-48a7-a44a-5039fc4777c5",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "../shared/FleDrp.php"
+            },
+            "designerId": "94610582-4f5f-4227-a0e8-7898a5f293c8",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "01038a97-4650-4a2c-965b-8b5e73080bb4"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobPnl",
+        "designer|userAlias": "jobpnl",
+        "border": 0,
+        "layout": "border",
+        "closeAction": null,
+        "title": "Jobs"
+    },
+    "id": "ExtBox1-ext-gen19456",
+    "designerId": "9c43090a-6208-4f7f-8358-c025cbfad457",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "JobLst ",
+                "layout|flex": 2,
+                "layout|region": "center"
+            },
+            "designerId": "43dc5ab2-65b2-41d8-a4f3-269f857c96a1",
+            "masterInstanceId": "ExtBox1-ext-gen2408"
+        },
+        {
+            "type": "tabpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "layout|region": "south",
+                "layout|split": true,
+                "designer|userClassName": "MyTabPanel2",
+                "designer|displayName": "JobDtl",
+                "border": 0,
+                "height": 150,
+                "activeTab": 0,
+                "tabPosition": "bottom"
+            },
+            "designerId": "9c403366-328a-4ff1-8e68-48b431e30b7d",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "JobInfTab"
+                    },
+                    "designerId": "2aa005d4-2651-4c90-b75f-02b4be96e16f",
+                    "masterInstanceId": "ExtBox1-ext-gen46497",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig7"
+                            },
+                            "designerId": "47a9b46e-8c23-4788-8f13-9543d9903281"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "JobInfSpFTab",
+                        "itemId": "JobInfSpFTab"
+                    },
+                    "designerId": "d595b248-bc51-4557-b00f-03b37d50c547",
+                    "masterInstanceId": "ExtBox1-ext-gen21592",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig11"
+                            },
+                            "designerId": "49b016e5-dd44-437f-9ed7-8e0ccbeb8bca"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": null,
+                        "itemId": "JobInfPgmTab"
+                    },
+                    "designerId": "9d9ffa3e-90de-48da-a954-b2450a1b5cc9",
+                    "masterInstanceId": "ExtBox1-ext-gen29709",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig8"
+                            },
+                            "designerId": "cb00899b-6e73-4f1b-9f03-9959b29e6de1"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "JobInfLibTab"
+                    },
+                    "designerId": "9b18001b-9fe2-48fc-8764-54cdf1774ccd",
+                    "masterInstanceId": "ExtBox1-ext-gen32125",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig9"
+                            },
+                            "designerId": "ccc3a36b-c9db-40dd-9431-a177d04e6710"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "JobInfFleTab"
+                    },
+                    "designerId": "350e2130-77a4-49ee-ab3d-3bc213efb7c2",
+                    "masterInstanceId": "ExtBox1-ext-gen34360",
+                    "cn": [
+                        {
+                            "type": "tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "TabConfig10"
+                            },
+                            "designerId": "f6167c03-b091-4229-aa8a-5d90cc570c94"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

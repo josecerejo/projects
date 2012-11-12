@@ -1,0 +1,76 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobInfLib",
+        "designer|userAlias": "jobinflib",
+        "border": 0,
+        "title": "Libraries",
+        "store": "JobInfLib"
+    },
+    "id": "ExtBox1-ext-gen32125",
+    "designerId": "a88a9f4d-0e57-4e9e-82da-630420fc3a60",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView10"
+            },
+            "designerId": "1505adb6-72fd-4b97-aca7-161683a2c953"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn62",
+                "dataIndex": "LIB",
+                "flex": 1,
+                "text": "Library"
+            },
+            "designerId": "de3af817-7cd8-451f-85fc-eccab098ff91"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn63",
+                "dataIndex": "LIBTXT",
+                "flex": 1,
+                "text": "Description"
+            },
+            "designerId": "77e40ff3-2039-4d23-911b-928238bc4b55"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn64",
+                "dataIndex": "LIBTYP",
+                "flex": 0.5,
+                "text": "Type"
+            },
+            "designerId": "199d8ef0-e825-4d68-b6a8-09cf456dea7f"
+        }
+    ]
+}

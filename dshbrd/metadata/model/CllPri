@@ -1,0 +1,55 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CllPri",
+        "idProperty": "Idn"
+    },
+    "id": "ExtBox1-ext-gen7192",
+    "designerId": "d273d1c6-17a7-4e7f-bd48-7baeba628a17",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField28",
+                "name": "Idn"
+            },
+            "designerId": "ad06654b-e2a3-4587-8f19-c23426c0fa7f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField22",
+                "name": "CllPri"
+            },
+            "designerId": "0e1b9fd0-1a37-4254-8bb8-b89fb493337e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField23",
+                "name": "Des"
+            },
+            "designerId": "e7b7dee9-b488-4910-9e7b-d36ededde483"
+        }
+    ]
+}

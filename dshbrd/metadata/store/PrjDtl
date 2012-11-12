@@ -1,0 +1,50 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PrjDtl",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "PrjDtl",
+        "model": "PrjDtl"
+    },
+    "id": "ExtBox1-ext-gen32822",
+    "designerId": "f9903136-e118-4aec-b56e-7d8869c24cd6",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/PrjDtl.php"
+            },
+            "designerId": "83320a56-6718-48a1-bdbb-dba5f2ceeac4",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "idProperty": "project_id",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "84a29df3-c841-4664-8fcf-ca1b1c83ea09"
+                }
+            ]
+        }
+    ]
+}

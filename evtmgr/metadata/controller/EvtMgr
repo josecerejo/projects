@@ -1,0 +1,38 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvtMgr",
+        "designer|userAlias": "evtmgr"
+    },
+    "id": "ExtBox1-ext-gen4734",
+    "designerId": "ea0cc56c-2c59-4e09-be94-67e8c5fd4225",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "AfrRnd",
+                "fn": "AfrRnd",
+                "implHandler": [
+                    "Ext.Function.defer(function() {\r",
+                    "    Ext.getBody().unmask();\r",
+                    "}, 1500, this);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Viewport",
+                "designer|controlQuery": "viewport"
+            },
+            "designerId": "4a7f8d35-b0a6-44a8-9af3-c43cb5b3eb6e"
+        }
+    ]
+}

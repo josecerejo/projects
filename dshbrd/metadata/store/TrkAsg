@@ -1,0 +1,63 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkAsg",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "TrkAsg",
+        "model": "TrkAsg",
+        "groupField": "AsgNme"
+    },
+    "id": "ExtBox1-ext-gen49243",
+    "designerId": "5145b36e-9297-44cf-8ec6-163f80bdc0d9",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/TrkAsg.php"
+            },
+            "designerId": "94eb2d55-d6da-4157-9708-6928de57c025",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "a5c24647-76bf-45a3-a370-ac614b721a6c"
+                }
+            ]
+        },
+        {
+            "type": "sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySorter1",
+                "property": "AsgNme"
+            },
+            "designerId": "e2979015-cd72-45c2-ae75-3bfbb7538336"
+        }
+    ]
+}

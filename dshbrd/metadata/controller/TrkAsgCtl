@@ -1,0 +1,52 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkAsgCtl",
+        "stores": [
+            "TrkAsg"
+        ]
+    },
+    "id": "ExtBox1-ext-gen5340",
+    "designerId": "0818de2e-28d5-4251-aa87-6e12e03f23c2",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAsgSve",
+                "fn": "TrkAsgSve",
+                "implHandler": [
+                    "this.getTrkAsgStore().sync();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkasg toolbar button[text=Save]"
+            },
+            "designerId": "860c9660-b2ec-4d3b-bf3d-42501bd3ee79"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAsg",
+                "ref": "TrkAsg",
+                "selector": "trkasg"
+            },
+            "designerId": "55b3461e-b7f0-407a-abad-eaea55e96358"
+        }
+    ]
+}

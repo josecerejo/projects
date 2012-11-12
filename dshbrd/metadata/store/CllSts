@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CllSts",
+        "autoLoad": true,
+        "autoSync": false,
+        "storeId": "CllSts",
+        "model": "CllSts"
+    },
+    "id": "ExtBox1-ext-gen8293",
+    "designerId": "31e45074-051a-4c47-b7b8-1dc14257e901",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/CllSts.php"
+            },
+            "designerId": "4b5f7150-8501-42c5-9f66-7acd0c2fcbed",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "e1d071e6-17bb-4d51-82ea-f4bdb13fcc15"
+                }
+            ]
+        }
+    ]
+}

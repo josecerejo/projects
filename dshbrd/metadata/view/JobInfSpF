@@ -1,0 +1,136 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobInfSpF",
+        "designer|userAlias": "jobinfspf",
+        "border": 0,
+        "title": "Spooled Files",
+        "store": "JobInfSpF"
+    },
+    "id": "ExtBox1-ext-gen21592",
+    "designerId": "b3f6fc59-c653-4c39-9c35-88f8c1d03587",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView8"
+            },
+            "designerId": "61b29a41-d1ff-4aea-a77f-1f4ee79f08a0"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn54",
+                "dataIndex": "SPLFLE",
+                "flex": 1,
+                "text": "Spooled File"
+            },
+            "designerId": "aef3b1de-8dc6-4418-9c8a-519f3fd24d2c"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn55",
+                "dataIndex": "SPLFLENBR",
+                "flex": 1,
+                "text": "Number"
+            },
+            "designerId": "2ecbf0a5-5fcf-4cb6-8372-9094c11d9b8c"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn56",
+                "dataIndex": "OPNDTE",
+                "flex": 1,
+                "text": "Open Date"
+            },
+            "designerId": "b0060d95-de29-4cd1-8ccc-3a5cce0818e4"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn57",
+                "dataIndex": "OPNTME",
+                "flex": 1,
+                "text": "Open Time"
+            },
+            "designerId": "7a9b6e71-9f81-4641-a212-df48291cac99"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn70",
+                "dataIndex": "FMSTYP",
+                "flex": 1,
+                "text": "Form Type"
+            },
+            "designerId": "a01f1661-889d-4122-b28f-fe4766cad13c"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn71",
+                "dataIndex": "OTQ",
+                "flex": 1,
+                "text": "OutQ"
+            },
+            "designerId": "3eb99f9e-6a45-4703-947d-b9f7ac3b4693"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn72",
+                "dataIndex": "OTQLIB",
+                "flex": 1,
+                "text": "OutQ Library"
+            },
+            "designerId": "a3030b6a-e75e-4552-b120-63b7b24cacf1"
+        }
+    ]
+}

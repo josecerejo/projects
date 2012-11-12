@@ -1,0 +1,473 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkMstCtl",
+        "stores": [
+            "TrkAsg",
+            "TrkAtc",
+            "PrjDtl",
+            "PrjTsk",
+            "TrkMstDtl",
+            "ChgRqs",
+            "ChgRqsObj",
+            "ChgObj",
+            "TrkMstLst",
+            "TrkMstFlt",
+            "AplPrf"
+        ]
+    },
+    "id": "ExtBox1-ext-gen9724",
+    "designerId": "2b0d2bc7-3aac-4ec6-b07d-1dee20b7ae74",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getPrjDtlStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.PrjDtlLod\r",
+                    "});\r",
+                    "\r",
+                    "this.getTrkMstDtlStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.TrkMstDtlLod\r",
+                    "});\r",
+                    "\r",
+                    "this.getTrkMstLstStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.TrkMstLstLod\r",
+                    "});\r",
+                    "\r",
+                    "this.getTrkMstFltStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.TrkMstFltLod\r",
+                    "});"
+                ]
+            },
+            "designerId": "010260a0-6473-45ff-89d6-79e384e1831c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstSve",
+                "fn": "TrkMstSve",
+                "implHandler": [
+                    "this.SveChg('yes',this.getTrkMstLst().getSelectionModel().getSelection()[0]);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkmstdtl toolbar button[text=Save]"
+            },
+            "designerId": "cc5eb616-5718-453b-8e53-495443c10751"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "BfrSlc",
+                "fn": "BfrSlc",
+                "implHandler": [
+                    "var Frm = this.getTrkMstDtl().getForm();\r",
+                    "if (Frm) {\r",
+                    "    if (Frm.isDirty()) {\r",
+                    "        if (this.getAplPrfStore().first().getData().AtoSve){\r",
+                    "            this.SveChg('yes', selections);\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            Ext.MessageBox.show({\r",
+                    "                title:'Save Changes?',\r",
+                    "                msg: 'You have unsaved changes. <br />Do you want to save your changes?',\r",
+                    "                buttons: Ext.MessageBox.YESNOCANCEL, \r",
+                    "                icon: Ext.MessageBox.QUESTION, \r",
+                    "                scope: {\r",
+                    "                    Obj: this,\r",
+                    "                    Slc: selections\r",
+                    "                },\r",
+                    "                fn: function(BtnIdn) {\r",
+                    "                    var Obj = this.Obj,\r",
+                    "                    Slc = this.Slc;\r",
+                    "                    Obj.SveChg(BtnIdn, Slc);\r",
+                    "                }\r",
+                    "            });\r",
+                    "        }\r",
+                    "        return false;\r",
+                    "    }\r",
+                    "}"
+                ],
+                "name": "beforeselect",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "trkmstlst"
+            },
+            "designerId": "f1c0609a-266e-4ba1-946a-d0bcb1675219"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SlcChg",
+                "fn": "SlcChg",
+                "implHandler": [
+                    "if (selections[0]) {\r",
+                    "    this.TrkPnlLod(selections[0]);\r",
+                    "}"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "trkmstlst"
+            },
+            "designerId": "13bf6766-cc37-47bc-a430-390e7cf7f588"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkPnlLod",
+                "fn": "TrkPnlLod",
+                "designer|params": [
+                    "Rcd"
+                ],
+                "implHandler": [
+                    "var PrjDtlSto = this.getPrjDtlStore(),\r",
+                    "PrjTskSto = this.getPrjTskStore(),    \r",
+                    "TrkAsgSto = this.getTrkAsgStore(),\r",
+                    "TrkAtcSto = this.getTrkAtcStore(),\r",
+                    "TrkMstDtlSto = this.getTrkMstDtlStore(),\r",
+                    "ChgObjSto = this.getChgObjStore(),\r",
+                    "ChgRqsSto = this.getChgRqsStore(),\r",
+                    "TrkIdn = Rcd.data.TrkIdn,\r",
+                    "TrkIdn7 = Rcd.get('TrkIdn').slice(-7),\r",
+                    "AplPrfSto = this.getAplPrfStore();\r",
+                    "\r",
+                    "TrkMstDtlSto.load({\r",
+                    "    params: { TrkIdn: Rcd.data.TrkIdn}\r",
+                    "});\r",
+                    "\r",
+                    "TrkAsgSto.load({\r",
+                    "    params: { filter: '[{\"property\":\"TrkIdn\",\"value\":\"=' + TrkIdn + '\"}]'}\r",
+                    "});\r",
+                    "\r",
+                    "TrkAtcSto.load({\r",
+                    "    params: { \r",
+                    "        TrkIdn: TrkIdn,\r",
+                    "        PrsTyp: 'LodDta'\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "AplPrfDta = AplPrfSto.load().first().getData();\r",
+                    "\r",
+                    "PrjDtlSto.removeAll();\r",
+                    "PrjTskSto.removeAll();\r",
+                    "if (AplPrfDta.PrjTab) {\r",
+                    "    if (Rcd.data.CllCls == 'Project' || Rcd.data.CllCls == 'SCR') {\r",
+                    "        PrjDtlSto.load({\r",
+                    "            params: { filter: '[{\"property\":\"TrkIdn\",\"value\":\"' + TrkIdn + '\"}]'}\r",
+                    "        });    \r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "if (AplPrfDta.ObjTab) {\r",
+                    "    ChgObjSto.load({\r",
+                    "        params: { filter: '[{\"property\":\"TrkIdn\",\"value\":\"= \\'' + TrkIdn7 + '\\'\"}]'}\r",
+                    "    });\r",
+                    "}\r",
+                    "\r",
+                    "if (AplPrfDta.MveTab) {\r",
+                    "    ChgRqsSto.load({\r",
+                    "        params: { filter: '[{\"property\":\"TrkIdn\",\"value\":\"= \\'' + TrkIdn7 + '\\'\"}]'}\r",
+                    "    });\r",
+                    "}\r",
+                    "\r",
+                    "if (this.getTrkAtc()) {\r",
+                    "    this.getTrkAtc().down('form').getForm().reset();\r",
+                    "}"
+                ]
+            },
+            "designerId": "0777aca5-8b16-4af0-9019-4541371bebbb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "PrjDtlLod",
+                "fn": "PrjDtlLod",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "var PrjTskSto = this.getPrjTskStore(),\r",
+                    "Rcd = Sto.first();\r",
+                    "\r",
+                    "if (Sto.first()) {\r",
+                    "    var Frm = this.getPrjDtl().getForm();\r",
+                    "    Frm.loadRecord(Rcd);\r",
+                    "\r",
+                    "    var PrjIdn = Rcd.data.project_id;\r",
+                    "    PrjTskSto.load({\r",
+                    "        params: { filter: '[{\"property\":\"PrjIdn\",\"value\":\"' + PrjIdn + '\"}]'}\r",
+                    "    });\r",
+                    "\r",
+                    "    Frm.findField('project_id').setValue('<a href=https://www.quickbase.com/db/bazid6rxt?a=er&rid=' + PrjIdn + ' target=\"_blank\">' + PrjIdn + '</a>');\r",
+                    "\r",
+                    "    if (Rcd.data.actual_finish) {\r",
+                    "        var DteCmp = Rcd.data.projected_end_date;\r",
+                    "        var Dte = new Date(Number(DteCmp));\r",
+                    "        DteCmp = ('0' + (Dte.getMonth()+1)).slice(-2) + '/' + ('0' + Dte.getDate()).slice(-2) + '/' + Dte.getFullYear();\r",
+                    "        Frm.findField('actual_finish').setValue(DteCmp);\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    this.getPrjDtl().getForm().reset();\r",
+                    "}"
+                ]
+            },
+            "designerId": "5274eff8-2f85-4d73-8668-41cd2925b455"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstLstLod",
+                "fn": "TrkMstLstLod",
+                "implHandler": [
+                    "if (this.getTrkMstLstStore().getTotalCount() > 0) {\r",
+                    "    if (this.getTrkMstLst()) {\r",
+                    "        this.getTrkMstLst().getSelectionModel().select(0);\r",
+                    "    }\r",
+                    "}"
+                ]
+            },
+            "designerId": "192b6b4e-ca9c-4eae-bcd7-78a87acbbaee"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstDtlLod",
+                "fn": "TrkMstDtlLod",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "this.getTrkMstDtl().getForm().loadRecord(Sto.first());"
+                ]
+            },
+            "designerId": "a27ff10e-599c-4984-8e61-7a7f951f88bf"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstFltLod",
+                "fn": "TrkMstFltLod",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "var Frm = this.getTrkMstFlt().down('form').getForm();\r",
+                    "\r",
+                    "if (Sto.first()) {\r",
+                    "    Frm.loadRecord(Sto.first());\r",
+                    "}\r",
+                    "else {\r",
+                    "    Frm.reset();\r",
+                    "}\r",
+                    "\r",
+                    "if (Frm.findField('CllTyp').value === ''){\r",
+                    "    Frm.findField('CllCtg').setDisabled(true);\r",
+                    "}"
+                ]
+            },
+            "designerId": "40908e72-e1e9-4608-b978-98a61616a8a0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SveChg",
+                "fn": "SveChg",
+                "designer|params": [
+                    "BtnIdn, Slc"
+                ],
+                "implHandler": [
+                    "if (BtnIdn == 'yes') {\r",
+                    "    Frm = this.getTrkMstDtl().getForm();\r",
+                    "    Frm.updateRecord();\r",
+                    "    this.getTrkMstDtlStore().sync({\r",
+                    "        success: function (Bch, Opt) {\r",
+                    "            return true;\r",
+                    "        },\r",
+                    "        failure: function (Bch, Opt) {\r",
+                    "            return false;\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "    Frm.loadRecord(Frm.getRecord());\r",
+                    "    Frm.reset();\r",
+                    "    PrvRcd = this.getTrkMstLst().getSelectionModel().getSelection()[0];\r",
+                    "    Frm.getFields().each(function(Fld){\r",
+                    "        PrvRcd.set(Fld.getName(),Fld.getValue());\r",
+                    "    });\r",
+                    "\r",
+                    "    this.getTrkMstLst().getSelectionModel().select(Slc);\r",
+                    "}\r",
+                    "else if (BtnIdn == 'no') {\r",
+                    "    console.log('No');\r",
+                    "    this.getTrkMstDtl().getForm().reset();\r",
+                    "    this.getTrkMstLst().getSelectionModel().select(Slc);\r",
+                    "}\r",
+                    "else if (BtnIdn == 'cancel') {\r",
+                    "    console.log('Cancel');\r",
+                    "}"
+                ]
+            },
+            "designerId": "f484db73-c3be-4bcf-8526-b85cdb2a9be0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstLst",
+                "ref": "TrkMstLst",
+                "selector": "trkmstlst"
+            },
+            "designerId": "5ff4d8c5-cfcd-4c26-b132-2b786b359bbb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstDtl",
+                "ref": "TrkMstDtl",
+                "selector": "trkmstdtl"
+            },
+            "designerId": "edee1cda-b2cf-4e45-af85-54f975cb38cd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "PrjDtl",
+                "ref": "PrjDtl",
+                "selector": "prjdtl"
+            },
+            "designerId": "5bfc477c-029a-47e7-84e3-cdabf1ef08ee"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstFlt",
+                "ref": "TrkMstFlt",
+                "selector": "trkmstflt"
+            },
+            "designerId": "909bce35-b6f7-4029-bd90-d02b5f9510bf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstLstRdy",
+                "fn": "TrkMstLstRdy",
+                "implHandler": [
+                    "if (this.getTrkMstLstStore().count() > 0) {\r",
+                    "    tablepanel.getSelectionModel().select(0);\r",
+                    "}"
+                ],
+                "name": "viewready",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "trkmstlst"
+            },
+            "designerId": "eb927fad-0399-42fb-95d6-ef4d54c5e33e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtc",
+                "ref": "TrkAtc",
+                "selector": "trkatc"
+            },
+            "designerId": "013eb06c-bb6f-4fb7-97f4-38ff250b2d55"
+        }
+    ]
+}

@@ -1,0 +1,459 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PrjTsk",
+        "designer|userAlias": "prjtsk",
+        "border": 0,
+        "title": null,
+        "store": "PrjTsk"
+    },
+    "id": "ExtBox1-ext-gen13963",
+    "designerId": "8cec8903-1222-4db5-b4c5-24c33cdeb3c0",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView2",
+                "designer|displayName": "PrjTsk"
+            },
+            "designerId": "441b40f1-93eb-4477-ab68-1ab5da107375"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn18",
+                "dataIndex": "task_id",
+                "flex": 0.75,
+                "text": "Task Idn"
+            },
+            "designerId": "f28fefaf-e3e1-4427-a257-59bc3b2e0a0f",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "return '<a href=https://www.quickbase.com/db/bazid6rxu?a=er&rid=' + value + ' target=\"_blank\">'+ value +'</a>';"
+                        ]
+                    },
+                    "designerId": "abbaaf37-fdc3-4bac-a9ec-20df5d4bac2b"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn20",
+                "dataIndex": "task_name",
+                "flex": 4,
+                "text": "Description"
+            },
+            "designerId": "666ad10b-4127-488c-83aa-41d22ab9202c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn value;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "f9fbb876-e033-415e-b61a-3031dcbc43f7"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn26",
+                "dataIndex": "status",
+                "flex": 1,
+                "text": "Status"
+            },
+            "designerId": "a2280811-4172-45ed-a7c2-8b95c761f2fa",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn value;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "7c148fd9-8967-4f5e-a3fb-b1a9fdedb6d7"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn27",
+                "dataIndex": "assigned_to",
+                "flex": 3,
+                "text": "Assigned To"
+            },
+            "designerId": "302f6822-64d0-45ce-ac2d-c31e88d7090c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn value;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "c8a78f0c-a1b1-4dce-b910-61153bcdcb99"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn21",
+                "align": "right",
+                "dataIndex": "req_hours",
+                "flex": 0.75,
+                "text": "Req Hrs"
+            },
+            "designerId": "5fd3dd42-fbec-4e1f-a703-93aeebf0a2ae",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn Number(Number(value) / 3600000).toFixed(2);\r",
+                            "}\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "e904cc1e-91e1-4285-be32-d5c9023c206f"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn22",
+                "align": "right",
+                "dataIndex": "epd_hours",
+                "flex": 0.75,
+                "text": "EPD Hrs"
+            },
+            "designerId": "d9b22565-a0d6-4bfa-93c9-55e7d60bea95",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn Number(Number(value) / 3600000).toFixed(2);\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "0ec8f8fd-6c24-48a8-8c15-353bcdb801ff"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn23",
+                "align": "center",
+                "dataIndex": "start",
+                "flex": 1,
+                "text": "Start Date"
+            },
+            "designerId": "2e337a1a-7730-4f05-be6b-0fe49b42e351",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\tvar Dte = new Date(Number(value));\r",
+                            "\treturn ('0' + (Dte.getMonth()+1)).slice(-2) + '/' + ('0' + Dte.getDate()).slice(-2) + '/' + Dte.getFullYear();\r",
+                            "}\r",
+                            ""
+                        ]
+                    },
+                    "designerId": "69a6e856-6477-455e-9214-fe4c30182de7"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn24",
+                "align": "center",
+                "dataIndex": "finish_date",
+                "flex": 1,
+                "text": "Finish Date"
+            },
+            "designerId": "9d9c5baa-af22-4eeb-95ea-78435aa17d79",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\tvar Dte = new Date(Number(value));\r",
+                            "\treturn ('0' + (Dte.getMonth()+1)).slice(-2) + '/' + ('0' + Dte.getDate()).slice(-2) + '/' + Dte.getFullYear();\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "54e449fd-84aa-4826-bd9c-4712a665d049"
+                }
+            ]
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn28",
+                "hidden": true,
+                "dataIndex": "related_resource",
+                "flex": 2,
+                "text": "Related Resource"
+            },
+            "designerId": "ecdfafba-49f4-43cd-b2a8-6dc6162cf8c6",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "renderer",
+                        "fn": "renderer",
+                        "designer|params": [
+                            "value",
+                            "metaData",
+                            "record",
+                            "rowIndex",
+                            "colIndex",
+                            "store",
+                            "view"
+                        ],
+                        "implHandler": [
+                            "if (value == '[object Object]') {\r",
+                            "\treturn '';\r",
+                            "}\r",
+                            "else {\r",
+                            "\treturn value;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "253260c5-6fa5-4d07-b51c-94e3282df9d7"
+                }
+            ]
+        }
+    ]
+}

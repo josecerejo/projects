@@ -1,0 +1,757 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkAtcCtl",
+        "stores": [
+            "FleDrpInf",
+            "TrkAtc"
+        ]
+    },
+    "id": "ExtBox1-ext-gen46461",
+    "designerId": "95a8353e-84fe-4907-b242-1527ce6e4671",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SlcChg",
+                "fn": "SlcChg",
+                "implHandler": [
+                    "if (selections[0]) {\r",
+                    "    this.getTrkAtc().down('form').getForm().loadRecord(selections[0]);\r",
+                    "}"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "trkatc gridpanel"
+            },
+            "designerId": "8ef1261c-3cfd-4599-acf3-5b21d72a190a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "OvrAtcDrp",
+                "fn": "OvrAtcDrp",
+                "designer|params": [
+                    "Pnl"
+                ],
+                "implHandler": [
+                    "Pnl.setBodyStyle('backgroundColor','#DAE7F6');"
+                ],
+                "name": "dragover",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "d5a1800f-3076-4412-91d1-c35201414704"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LveAtcDrp",
+                "fn": "LveAtcDrp",
+                "designer|params": [
+                    "Pnl"
+                ],
+                "implHandler": [
+                    "Pnl.setBodyStyle('backgroundColor','');"
+                ],
+                "name": "dragleave",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panell",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "4ffaff8f-69b3-41e7-a9ee-c294abfb4a5a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "DrpAtcDrp",
+                "fn": "DrpAtcDrp",
+                "designer|params": [
+                    "Pnl"
+                ],
+                "implHandler": [
+                    "Pnl.setBodyStyle('backgroundColor','');"
+                ],
+                "name": "drop",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "bd847a71-3394-42cb-a190-6602024bb5ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleDrpStr",
+                "fn": "FleDrpStr",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "FleLst",
+                    "FleIdnMst"
+                ],
+                "implHandler": [
+                    "var TrkIdn = this.getTrkMstDtl().getForm().findField('TrkIdn').getValue(),\r",
+                    "Sto = this.getFleDrpInfStore(),\r",
+                    "Idx = 0;\r",
+                    "\r",
+                    "Ext.Array.each(FleLst, function(Fle) {\r",
+                    "    var Rcd = Ext.create('DshBrd.model.FleDrpInf'),\r",
+                    "    FleNmeTmp = FleIdnMst + ('0' + Idx.toString()).slice(-2) + '-' +  Fle.name;\r",
+                    "\r",
+                    "    Rcd.set('Idn',Idx);\r",
+                    "    Rcd.set('FlrNme','../htsatt/');\r",
+                    "    Rcd.set('FlePfx',TrkIdn.slice(-7));\r",
+                    "    Rcd.set('FleNme',Fle.name);\r",
+                    "    Rcd.set('Des',Fle.name);\r",
+                    "    Rcd.set('FleNmeOrg',Fle.name);\r",
+                    "    Rcd.set('FleNmeDrp',Fle.name);\r",
+                    "    Rcd.set('FlrNmeTmp','../fledrp/');\r",
+                    "    Rcd.set('FlePfxTmp',FleIdnMst + ('0' + Idx.toString()).slice(-2));\r",
+                    "    Rcd.set('FleExs','');\r",
+                    "    Rcd.set('FleRpl','Yes');\r",
+                    "    Rcd.set('PrsSts',0);\r",
+                    "    Sto.add(Rcd);\r",
+                    "    Idx++;\r",
+                    "}, this);\r",
+                    "\r",
+                    "Wdw = Ext.create('DshBrd.view.FleDrp').show();\r",
+                    "Wdw.down('toolbar').getComponent('FleIdnMst').setValue(FleIdnMst);"
+                ],
+                "name": "fdpstart",
+                "scope": "me",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "0ad07c51-67cd-4764-8f67-8fb5b5417651"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodStr",
+                "fn": "LodStr",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "//console.log('LodStr');\r",
+                    "//console.log(Fle);"
+                ],
+                "name": "loadstart",
+                "scope": "me",
+                "designer|targetType": null,
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "530931a8-2c13-4688-b785-b25f4780f235"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodScs",
+                "fn": "LodScs",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "Ext.getCmp('prgbar-' + FleIdx).updateProgress(1,'',true);\r",
+                    "\r",
+                    "var Rcd = this.getFleDrpInfStore().getAt(FleIdx);\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: '../shared/FleDrp.php',\r",
+                    "    scope: this,\r",
+                    "    params: {\r",
+                    "        FleDrpInf: Ext.JSON.encode(Rcd.getData()),\r",
+                    "        PrsTyp: 'SveFle',\r",
+                    "        FleRsl: Evt.target.result\r",
+                    "    },\r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.Scs === true) {\r",
+                    "            Rcd.set('PrsSts','Temporarily Stored');\r",
+                    "            this.ChkLodCpl();\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            console.log(Rsp.Dta);\r",
+                    "            Ext.Array.each(Rsp.Msg, function (Err) {\r",
+                    "                console.log(Err.PmrIdn);\r",
+                    "                Ext.Array.each(Err.Msg, function (ErrMsg) {\r",
+                    "                    console.log(ErrMsg);\r",
+                    "                });\r",
+                    "            });\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "load",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "b4985f7b-bfaf-4d18-adc1-699e3953c5e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodAbr",
+                "fn": "LodAbr",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "//console.log('LodAbr');"
+                ],
+                "name": "loadabort",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "c2e25117-b6b8-4e02-8918-cd1cefbf93b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodErr",
+                "fn": "LodErr",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "console.log('LodErr');"
+                ],
+                "name": "loaderror",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "bf832e56-0088-4740-8c4b-a9392f629068"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodPrg",
+                "fn": "LodPrg",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "var PrgVlu = Evt.loaded/Evt.total;\r",
+                    "if (PrgVlu == 1) {\r",
+                    "    Ext.getCmp('prgbar-' + FleIdx).updateProgress(Evt.loaded/Evt.total,'',true);\r",
+                    "}"
+                ],
+                "name": "loadprogress",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "9a23d022-eecb-4879-a489-b4727a485c76"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "LodEnd",
+                "fn": "LodEnd",
+                "designer|params": [
+                    "Cmp",
+                    "Evt",
+                    "Fle",
+                    "FleIdx",
+                    "FleIdn"
+                ],
+                "implHandler": [
+                    "//console.log('LodEnd');"
+                ],
+                "name": "loadend",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Panel",
+                "designer|controlQuery": "trkatc panel[itemId=AtcDrp]"
+            },
+            "designerId": "785dc6f1-57d5-439d-9b1e-8d1b746a224f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleDrpSve",
+                "fn": "FleDrpSve",
+                "implHandler": [
+                    "var FleDrpInfSto = this.getFleDrpInfStore(),\r",
+                    "TrkAtcSto = this.getTrkAtcStore(),\r",
+                    "Idx = 0,\r",
+                    "FleDrpInfLst = [],\r",
+                    "TrkAtcLst = [];\r",
+                    "\r",
+                    "FleDrpInfSto.each(function(Rcd) {\r",
+                    "    Rcd.setDirty();\r",
+                    "    FleDrpInfLst[Idx++] = Rcd.getData();\r",
+                    "});\r",
+                    "\r",
+                    "Idx = 0;\r",
+                    "TrkAtcSto.each(function(Rcd) {\r",
+                    "    TrkAtcLst[Idx++] = Rcd.getData();\r",
+                    "});\r",
+                    "\r",
+                    "FleDrpInfSto.sync({\r",
+                    "    scope: this,\r",
+                    "    success: function(Bch){\r",
+                    "        this.FleTmpClr(button.up('window'));\r",
+                    "        Ext.Ajax.request({\r",
+                    "            url: 'data/TrkAtc.php',\r",
+                    "            scope: this,\r",
+                    "            params: {\r",
+                    "                FleDrpInfLst: Ext.JSON.encode(FleDrpInfLst),\r",
+                    "                TrkAtcLst: Ext.JSON.encode(TrkAtcLst),\r",
+                    "                TrkIdn: this.getTrkMstDtl().getForm().findField('TrkIdn').getValue(),\r",
+                    "                PrsTyp: 'UpdDta'\r",
+                    "            },\r",
+                    "            success: function(RspJSN){\r",
+                    "                FleDrpInfSto.removeAll(true);\r",
+                    "                TrkAtcSto.load({\r",
+                    "                    params: { \r",
+                    "                        TrkIdn: this.getTrkMstDtl().getForm().findField('TrkIdn').getValue(),\r",
+                    "                        PrsTyp: 'LodDta'\r",
+                    "                    }\r",
+                    "                });\r",
+                    "            },\r",
+                    "            failure: function(){\r",
+                    "                console.log('Load Error-php');\r",
+                    "            }\r",
+                    "        });\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "fledrp toolbar button[text=Save]"
+            },
+            "designerId": "1d2c0633-720e-4a07-ad0d-c3cebbb17edb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleDrpCnl",
+                "fn": "FleDrpCnl",
+                "implHandler": [
+                    "this.FleTmpClr(button.up('window'));\r",
+                    "this.getFleDrpInfStore().removeAll(true);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "fledrp toolbar button[text=Cancel]"
+            },
+            "designerId": "ec05b7f7-c149-4264-b569-b70e4b32958f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleDrpEdt",
+                "fn": "FleDrpEdt",
+                "implHandler": [
+                    "Rcd = e.record;\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: '../shared/FleDrp.php',\r",
+                    "    scope: this,\r",
+                    "    params: {\r",
+                    "        FleDrpInf: Ext.JSON.encode(Rcd.getData()),\r",
+                    "        PrsTyp: 'ChkFle'\r",
+                    "    },\r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.Scs === true) {\r",
+                    "            Rcd.set('FleExs',Rsp.FleExs);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "edit",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "fledrp gridpanel"
+            },
+            "designerId": "546dc097-cc4a-42c9-8237-45e675f52fc2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtcDlt",
+                "fn": "TrkAtcDlt",
+                "implHandler": [
+                    "var Rcd = this.getTrkAtc().down('gridpanel').getSelectionModel().getSelection()[0], \r",
+                    "Sto = this.getTrkAtcStore(),\r",
+                    "DltBtn = button,\r",
+                    "SveBtn = button.up('toolbar').down('button[text=Save]');\r",
+                    "\r",
+                    "Sto.remove(Rcd);\r",
+                    "Sto.sync({\r",
+                    "    success: function (Bch, Opt) {\r",
+                    "        SveBtn.setDisabled(false);\r",
+                    "        DltBtn.setDisabled(false);\r",
+                    "        return true;\r",
+                    "    },\r",
+                    "    failure: function (Bch, Opt) {\r",
+                    "        return false;\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "Frm = button.up('form').getForm().reset();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkatc toolbar button[text=Delete]"
+            },
+            "designerId": "a3d8d2e2-65b3-4989-a65d-591d29288cc1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtcSve",
+                "fn": "TrkAtcSve",
+                "implHandler": [
+                    "var Sto = this.getTrkAtcStore(),\r",
+                    "Frm = button.up('form').getForm(),\r",
+                    "SveBtn = button,\r",
+                    "DltBtn = button.up('toolbar').down('button[text=Delete]');\r",
+                    "\r",
+                    "Frm.updateRecord();\r",
+                    "Sto.sync({\r",
+                    "    scope: this,\r",
+                    "    success: function (Bch, Opt) {\r",
+                    "        SveBtn.setDisabled(false);\r",
+                    "        DltBtn.setDisabled(false);\r",
+                    "        Frm.loadRecord(this.getTrkAtc().down('gridpanel').getSelectionModel().getSelection()[0]);        \r",
+                    "        return true;\r",
+                    "    },\r",
+                    "    failure: function (Bch, Opt) {\r",
+                    "        return false;\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkatc toolbar button[text=Save]"
+            },
+            "designerId": "e1a7884f-9773-4fc4-a398-1dbacab0566c"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getTrkAtcStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.TrkAtcLod,\r",
+                    "    beforesync: this.TrkAtcBfrSyc\r",
+                    "});"
+                ]
+            },
+            "designerId": "7d02369f-708f-4adf-aa16-dcdcf871dce9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleTmpClr",
+                "fn": "FleTmpClr",
+                "designer|params": [
+                    "Wdw"
+                ],
+                "implHandler": [
+                    "var Idx = 0;\r",
+                    "\r",
+                    "while (Ext.getCmp('prgbar-' + Idx)) {\r",
+                    "    Ext.getCmp('prgbar-' + Idx).destroy();\r",
+                    "    Idx++;\r",
+                    "}\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: '../shared/FleDrp.php',\r",
+                    "    scope: this,\r",
+                    "    params: {\r",
+                    "        FlePfxTmp: Wdw.down('toolbar').getComponent('FleIdnMst').getValue(), \r",
+                    "        FlrNmeTmp: '../fledrp/',\r",
+                    "        PrsTyp: 'DltFleAll'\r",
+                    "    },\r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.Scs === true) {\r",
+                    "            // console.log(Rsp);\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            Ext.Array.each(Rsp.Msg, function (Err) {\r",
+                    "                console.log(Err.PmrIdn);\r",
+                    "                Ext.Array.each(Err.Msg, function (ErrMsg) {\r",
+                    "                    console.log(ErrMsg);\r",
+                    "                });\r",
+                    "            });\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "Wdw.close();"
+                ]
+            },
+            "designerId": "0055464c-de9d-4c21-b2ee-ddd38a585a0d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ChkLodCpl",
+                "fn": "ChkLodCpl",
+                "implHandler": [
+                    "var Sto = this.getFleDrpInfStore(),\r",
+                    "LodCpl = true;\r",
+                    "\r",
+                    "Sto.each(function(Rcd) {\r",
+                    "    if (Rcd.get('PrsSts') === 0) {\r",
+                    "        LodCpl = false;\r",
+                    "        return false;\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "if (LodCpl) {\r",
+                    "    Sto.load({\r",
+                    "        params: {\r",
+                    "            FlePfxTmp: this.getFleDrpInfStore().getAt(0).get('FlePfxTmp').substr(0,13),\r",
+                    "            FlrNmeTmp: '../fledrp/',\r",
+                    "            PrsTyp: 'GetInf'\r",
+                    "        }\r",
+                    "    });\r",
+                    "\r",
+                    "    this.getFleDrp().down('button[text=Save]').enable(true);\r",
+                    "}"
+                ]
+            },
+            "designerId": "8840bc42-e99b-4e08-b3c6-a14e41c50962"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtcLod",
+                "fn": "TrkAtcLod",
+                "designer|params": [
+                    "Rcd"
+                ],
+                "implHandler": [
+                    "if (this.getTrkAtcStore().getTotalCount() > 0) {\r",
+                    "    if (this.getTrkAtc().down('gridpanel')) {\r",
+                    "        this.getTrkAtc().down('gridpanel').getSelectionModel().select(0);\r",
+                    "    }\r",
+                    "}"
+                ]
+            },
+            "designerId": "d1cc449b-d64b-40f9-9dd2-90c06f5c8f26"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtcBfrSyc",
+                "fn": "TrkAtcBfrSyc",
+                "designer|params": [
+                    "Sto",
+                    "Opr"
+                ],
+                "implHandler": [
+                    "var TBr = this.getTrkAtc().down('form').down('toolbar'),\r",
+                    "SveBtn = TBr.down('button[text=Save]'),\r",
+                    "DltBtn = TBr.down('button[text=Delete]');\r",
+                    "\r",
+                    "\r",
+                    "console.log(SveBtn);\r",
+                    "console.log(DltBtn);\r",
+                    "\r",
+                    "SveBtn.setDisabled(true);\r",
+                    "DltBtn.setDisabled(true);"
+                ]
+            },
+            "designerId": "c06a2bab-8a10-4331-a13d-ff6bac02b243"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FleDrp",
+                "ref": "FleDrp",
+                "selector": "fledrp"
+            },
+            "designerId": "2ff1b8ab-9633-4f01-a15c-bd0eac2d3a74"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstDtl",
+                "ref": "TrkMstDtl",
+                "selector": "trkmstdtl"
+            },
+            "designerId": "1c1dc41c-0db1-498d-ac17-86565e26c81a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkAtc",
+                "ref": "TrkAtc",
+                "selector": "trkatc"
+            },
+            "designerId": "e8248848-dcc9-437d-ba94-faae62502fbb"
+        }
+    ]
+}

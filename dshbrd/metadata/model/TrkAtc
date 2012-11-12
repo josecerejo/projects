@@ -1,0 +1,81 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkAtc",
+        "idProperty": "Idn"
+    },
+    "id": "ExtBox1-ext-gen34689",
+    "designerId": "bfe6ce6b-70b5-4b8e-8f80-a60936d4fdd2",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField107",
+                "name": "Idn"
+            },
+            "designerId": "f61baa4b-4290-455e-a8de-f179dcc82585"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField21",
+                "name": "TrkIdn"
+            },
+            "designerId": "46b70b9a-518c-4ccc-bc74-3db1b1c84287"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField4",
+                "name": "AtcDes"
+            },
+            "designerId": "270b077f-8c0b-4e01-b467-4236e2440e1c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field208",
+                "name": "AtcNme"
+            },
+            "designerId": "c209d9ac-c389-45ae-ad32-c22be3046f38"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField5",
+                "name": "AtcLnk"
+            },
+            "designerId": "316b96ed-9731-4403-8cdd-77af73346781"
+        }
+    ]
+}

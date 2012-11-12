@@ -1,0 +1,42 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FleInf",
+        "idProperty": "FleNme"
+    },
+    "id": "ExtBox1-ext-gen24518",
+    "designerId": "7bd23677-d678-4bd9-b26c-6a57b86e3d41",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField107",
+                "name": "FleNme"
+            },
+            "designerId": "169e11c7-71c4-4114-9710-03d98b094fc5"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField4",
+                "name": "FleTxt"
+            },
+            "designerId": "0fa83eae-287d-4299-b0ff-0304b1a5df8d"
+        }
+    ]
+}

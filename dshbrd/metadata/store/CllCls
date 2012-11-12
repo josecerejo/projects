@@ -1,0 +1,44 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CllCls",
+        "storeId": "CllCls",
+        "model": null,
+        "data": "[\r\n    {\"CllCls\":\"Incident\", \"Des\":\"Incident\"},\r\n    {\"CllCls\":\"Project\", \"Des\":\"Project\"},\r\n    {\"CllCls\":\"SCR\", \"Des\":\"System Change Request\"}\r\n]\r\n"
+    },
+    "id": "ExtBox1-ext-gen64225",
+    "designerId": "99715af2-ed50-46bd-a3c4-c109ed9a1ff7",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField173",
+                "name": "CllCls"
+            },
+            "designerId": "3beec393-6fe0-414c-9893-501e98c2b6f6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField176",
+                "name": "Des"
+            },
+            "designerId": "0ad70ba0-9c06-4b55-9785-1e21193ff347"
+        }
+    ]
+}

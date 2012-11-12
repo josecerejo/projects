@@ -1,0 +1,50 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PrjTsk",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "PrjTsk",
+        "model": "PrjTsk"
+    },
+    "id": "ExtBox1-ext-gen13070",
+    "designerId": "e53f7d4b-9840-4c26-8795-454fcd68de7e",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/PrjTsk.php"
+            },
+            "designerId": "d33e6c3c-3fda-4856-a42e-b3fc8fba227c",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "idProperty": "task_id",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "7f4102a4-0eb6-4b0d-b0dc-d27835410bc1"
+                }
+            ]
+        }
+    ]
+}

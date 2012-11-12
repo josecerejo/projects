@@ -1,0 +1,54 @@
+{
+    "type": "treestore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CogDir",
+        "autoLoad": true,
+        "autoSync": false,
+        "storeId": "CogDir",
+        "model": "FleLst",
+        "folderSort": true
+    },
+    "id": "ExtBox1-ext-gen37185",
+    "designerId": "fd2d2951-506b-4150-a063-5fe3746f7a97",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "extraParams": [
+                    "{\r",
+                    "    pthlst:'../../cogdta|../../coglog',\r",
+                    "    flrlst:'Data|Logs',\r",
+                    "    dsplst:'Data [usdso-virgo/prod$/data]|Logs [usdso-virgo/log$]'\r",
+                    "}"
+                ],
+                "url": "data/GetDir.php"
+            },
+            "designerId": "4dfa3bf0-d2fb-46c6-a4ad-08f3e6985080",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader"
+                    },
+                    "designerId": "bed35ed5-597c-4c51-8df8-db4df8d875b4"
+                }
+            ]
+        }
+    ]
+}

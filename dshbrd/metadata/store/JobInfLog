@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobInfLog",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "JobInfLog",
+        "model": "JobInfLog"
+    },
+    "id": "ExtBox1-ext-gen19877",
+    "designerId": "cd1e5737-8f77-4f68-8b53-a137b42ba797",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/JobInf.php"
+            },
+            "designerId": "d2c98d57-a5c3-47ff-b6f4-7a9a1c1992d6",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "30a830f0-4171-4143-949f-6b42de261ab2"
+                }
+            ]
+        }
+    ]
+}

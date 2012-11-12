@@ -1,0 +1,18 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LnkPnl",
+        "designer|userAlias": "lnkpln",
+        "border": 0,
+        "closable": false,
+        "closeAction": null,
+        "title": "Links"
+    },
+    "id": "ExtBox1-ext-gen21896",
+    "designerId": "43ebc710-ac5b-4d5d-9e35-4a515edfeeca"
+}

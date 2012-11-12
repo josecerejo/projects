@@ -1,0 +1,18 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DocPnl",
+        "designer|userAlias": "docpnl",
+        "border": 0,
+        "closable": false,
+        "closeAction": null,
+        "title": "Documentation"
+    },
+    "id": "ExtBox1-ext-gen19473",
+    "designerId": "f34ca242-1902-4979-8f35-e12050196b78"
+}

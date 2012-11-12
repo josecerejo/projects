@@ -1,0 +1,101 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ChgObj",
+        "designer|userAlias": "chgobj",
+        "border": 0,
+        "title": null,
+        "store": "ChgObj"
+    },
+    "id": "ExtBox1-ext-gen22147",
+    "designerId": "52e5c4fd-cd4f-42d6-9748-322484f448b0",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView3"
+            },
+            "designerId": "3d2146c7-defd-489f-9c3c-fce237c68c6c"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn25",
+                "dataIndex": "OBJNME",
+                "text": "Object"
+            },
+            "designerId": "ca44dbca-c3f7-429d-af19-d5e85665a163"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn26",
+                "dataIndex": "OBJTYP",
+                "text": "Type"
+            },
+            "designerId": "136f4cbd-0fc0-4b4b-959d-4ff1e4475a13"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn27",
+                "dataIndex": "TRGENV",
+                "text": "Target"
+            },
+            "designerId": "90132ec5-5843-45a4-8511-15fb7daf7876"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn28",
+                "dataIndex": "LCKUSR",
+                "text": "Developer"
+            },
+            "designerId": "9a99c027-1bc4-4865-a22b-524c58b59849"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn30",
+                "dataIndex": "PRSSTP",
+                "text": "Step"
+            },
+            "designerId": "3e21580f-237c-47e2-accd-f996b11f02b7"
+        }
+    ]
+}

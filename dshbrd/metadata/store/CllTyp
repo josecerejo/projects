@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CllTyp",
+        "autoLoad": true,
+        "autoSync": false,
+        "storeId": "CllTyp",
+        "model": "CllTyp"
+    },
+    "id": "ExtBox1-ext-gen4448",
+    "designerId": "f0ba4b6a-5553-4831-9340-c7b235256c57",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/CllTyp.php"
+            },
+            "designerId": "63e73dc8-7843-4735-83f1-e95cdef68f61",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "cfdee471-3218-4eef-98ba-0355e01b8adf"
+                }
+            ]
+        }
+    ]
+}

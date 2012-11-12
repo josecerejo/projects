@@ -1,0 +1,141 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AplPrf"
+    },
+    "id": "ExtBox1-ext-gen59031",
+    "designerId": "feaab85e-4490-4fce-b776-b1104ef9d738",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField179",
+                "name": "JobTab",
+                "type": "boolean"
+            },
+            "designerId": "473641f5-8643-486f-8c43-2348ea4d0b4d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField180",
+                "name": "DocTab",
+                "type": "boolean"
+            },
+            "designerId": "3bfe6d21-d9cd-48c9-86cd-093f2bb62b4f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField181",
+                "name": "LnkTab",
+                "type": "boolean"
+            },
+            "designerId": "763ff068-d11e-4193-af1f-8080fcce8b24"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField182",
+                "name": "CogTab",
+                "type": "boolean"
+            },
+            "designerId": "70e79310-0fae-4a81-99ba-7027adde2e4f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField183",
+                "name": "ObjTab",
+                "type": "boolean"
+            },
+            "designerId": "7f4d020a-19cd-4dcf-9bd2-4a35fe3b48f6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField184",
+                "name": "MveTab",
+                "type": "boolean"
+            },
+            "designerId": "02f92f6e-9d41-495a-92fd-b73b121a00df"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField185",
+                "name": "PrjTab",
+                "type": "boolean"
+            },
+            "designerId": "a20c51e7-2b40-418f-aae5-4f67fa1f35cd"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField186",
+                "name": "TskTab",
+                "type": "boolean"
+            },
+            "designerId": "374612d2-d30c-48e7-9a26-b054c8be3462"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField187",
+                "name": "AtoSve",
+                "type": "boolean"
+            },
+            "designerId": "1b91438d-a65a-48e0-8bb8-8ff4ef50032e"
+        }
+    ]
+}

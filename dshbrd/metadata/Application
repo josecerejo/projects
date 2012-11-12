@@ -1,0 +1,132 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "CllTyp",
+            "CllCtg",
+            "CllPri",
+            "PrjTsk",
+            "PrjDtl",
+            "TrkAtc",
+            "TrkAsg",
+            "TrkMst",
+            "ChgObj",
+            "ChgRqs",
+            "ChgRqsObj",
+            "CllCls",
+            "CllAsg",
+            "CllAsgGrp",
+            "CllAsgSts",
+            "FleInf",
+            "PrfSet",
+            "FleDrpInf",
+            "FleLst",
+            "JobInfLib",
+            "JobInfPgm",
+            "JobInfFle",
+            "JobInf",
+            "JobInfSpF",
+            "JobInfLog"
+        ],
+        "stores": [
+            "CogDir",
+            "CllTyp",
+            "CllCtg",
+            "CllPri",
+            "CllSts",
+            "PrjTsk",
+            "PrjDtl",
+            "TrkAtc",
+            "TrkAsg",
+            "ChgObj",
+            "ChgRqs",
+            "ChgRqsObj",
+            "CllCls",
+            "TrkMstLst",
+            "CllAsg",
+            "TrkMstFlt",
+            "CllAsgGrp",
+            "CllAsgSts",
+            "TrkMstDtl",
+            "FleInf",
+            "PrfSet",
+            "FleDrpInf",
+            "AplPrf",
+            "JobInf",
+            "JobInfSpF",
+            "JobInfPgm",
+            "JobInfLib",
+            "JobInfFle",
+            "JobInfLog"
+        ],
+        "views": [
+            "DshBrd",
+            "JobPnl",
+            "DocPnl",
+            "LnkPnl",
+            "TrkMstLst",
+            "TrkPnl",
+            "TrkMstDtl",
+            "TrkAsg",
+            "PrjDtl",
+            "PrjTsk",
+            "ChgObj",
+            "ChgRqs",
+            "CogPnl",
+            "TrkAtc",
+            "DshBrdPrf",
+            "FleDrp",
+            "JobLst",
+            "JobInf",
+            "JobInfSpF",
+            "JobInfPgm",
+            "JobInfLib",
+            "JobInfFle"
+        ],
+        "name": "DshBrd",
+        "controllers": [
+            "JobPnlCtl",
+            "TrkMstFltCtl",
+            "TrkMstCtl",
+            "TrkAtcCtl",
+            "DshBrdCtl",
+            "CogPnlCtl",
+            "TrkAsgCtl"
+        ]
+    },
+    "id": "ExtBox1-ext-gen13063",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.QuickTips.init();\r",
+                    "Ext.getBody().mask('Loading...', 'x-loading-spinner', true);\r",
+                    "\r",
+                    "var DshBrd = Ext.create('DshBrd.view.DshBrd', {\r",
+                    "    renderTo: Ext.getBody()\r",
+                    "});\r",
+                    "DshBrd.show();\r",
+                    "\r",
+                    "Ext.getBody().unmask();\r",
+                    "\r",
+                    "Ext.Ajax.timeout = 120000;"
+                ]
+            },
+            "designerId": "6e5655bb-7803-4021-a30d-caa0992bec0a"
+        }
+    ]
+}

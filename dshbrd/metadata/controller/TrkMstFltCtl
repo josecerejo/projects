@@ -1,0 +1,280 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TrkMstFltCtl",
+        "stores": [
+            "TrkMstFlt",
+            "TrkMstLst"
+        ]
+    },
+    "id": "ExtBox1-ext-gen10275",
+    "designerId": "824ad0a7-8714-4631-a649-eb240c7d833f",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltBfrRnr",
+                "fn": "FltBfrRnr",
+                "implHandler": [
+                    "this.FltTrkIdn(null,null,null,null);\r",
+                    "this.FltSchCBx(null,null,null,null);"
+                ],
+                "name": "beforerender",
+                "scope": "me",
+                "designer|targetType": "Ext.window.Window",
+                "designer|controlQuery": "trkmstflt"
+            },
+            "designerId": "6762d8a8-1f1e-480e-8f48-81ee372ce543"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltApy",
+                "fn": "FltApy",
+                "implHandler": [
+                    "var Frm = button.up('form'),\r",
+                    "Sto = this.getTrkMstLstStore(),\r",
+                    "ExpDte = new Date();\r",
+                    "\r",
+                    "ExpDte.setDate(ExpDte.getDate() + 3650);\r",
+                    "Ext.util.Cookies.set('TrkMstFlt',Ext.JSON.encode(Frm.getForm().getValues()), ExpDte);\r",
+                    "\r",
+                    "Sto.loadPage(1);\r",
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkmstflt toolbar button[text=Apply]"
+            },
+            "designerId": "326ce984-626b-4ae9-a841-77ba019ad64c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltRst",
+                "fn": "FltRst",
+                "implHandler": [
+                    "var Frm = button.up('form').getForm();\r",
+                    "var Dte = new Date();\r",
+                    "\r",
+                    "Frm.reset();\r",
+                    "Frm.findField('DteRcvLow').setValue('01/01/' + Ext.Date.format(Dte, 'Y'));\r",
+                    "Frm.findField('DteRcvHgh').setValue(Ext.Date.format(Dte, 'm/d/Y'));\r",
+                    "Frm.findField('CllSts').setValue('Open');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkmstflt toolbar button[text=Reset]"
+            },
+            "designerId": "6a27683d-3533-4c62-895d-1a2451ff1d17"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltCnl",
+                "fn": "FltCnl",
+                "implHandler": [
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "trkmstflt toolbar button[text=Cancel]"
+            },
+            "designerId": "5eb9de74-ad47-4ff2-8cff-986b0d534aa5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstFlt",
+                "ref": "TrkMstFlt",
+                "selector": "trkmstflt"
+            },
+            "designerId": "c7e6dded-dd0f-4be7-b540-3b87188d97f1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltTrkIdn",
+                "fn": "FltTrkIdn",
+                "implHandler": [
+                    "try {\r",
+                    "    var Frm = this.getTrkMstFlt().down('form').getForm();\r",
+                    "    if (Frm.findField('TrkIdn').getValue() === '') {\r",
+                    "        Frm.getFields().each(function(Fld){\r",
+                    "            Fld.setDisabled(false);\r",
+                    "        });\r",
+                    "        this.FltSchCBx(null,null,null,null);\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        Frm.getFields().each(function(Fld){\r",
+                    "            Fld.setDisabled(true);\r",
+                    "        }); \r",
+                    "        Frm.findField('TrkIdn').setDisabled(false);\r",
+                    "    }\r",
+                    "}\r",
+                    "catch(Err) {\r",
+                    "    console.log(Err);\r",
+                    "    console.log('ChgTrkIdn');\r",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "trkmstflt textfield[name=TrkIdn]"
+            },
+            "designerId": "37228c52-a2b2-4da9-a88b-194d61a6f7d6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltSchCBx",
+                "fn": "FltSchCBx",
+                "implHandler": [
+                    "try {\r",
+                    "    var Frm = this.getTrkMstFlt().down('form').getForm();\r",
+                    "    Frm.findField('SchTxt').setDisabled(true);\r",
+                    "    if (Frm.findField('SchDes').getValue() || Frm.findField('SchSln').getValue()) {\r",
+                    "        Frm.findField('SchTxt').setDisabled(false);\r",
+                    "    }\r",
+                    "}\r",
+                    "catch(Err) {\r",
+                    "    console.log(Err);\r",
+                    "    console.log('ChgSchCBx');\r",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Checkbox",
+                "designer|controlQuery": "trkmstflt checkboxfield"
+            },
+            "designerId": "baaaf5cb-dfc2-440b-bebe-272e5d9284c6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltCllTyp",
+                "fn": "FltCllTyp",
+                "implHandler": [
+                    "try {\r",
+                    "    var CBx = field.up('form').getForm().findField('CllCtg');\r",
+                    "    CBx.clearValue();\r",
+                    "    if (!newValue || newValue.length > 1) {\r",
+                    "        CBx.setDisabled(true);\r",
+                    "    }\r",
+                    "    else if (newValue.length == 1) {\r",
+                    "        CBx.store.clearFilter();\r",
+                    "        CBx.store.filter('CllTyp',newValue);\r",
+                    "        CBx.setDisabled(false);\r",
+                    "    }\r",
+                    "}\r",
+                    "catch(Err) {\r",
+                    "    console.log(Err);\r",
+                    "    console.log('ChgCllTyp');\r",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "trkmstflt combobox[name=CllTyp]"
+            },
+            "designerId": "1fb2ab4b-5554-4a92-840c-40becdfc366a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FltCllAsgGrp",
+                "fn": "FltCllAsgGrp",
+                "implHandler": [
+                    "try {\r",
+                    "    var CBx = field.up('form').getForm().findField('AsgNme');\r",
+                    "    CBx.store.clearFilter();\r",
+                    "    CBx.store.filter('GrpNme',newValue);\r",
+                    "    CBx.clearValue();\r",
+                    "    if (!newValue){\r",
+                    "        CBx.setDisabled(true);\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        CBx.setDisabled(false);\r",
+                    "    }\r",
+                    "}\r",
+                    "catch(Err) {\r",
+                    "    console.log(Err);\r",
+                    "    console.log('ChgCllAsgGrp');\r",
+                    "}"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "trkmstflt combobox[name=GrpNme]"
+            },
+            "designerId": "7d5d2465-8bec-49e1-b7d9-526fb5904144"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstLst",
+                "ref": "TrkMstLst",
+                "selector": "trkmst"
+            },
+            "designerId": "014d54b3-9775-4a3a-8271-bae38794db74"
+        }
+    ]
+}

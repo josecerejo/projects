@@ -1,0 +1,68 @@
+{
+    "name": "evtmgr",
+    "settings": {
+        "urlPrefix": "http://localhost/ampsent/evtmgr",
+        "spacesToIndent": 4,
+        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/ampsent/evtmgr",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 670,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "ext41",
+    "topInstanceFileMap": {
+        "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "7b6f98d7-c9eb-4cec-a2f4-49e736d4e67f": {
+            "paths": [
+                "metadata/view/EvtMgr",
+                "app/view/override/EvtMgr.js",
+                "app/view/EvtMgr.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "EvtMgr"
+        },
+        "ea0cc56c-2c59-4e09-be94-67e8c5fd4225": {
+            "paths": [
+                "metadata/controller/EvtMgr",
+                "app/controller/override/EvtMgr.js",
+                "app/controller/EvtMgr.js"
+            ],
+            "className": "EvtMgr"
+        },
+        "4853fff4-1c25-4768-aa94-77562042d72c": {
+            "paths": [
+                "metadata/model/Evt",
+                "app/model/override/Evt.js",
+                "app/model/Evt.js"
+            ],
+            "className": "Evt"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "7b6f98d7-c9eb-4cec-a2f4-49e736d4e67f"
+        ],
+        "store": [],
+        "controller": [
+            "ea0cc56c-2c59-4e09-be94-67e8c5fd4225"
+        ],
+        "model": [
+            "4853fff4-1c25-4768-aa94-77562042d72c"
+        ],
+        "resource": [
+            "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,172 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FleDrpInf",
+        "idProperty": "Idn"
+    },
+    "id": "ExtBox1-ext-gen4585",
+    "designerId": "3d3cf10b-a644-4f0f-bda3-fb6ad6376176",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field209",
+                "name": "Idn"
+            },
+            "designerId": "8838e47c-287c-4d8a-a3cc-739a004992d5"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField107",
+                "name": "FlrNme"
+            },
+            "designerId": "3e87a1fa-43a1-43a4-a9d2-9c1f8ddef2dd"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field206",
+                "name": "FlePfx"
+            },
+            "designerId": "008610be-7ca3-4e87-a24c-7443eab61518"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field200",
+                "name": "FleNme"
+            },
+            "designerId": "557727f9-cde0-4806-b26a-99a6163e44b4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyField4",
+                "name": "Des"
+            },
+            "designerId": "8ef69f59-f6e1-4b3a-a0cc-30c5333304b4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field124",
+                "name": "FleNmeOrg"
+            },
+            "designerId": "823b7737-a323-4acd-a21d-c8134d0248fb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field201",
+                "name": "FleNmeDrp"
+            },
+            "designerId": "81cd42d4-a306-4d4b-ad49-c91acb3cd57e"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field204",
+                "name": "FlrNmeTmp"
+            },
+            "designerId": "ad56a8b6-00c5-41d0-aeb5-4995b50155f6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field207",
+                "name": "FlePfxTmp"
+            },
+            "designerId": "b661f596-189d-4cde-9e9e-3f1c2170bee8"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field205",
+                "name": "FleExs"
+            },
+            "designerId": "6dc88eba-1c6a-4fff-9b0a-cdb7d71c8174"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field202",
+                "name": "FleRpl"
+            },
+            "designerId": "212a3ab1-281b-49a5-a172-f6f032f153cd"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field199",
+                "name": "PrsSts"
+            },
+            "designerId": "ee667c6b-92ff-41b8-a82c-68754ce0513f"
+        }
+    ]
+}

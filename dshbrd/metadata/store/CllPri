@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CllPri",
+        "autoLoad": true,
+        "autoSync": false,
+        "storeId": "CllPri",
+        "model": "CllPri"
+    },
+    "id": "ExtBox1-ext-gen7548",
+    "designerId": "5339d4aa-01b0-4f52-ba91-ebbe0a7b4be9",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "url": "data/CllPri.php"
+            },
+            "designerId": "d5e768ff-503f-466a-8dd8-6481bab9c848",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader4",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "e0a5124d-5501-4149-930e-b41fc3d26893"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,273 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobPnlCtl",
+        "stores": [
+            "JobInf",
+            "JobInfFle",
+            "JobInfLib",
+            "JobInfPgm",
+            "JobInfSpF"
+        ]
+    },
+    "id": "ExtBox1-ext-gen9901",
+    "designerId": "43d45050-6d4d-44fa-9ebf-e2a625c2b2da",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getJobInfStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.JobInfLod\r",
+                    "});"
+                ]
+            },
+            "designerId": "7bda2952-6267-4d3e-8c18-fd84a9703511"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobPnlLod",
+                "fn": "JobPnlLod",
+                "designer|params": [
+                    "Rcd"
+                ],
+                "implHandler": [
+                    "var Frm = this.getJobInf().getForm();\r",
+                    "\r",
+                    "Frm.loadRecord(Rcd);\r",
+                    "if (Rcd.data.SBSLIB > '') {\r",
+                    "    Frm.findField('SBSQLF').setValue(Rcd.get('SBSLIB') + '/' + Rcd.get('SBS'));\r",
+                    "}\r",
+                    "else {\r",
+                    "    Frm.findField('SBSQLF').setValue(Rcd.get('SBS'));\r",
+                    "}\r",
+                    "\r",
+                    "if (Rcd.data.JBDLIB > '') {\r",
+                    "    Frm.findField('JBDQLF').setValue(Rcd.get('JBDLIB') + '/' + Rcd.get('JBD'));\r",
+                    "}\r",
+                    "else {\r",
+                    "    Frm.findField('JBDQLF').setValue(Rcd.get('JBD'));\r",
+                    "}\r",
+                    "    \r",
+                    "\r",
+                    "this.getJobInfLibStore().load({\r",
+                    "    params: { \r",
+                    "        Job: Rcd.get('JOB'),\r",
+                    "        Usr: Rcd.get('USR'),\r",
+                    "        JobNbrA: Rcd.get('JOBNBRA'),\r",
+                    "        InfTyp: 'Lib'\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "this.getJobInfSpFStore().load({\r",
+                    "    params: { \r",
+                    "        Job: Rcd.get('JOB'),\r",
+                    "        Usr: Rcd.get('USR'),\r",
+                    "        JobNbrA: Rcd.get('JOBNBRA'),\r",
+                    "        InfTyp: 'SpF'\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "this.getJobInfFleStore().load({\r",
+                    "    params: { \r",
+                    "        Job: Rcd.get('JOB'),\r",
+                    "        Usr: Rcd.get('USR'),\r",
+                    "        JobNbrA: Rcd.get('JOBNBRA'),\r",
+                    "        InfTyp: 'Fle'\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "/*\r",
+                    "*/\r",
+                    "\r",
+                    "//this.getJobInfPgmStore().load({\r",
+                    "//    params: { \r",
+                    "//        Job: Rcd.get('JOB'),\r",
+                    "//        Usr: Rcd.get('USR'),\r",
+                    "//        JobNbrA: Rcd.get('JOBNBRA'),\r",
+                    "//        InfTyp: 'Pgm'\r",
+                    "//    }\r",
+                    "//});"
+                ]
+            },
+            "designerId": "542c7971-2d6d-4a1f-8ae3-ed3c96747a2f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInfLod",
+                "fn": "JobInfLod",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "//if (Sto.getTotalCount() > 0) {\r",
+                    "//    Ext.Function.defer(function() {\r",
+                    "//        if (this.getJobLst()) {\r",
+                    "//            console.log(this.getJobLst().getSelectionModel());\r",
+                    "//            this.getJobLst().getSelectionModel().select(0);\r",
+                    "//        }\r",
+                    "//    }, 5000, this);\r",
+                    "//}"
+                ]
+            },
+            "designerId": "8a938dd2-f655-465e-bd29-664ba4f84d5f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobLst",
+                "ref": "JobLst",
+                "selector": "joblst"
+            },
+            "designerId": "bd10e2d5-5d59-42cd-a8f7-433164ded4af"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInf",
+                "ref": "JobInf",
+                "selector": "jobinf"
+            },
+            "designerId": "6eebbef5-8225-43cc-b40a-b1d6ac251b28"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInfSpF",
+                "ref": "JobInfSpF",
+                "selector": "jobinfspf"
+            },
+            "designerId": "c9a7802f-e63e-4d97-83c5-e4655f90a510"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInfPgm",
+                "ref": "JobInfPgm",
+                "selector": "jobinfpgm"
+            },
+            "designerId": "8cf164c6-234a-48c6-8d29-262c0a3975e5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInfLib",
+                "ref": "JobInfLib",
+                "selector": "jobinflib"
+            },
+            "designerId": "69e9be34-76eb-4dbf-a136-6f253a41918e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobInfFle",
+                "ref": "JobInfFle",
+                "selector": "jobinffle"
+            },
+            "designerId": "d5433c75-9040-4ef6-a5f6-d90e4ee78a1f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SlcChg",
+                "fn": "SlcChg",
+                "implHandler": [
+                    "if (selections[0]) {\r",
+                    "    this.JobPnlLod(selections[0]);\r",
+                    "}"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "joblst"
+            },
+            "designerId": "df60fe1a-7a26-41a9-bff3-b345dd6fbe11"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "JobLstRdy",
+                "fn": "JobLstRdy",
+                "implHandler": [
+                    "if (this.getJobInfStore().count() > 0) {\r",
+                    "    tablepanel.getSelectionModel().select(0);\r",
+                    "}"
+                ],
+                "name": "viewready",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "gridpanel"
+            },
+            "designerId": "5d72db9b-7510-4973-93fb-ed3103c6f44b"
+        }
+    ]
+}

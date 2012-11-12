@@ -1,0 +1,184 @@
+{
+    "type": "form",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "JobInf",
+        "designer|userAlias": "jobinf",
+        "border": 0,
+        "layout": "hbox",
+        "bodyPadding": 10,
+        "title": "Detail"
+    },
+    "id": "ExtBox1-ext-gen46497",
+    "designerId": "18127da4-fb03-46b1-800f-32fea2ea4917",
+    "cn": [
+        {
+            "type": "fieldcontainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "designer|userClassName": "MyFieldContainer8",
+                "designer|displayName": "FldCtrLft",
+                "height": 120,
+                "layout": "vbox",
+                "fieldLabel": null
+            },
+            "designerId": "5730d767-c567-4c46-a779-a6fd41eac75d",
+            "cn": [
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField17",
+                        "name": "JOB",
+                        "value": null,
+                        "fieldLabel": "Job"
+                    },
+                    "designerId": "83a17a83-a71c-47ff-8cd4-da62cb9cb0f0"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField18",
+                        "name": "USR",
+                        "value": null,
+                        "fieldLabel": "User"
+                    },
+                    "designerId": "ead70bbf-6e35-45dc-9888-d402d187e3c3"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField19",
+                        "name": "JOBNBRA",
+                        "value": null,
+                        "fieldLabel": "Job Number"
+                    },
+                    "designerId": "fdcfdb16-f077-44cb-8b89-fb5f6b013450"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyDisplayField21",
+                        "name": "SBSQLF",
+                        "value": null,
+                        "fieldLabel": "Subsystem"
+                    },
+                    "designerId": "04d16b45-9907-4542-850b-bf72f6fdbc31"
+                }
+            ]
+        },
+        {
+            "type": "fieldcontainer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "designer|userClassName": "MyFieldContainer9",
+                "designer|displayName": "FldCtrRgt",
+                "height": 120,
+                "width": 400,
+                "layout": "vbox",
+                "fieldLabel": null
+            },
+            "designerId": "4545fb9a-64fe-4b56-a6ba-d4057157fd03",
+            "cn": [
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField20",
+                        "name": "JOBTYP",
+                        "value": null,
+                        "fieldLabel": "Job Type"
+                    },
+                    "designerId": "e211cdd5-03e2-4817-a700-c61a6e3d3fc7"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField20",
+                        "name": "JOBSTS",
+                        "value": null,
+                        "fieldLabel": "Job Status"
+                    },
+                    "designerId": "a15b46a5-1517-40ea-b28e-f16363ccdb8f"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDisplayField20",
+                        "name": "JOBSTSACV",
+                        "value": null,
+                        "fieldLabel": "Active Status"
+                    },
+                    "designerId": "1382b96b-0ab9-4ee6-9368-7a8cbfb5f6ad"
+                },
+                {
+                    "type": "displayfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyDisplayField21",
+                        "name": "JBDQLF",
+                        "value": null,
+                        "fieldLabel": "Job Description"
+                    },
+                    "designerId": "a478f9bb-9619-4f69-9e0c-dd64d9a9f4d4"
+                }
+            ]
+        }
+    ]
+}

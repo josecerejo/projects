@@ -1,0 +1,61 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobInfPgm",
+        "designer|userAlias": "jobinfpgm",
+        "border": 0,
+        "title": "Programs",
+        "store": "JobInfPgm"
+    },
+    "id": "ExtBox1-ext-gen29709",
+    "designerId": "aaab30c3-94ae-4b0c-8676-efcb87aa6c1f",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView9"
+            },
+            "designerId": "c2992c0f-7a43-446c-bf69-9e1df1e2cf0f"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn60",
+                "dataIndex": "PgmNme",
+                "flex": 1,
+                "text": "Program"
+            },
+            "designerId": "8fb5df39-9325-4144-a49f-02232d742b52"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn61",
+                "dataIndex": "PgmLib",
+                "flex": 1,
+                "text": "Library"
+            },
+            "designerId": "5c2b2183-5b07-4b28-bbfc-5ef387d175c2"
+        }
+    ]
+}

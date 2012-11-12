@@ -1,0 +1,382 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DshBrdCtl",
+        "stores": [
+            "TrkMstLst",
+            "TrkMstFlt",
+            "AplPrf",
+            "JobInf"
+        ]
+    },
+    "id": "ExtBox1-ext-gen2860",
+    "designerId": "f5047437-198b-4e2f-9057-4e45efdf4588",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TabChg",
+                "fn": "TabChg",
+                "implHandler": [
+                    "Btn = tabPanel.up('viewport').down('toolbar').getComponent('FltBtn');\r",
+                    "switch(newCard.title.trim())\r",
+                    "{\r",
+                    "    case 'Tracking':\r",
+                    "    Btn.setDisabled(false);\r",
+                    "    break;\r",
+                    "    case 'Jobs':\r",
+                    "    Btn.setDisabled(false);\r",
+                    "    break;\r",
+                    "    case 'Documentation':\r",
+                    "    Btn.setDisabled(true);\r",
+                    "    break;\r",
+                    "    case 'Links':\r",
+                    "    Btn.setDisabled(true);\r",
+                    "    break;\r",
+                    "    case 'Cognos':\r",
+                    "    Btn.setDisabled(true);\r",
+                    "    break;\r",
+                    "}"
+                ],
+                "name": "tabchange",
+                "scope": "me",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "viewport tabpanel"
+            },
+            "designerId": "69085512-3954-42a0-8cb2-391533b22d5b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TBrRfr",
+                "fn": "TBrRfr",
+                "implHandler": [
+                    "var Tab = button.up('viewport').down('tabpanel').getActiveTab();\r",
+                    "\r",
+                    "if(Tab.title.trim() == 'Tracking') {\r",
+                    "    this.getTrkMstLstStore().load();\r",
+                    "}\r",
+                    "else if(Tab.title.trim() == 'Jobs') {\r",
+                    "    this.getJobInfStore().load();\r",
+                    "}\r",
+                    "else {\r",
+                    "    console.log('No Filter');\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[text=Refresh]"
+            },
+            "designerId": "98dd473c-cc6b-4d09-a9fe-0fe99d53c9fd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TBrFlt",
+                "fn": "TBrFlt",
+                "implHandler": [
+                    "var Tab = button.up('viewport').down('tabpanel').getActiveTab();\r",
+                    "\r",
+                    "if(Tab.title.trim() == 'Tracking') {\r",
+                    "    var Sto = this.getTrkMstFltStore();\r",
+                    "\r",
+                    "    Wdw = Ext.getCmp('TrkMstFlt');\r",
+                    "    if (!Wdw) {\r",
+                    "        Ext.create('DshBrd.view.TrkMstFlt').show();\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        Wdw.show();\r",
+                    "    }\r",
+                    "\r",
+                    "    Sto.load();\r",
+                    "}\r",
+                    "else {\r",
+                    "    console.log('No Filter');\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[text=Filter]"
+            },
+            "designerId": "fa11ec53-22f7-4bd1-b909-110139ba8523"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "PrfCnl",
+                "fn": "PrfCnl",
+                "implHandler": [
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "aplprf toolbar button[text=Cancel]"
+            },
+            "designerId": "5dcda59e-b38f-49a9-a007-cdf591fc8fa6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "PrfSve",
+                "fn": "PrfSve",
+                "implHandler": [
+                    "var Sto = this.getAplPrfStore();\r",
+                    "this.getAplPrf().down('form').getForm().updateRecord();\r",
+                    "Sto.sync({\r",
+                    "    success: function (Bch, Opt) {\r",
+                    "        return true;\r",
+                    "    },\r",
+                    "    failure: function (Bch, Opt) {\r",
+                    "        return false;\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "this.getController('TrkMstCtl').TrkPnlLod(this.getTrkMstLst().getSelectionModel().getSelection()[0]);\r",
+                    "\r",
+                    "this.SetTab(Sto);\r",
+                    "button.up('window').close();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "aplprf toolbar button[text=Save]"
+            },
+            "designerId": "bea53983-67c3-4058-918b-91ae3ed276ea"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MnuClk",
+                "fn": "MnuClk",
+                "implHandler": [
+                    "switch(item.text) {\r",
+                    "    case 'Preferences':\r",
+                    "    //    PrfWdw = Ext.getCmp('AplPrfWdw');\r",
+                    "    if (!Ext.getCmp('AplPrfWdw')) {\r",
+                    "        Ext.create('DshBrd.view.AplPrf', {\r",
+                    "            title: 'Preferences'\r",
+                    "        }).show();\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        console.log('show');\r",
+                    "        Wdw.show();\r",
+                    "    }\r",
+                    "    var Sto = this.getAplPrfStore();\r",
+                    "    Sto.load();\r",
+                    "    break;\r",
+                    "\r",
+                    "    default:\r",
+                    "    console.log(item);\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "menuitem"
+            },
+            "designerId": "056be03b-2f37-445b-89f1-1c8c0803ba00"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getAplPrfStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.AplPrfLod\r",
+                    "});"
+                ]
+            },
+            "designerId": "5135dff8-1cc1-4829-9bad-00e5ab2784b7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SetTab",
+                "fn": "SetTab",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "var DshBrdTab = this.getDshBrd().down('tabpanel'),\r",
+                    "TrkPnlTab = this.getTrkPnl().down('tabpanel'),\r",
+                    "Dta = Sto.first().getData(),\r",
+                    "DshBrdAcvTab = DshBrdTab.getActiveTab(),\r",
+                    "TrkPnlAcvTab = TrkPnlTab.getActiveTab();\r",
+                    "\r",
+                    "Ext.Array.each(Sto.getProxy().getModel().getFields(), function(Fld) {\r",
+                    "    if (Dta[Fld.name]) {\r",
+                    "        if (DshBrdTab.child('#'+Fld.name)) {\r",
+                    "            DshBrdTab.child('#'+Fld.name).tab.show();\r",
+                    "        }\r",
+                    "        else if (TrkPnlTab.child('#'+Fld.name)) {\r",
+                    "            TrkPnlTab.child('#'+Fld.name).tab.show();\r",
+                    "        }\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        if (DshBrdTab.child('#'+Fld.name)) {\r",
+                    "            DshBrdTab.child('#'+Fld.name).tab.hide();\r",
+                    "            if(DshBrdAcvTab.getItemId() == Fld.name) {\r",
+                    "                DshBrdTab.setActiveTab(0);\r",
+                    "            }\r",
+                    "        }\r",
+                    "        else if (TrkPnlTab.child('#'+Fld.name)) {\r",
+                    "            TrkPnlTab.child('#'+Fld.name).tab.hide();\r",
+                    "            if(TrkPnlAcvTab.getItemId() == Fld.name) {\r",
+                    "                TrkPnlTab.setActiveTab(0);\r",
+                    "            }\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "01fe8a27-7e68-48a5-98c2-d144f8c09551"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "AplPrfLod",
+                "fn": "AplPrfLod",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "if (Sto.first()) {\r",
+                    "    if (this.getAplPrf()) {\r",
+                    "        this.getAplPrf().down('form').getForm().loadRecord(Sto.first());\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    Rcd = Ext.create('DshBrd.model.AplPrf');\r",
+                    "    Ext.Array.each(Sto.getProxy().getModel().getFields(), function(Fld) {\r",
+                    "        Rcd.set(Fld.name,true);\r",
+                    "    });\r",
+                    "    Sto.add(Rcd);\r",
+                    "    Sto.sync();\r",
+                    "    if (this.getAplPrf()) {\r",
+                    "        this.getAplPrf().down('form').getForm().loadRecord(Sto.first());\r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "this.SetTab(Sto);"
+                ]
+            },
+            "designerId": "e58a1965-121f-46d2-a012-995b388dc1c3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkPnl",
+                "ref": "TrkPnl",
+                "selector": "trkpnl"
+            },
+            "designerId": "bb73ed92-05be-4ad5-abd9-daa9f75be2ef"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "AplPrf",
+                "ref": "AplPrf",
+                "selector": "aplprf"
+            },
+            "designerId": "96e719f7-c4ea-44a2-a215-bb240b4002cb"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "DshBrd",
+                "forceCreate": null,
+                "ref": "DshBrd",
+                "selector": "dshbrd",
+                "xtype": null
+            },
+            "designerId": "814dc060-84d7-4432-ada5-9029a95c7886"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TrkMstLst",
+                "ref": "TrkMstLst",
+                "selector": "trkmstlst"
+            },
+            "designerId": "5a07d79a-b30a-4ed3-a3da-e2607166c2c7"
+        }
+    ]
+}

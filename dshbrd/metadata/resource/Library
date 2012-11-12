@@ -1,0 +1,14 @@
+{
+    "type": "libraryresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "basePath": "http://localhost/extjs/",
+        "debug": true
+    },
+    "id": "ExtBox1-ext-gen2175",
+    "designerId": "69ca7037-99c7-410b-a805-5d97b1e40726"
+}
