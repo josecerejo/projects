@@ -1,4 +1,4 @@
 projects
 ========
 
-extjs Project Files
+Sencha Architect Project Files
