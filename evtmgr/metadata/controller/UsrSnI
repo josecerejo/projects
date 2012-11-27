@@ -1,0 +1,129 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsrSnI",
+        "designer|userAlias": "usrsni"
+    },
+    "id": "ExtBox1-ext-gen5678",
+    "designerId": "9a07307f-adc2-47bc-a52f-f0567ff62669",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ClkSnI",
+                "fn": "ClkSnI",
+                "implHandler": [
+                    "if (button.type == 'button'){\r",
+                    "    Btn = button; \r",
+                    "    Frm = Btn.up('form').getForm();\r",
+                    "} \r",
+                    "else {\r",
+                    "    Frm = button.getForm();\r",
+                    "    Btn = button.down('button');\r",
+                    "}\r",
+                    "\r",
+                    "Fld = Frm.getValues();\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: '../shared/PrsSnI.php',\r",
+                    "    scope: this,\r",
+                    "    params: {\r",
+                    "        UsrNme: Fld.UsrNme,\r",
+                    "        Pwd: Fld.Pwd\r",
+                    "    },\r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.Scs === true) {\r",
+                    "            Btn.up('window').close();\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            Btn.nextSibling('label').setVisible(true); \r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "usrsni form button[text=Sign In]"
+            },
+            "designerId": "a0dd67cb-1299-444b-a214-86a66a35ff78"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "AfrRnd",
+                "fn": "AfrRnd",
+                "implHandler": [
+                    "abstractcomponent.getForm().findField('UsrNme').focus(false,200);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "usrsni panel"
+            },
+            "designerId": "4c11a260-311b-47b1-a7a7-f8fbe12204e0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SpcKey",
+                "fn": "SpcKey",
+                "implHandler": [
+                    "if (e.keyCode == Ext.EventObject.ENTER) {\r",
+                    "    this.ClkSnI(field.up('form'));\r",
+                    "}"
+                ],
+                "name": "specialkey",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "usrsni textfield"
+            },
+            "designerId": "49fed5f3-0ccf-4c77-afa6-7730e78dbdfe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TxtChg",
+                "fn": "TxtChg",
+                "implHandler": [
+                    "field.nextSibling('label').setVisible(false); "
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "usrsni textfield"
+            },
+            "designerId": "74555e4e-52e6-402a-b9c1-4d4fa0635d68"
+        }
+    ]
+}

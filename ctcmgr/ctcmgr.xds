@@ -1,9 +1,9 @@
 {
-    "name": "evtmgr",
+    "name": "ctcmgr",
     "settings": {
-        "urlPrefix": "http://localhost/ampsent/evtmgr",
+        "urlPrefix": "http://localhost/ampsent/ctcmgr",
         "spacesToIndent": 4,
-        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/ampsent/evtmgr",
+        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/ampsent/ctcmgr",
         "sdkPath": "",
         "lineEnding": "CRLF",
         "genTimestamps": false,
@@ -31,11 +31,11 @@
         },
         "ea0cc56c-2c59-4e09-be94-67e8c5fd4225": {
             "paths": [
-                "metadata/controller/EvtMgr",
-                "apl/controller/override/EvtMgr.js",
-                "apl/controller/EvtMgr.js"
+                "metadata/controller/CtcMgr",
+                "apl/controller/override/CtcMgr.js",
+                "apl/controller/CtcMgr.js"
             ],
-            "className": "EvtMgr"
+            "className": "CtcMgr"
         },
         "4853fff4-1c25-4768-aa94-77562042d72c": {
             "paths": [

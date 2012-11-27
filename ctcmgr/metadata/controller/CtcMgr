@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EvtMgr",
-        "designer|userAlias": "evtmgr"
+        "designer|userClassName": "CtcMgr",
+        "designer|userAlias": "ctcmgr"
     },
     "id": "ExtBox1-ext-gen4734",
     "designerId": "ea0cc56c-2c59-4e09-be94-67e8c5fd4225",
@@ -51,7 +51,7 @@
                     "    success: function(RspJSN){\r",
                     "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
                     "        if (Rsp.Scs === true) {\r",
-                    "            var UsrSnI = Ext.create('EvtMgr.view.UsrSnI', {\r",
+                    "            var UsrSnI = Ext.create('CtcMgr.view.UsrSnI', {\r",
                     "                renderTo: Ext.getBody()\r",
                     "            });\r",
                     "\r",

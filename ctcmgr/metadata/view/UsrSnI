@@ -1,0 +1,155 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "UsrSnI",
+        "designer|userAlias": "usrsni",
+        "height": 158,
+        "itemId": null,
+        "width": 349,
+        "layout": "vbox",
+        "closable": false,
+        "title": "Sign In",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen2097",
+    "designerId": "dea7f12e-d8e2-4da9-a7ac-15489c6820c6",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "designer|userClassName": "MyForm",
+                "designer|displayName": "",
+                "border": 0,
+                "height": 95,
+                "id": "UsrSnIPnl",
+                "itemId": "UsrSnIPnl",
+                "width": 262,
+                "defaults": [
+                    "{\r",
+                    "    labelWidth: 75,\r",
+                    "    labelSeparator: ' ',\r",
+                    "    enableKeyEvents:true\r",
+                    "}"
+                ],
+                "layout": "vbox",
+                "bodyPadding": 10,
+                "title": null,
+                "url": null
+            },
+            "designerId": "3d2aa27d-50fd-4b82-bfb4-6424967a0bb5",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "designer|userClassName": "MyTextField",
+                        "name": "UsrNme",
+                        "fieldLabel": "User Name",
+                        "labelSeparator": null,
+                        "labelWidth": null,
+                        "msgTarget": null,
+                        "enableKeyEvents": null
+                    },
+                    "designerId": "9d4181cf-e309-4a15-9b37-0ef6f9ba06e0"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "designer|userClassName": "MyTextField1",
+                        "inputType": "password",
+                        "name": "Pwd",
+                        "fieldLabel": "Password",
+                        "labelSeparator": null,
+                        "labelWidth": null,
+                        "msgTarget": null,
+                        "enableKeyEvents": null
+                    },
+                    "designerId": "27030b45-05d7-4d9d-9544-0211f7e456db"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "designer|userClassName": "MyButton1",
+                        "id": null,
+                        "maxWidth": 60,
+                        "text": "Sign In"
+                    },
+                    "designerId": "12590eb8-3d5d-4e16-a035-24185fe68f5e"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|margins": "10 0 0 0 ",
+                        "designer|userClassName": "MyLabel",
+                        "disabled": false,
+                        "hidden": true,
+                        "html": "Invalid User Name and/or Password",
+                        "id": null,
+                        "style": [
+                            "{\r",
+                            "    color: red;\r",
+                            "    font-size: 15px;\r",
+                            "}"
+                        ],
+                        "text": ""
+                    },
+                    "designerId": "77648da4-e5b5-4792-a7a1-9513649e9b0a"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "SpcKey",
+                "fn": "SpcKey",
+                "designer|params": [
+                    "Fld, Evt, Opt"
+                ],
+                "implHandler": [
+                    "console.log(Fld);"
+                ]
+            },
+            "designerId": "00f595f1-2c76-4b65-bd13-ea9c054c8859"
+        }
+    ]
+}

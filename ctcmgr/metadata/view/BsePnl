@@ -1,0 +1,166 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "designer|userClassName": "BsePnl",
+        "designer|userAlias": "bsepnl",
+        "hidden": null,
+        "layout": "vbox"
+    },
+    "id": "ExtBox1-ext-gen2271",
+    "designerId": "7b6f98d7-c9eb-4cec-a2f4-49e736d4e67f",
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "layout|margins": null,
+                "container|padding": 1,
+                "designer|userClassName": "MyToolbar",
+                "designer|displayName": "TBr",
+                "border": 0,
+                "disabled": false,
+                "height": null,
+                "hidden": null
+            },
+            "designerId": "d0fbd307-fd94-492f-8ae0-7aedd91c589e",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "href": "../evtmgr/app.html",
+                        "text": "Events"
+                    },
+                    "designerId": "6de3b5b9-2d8c-408d-8bfa-cef3c708c0cc"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton2",
+                        "href": "../ctcmgr/app.html",
+                        "hrefTarget": null,
+                        "text": "Contacts"
+                    },
+                    "designerId": "edd52d07-5d33-4d1c-ac78-8521cdfeda44"
+                },
+                {
+                    "type": "tbfill",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyFill",
+                        "designer|displayName": "RgtAdj",
+                        "border": 0
+                    },
+                    "designerId": "d473b690-40dc-4e78-b431-0832f95b9560"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton1",
+                        "designer|displayName": "SnO",
+                        "disabled": null,
+                        "text": "Sign Out"
+                    },
+                    "designerId": "807e9bdd-f7e3-42ab-9e5a-c5179073df74"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyContainer",
+                "designer|displayName": "Hdg",
+                "border": 0,
+                "height": 30
+            },
+            "designerId": "ac06a32e-488d-414b-aeb6-5954415c3fca"
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "designer|userClassName": "MyPanel",
+                "designer|displayName": "CrdDck",
+                "border": 0,
+                "layout": "card"
+            },
+            "designerId": "d90a22c1-f237-4e1c-9cd8-8d8175707053",
+            "cn": [
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer2",
+                        "designer|displayName": "Evt"
+                    },
+                    "designerId": "9b9c95b5-279f-447a-aff6-906edfeeee1e"
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyContainer3",
+                        "designer|displayName": "Ctc",
+                        "html": [
+                            "'<h1>Contacts</h1><p>Test</p>'"
+                        ]
+                    },
+                    "designerId": "f8a3e09c-4988-4801-be7d-c89ff2646391"
+                }
+            ]
+        }
+    ]
+}

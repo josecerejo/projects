@@ -1,0 +1,49 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Evt",
+        "designer|userAlias": "evt",
+        "storeId": "Evt",
+        "model": "Evt"
+    },
+    "id": "ExtBox1-ext-gen2122",
+    "designerId": "57047684-5cef-4016-b5f0-a00904e51bfe",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "designer|displayName": "Pxy"
+            },
+            "designerId": "336de96c-9d6a-46a7-9f27-4709ba30fd91",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "designer|displayName": "DtaRdr",
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl"
+                    },
+                    "designerId": "ce8b64ff-c911-4bce-9a3b-1731ccedef6d"
+                }
+            ]
+        }
+    ]
+}

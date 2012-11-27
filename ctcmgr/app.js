@@ -29,14 +29,14 @@ Ext.application({
         'BsePnl'
     ],
     appFolder: 'apl',
-    name: 'EvtMgr',
+    name: 'CtcMgr',
     controllers: [
-        'EvtMgr',
+        'CtcMgr',
         'UsrSnI'
     ],
 
     launch: function() {
-        var BsePnl = Ext.create('EvtMgr.view.BsePnl', {
+        var BsePnl = Ext.create('CtcMgr.view.BsePnl', {
             renderTo: Ext.getBody()
         });
         BsePnl.show();
@@ -49,7 +49,7 @@ Ext.application({
                 if (Rsp.Scs === true) {
                 }
                 else {
-                    var UsrSnI = Ext.create('EvtMgr.view.UsrSnI', {
+                    var UsrSnI = Ext.create('CtcMgr.view.UsrSnI', {
                         renderTo: Ext.getBody()
                     });
 
