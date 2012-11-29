@@ -6,13 +6,13 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Evt",
-        "designer|userAlias": "evt",
-        "storeId": "MyStore1",
-        "model": "Evt"
+        "designer|userClassName": "EvtGrp",
+        "designer|userAlias": "evtgrp",
+        "storeId": "Evt",
+        "model": "EvtGrp"
     },
-    "id": "ExtBox1-ext-gen17105",
-    "designerId": "18fd8123-bf65-419a-806f-c44c71e1e977",
+    "id": "ExtBox1-ext-gen2122",
+    "designerId": "57047684-5cef-4016-b5f0-a00904e51bfe",
     "cn": [
         {
             "type": "restproxy",
@@ -24,9 +24,9 @@
             "userConfig": {
                 "designer|userClassName": "MyRestProxy",
                 "designer|displayName": "Pxy",
-                "url": "data/Evt.php"
+                "url": "data/EvtGrp.php"
             },
-            "designerId": "1ad99961-a3f0-482f-afd8-37f9d3f2135a",
+            "designerId": "336de96c-9d6a-46a7-9f27-4709ba30fd91",
             "cn": [
                 {
                     "type": "jsonreader",
@@ -42,7 +42,7 @@
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"
                     },
-                    "designerId": "4b022da0-9cd0-4ba4-b82d-770a1dc019b0"
+                    "designerId": "ce8b64ff-c911-4bce-9a3b-1731ccedef6d"
                 }
             ]
         }

@@ -85,10 +85,6 @@ Ext.define('EvtMgr.view.UsrSnI', {
         });
 
         me.callParent(arguments);
-    },
-
-    SpcKey: function(Fld, Evt, Opt) {
-        console.log(Fld);
     }
 
 });

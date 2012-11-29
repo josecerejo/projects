@@ -9,6 +9,7 @@
         "container|align": "stretch",
         "designer|userClassName": "BsePnl",
         "designer|userAlias": "bsepnl",
+        "border": 0,
         "hidden": null,
         "layout": "vbox"
     },
@@ -45,8 +46,15 @@
                     "userConfig": {
                         "layout|flex": null,
                         "designer|userClassName": "MyButton3",
-                        "href": "../evtmgr/app.html",
-                        "text": "Events"
+                        "border": null,
+                        "itemId": "EvtBtn",
+                        "stateId": null,
+                        "href": null,
+                        "text": "Events",
+                        "tooltip": "Open the Events page"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
                     },
                     "designerId": "6de3b5b9-2d8c-408d-8bfa-cef3c708c0cc"
                 },
@@ -61,9 +69,84 @@
                         "layout|flex": null,
                         "designer|userClassName": "MyButton2",
                         "href": "../ctcmgr/app.html",
-                        "text": "Contacts"
+                        "text": "Contacts",
+                        "tooltip": "Open the Contacts page"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
                     },
                     "designerId": "edd52d07-5d33-4d1c-ac78-8521cdfeda44"
+                },
+                {
+                    "type": "tbseparator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MySeparator"
+                    },
+                    "designerId": "0f95cca1-adda-4f37-b06f-af4d41ea0881"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton4",
+                        "itemId": "NewGrpBtn",
+                        "text": "New Group...",
+                        "tooltip": "Create a new event group"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "2d891839-c652-486d-adef-c6432da086cf"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton5",
+                        "itemId": "NewEvtBtn",
+                        "text": "New Event...",
+                        "tooltip": "Create a new event"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "9b921819-1229-4ab0-85e8-e82b69d9f11c"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton6",
+                        "hidden": true,
+                        "itemId": "NewIvtBtn",
+                        "text": "New Invitation...",
+                        "tooltip": "Create a new invitation for the event shown"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "b4f854ea-b5c6-4361-98f2-d704e12dab5e"
                 },
                 {
                     "type": "tbfill",
@@ -89,30 +172,41 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
+                        "designer|userClassName": "MyButton7",
+                        "hidden": true,
+                        "id": "",
+                        "itemId": "RtnBtn",
+                        "icon": "page-prev.gif",
+                        "text": "Return",
+                        "tooltip": "Return to Event List panel"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "c21845aa-2aae-4901-af07-a05645fb853a"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
                         "designer|userClassName": "MyButton1",
-                        "designer|displayName": "SnO",
+                        "designer|displayName": "Sign Out",
                         "disabled": null,
-                        "text": "Sign Out"
+                        "itemId": "SnOBtn",
+                        "text": "Sign Out",
+                        "tooltip": "Sign out of the Event Manager"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
                     },
                     "designerId": "807e9bdd-f7e3-42ab-9e5a-c5179073df74"
                 }
             ]
-        },
-        {
-            "type": "container",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "layout|flex": null,
-                "designer|userClassName": "MyContainer",
-                "designer|displayName": "Hdg",
-                "border": 0,
-                "height": 30
-            },
-            "designerId": "ac06a32e-488d-414b-aeb6-5954415c3fca"
         },
         {
             "type": "panel",
@@ -124,9 +218,10 @@
             "userConfig": {
                 "layout|flex": 1,
                 "designer|userClassName": "MyPanel",
-                "designer|displayName": "CrdDck",
+                "designer|displayName": "PnlDck",
                 "border": 0,
-                "layout": "card"
+                "layout": "card",
+                "bodyBorder": false
             },
             "designerId": "d90a22c1-f237-4e1c-9cd8-8d8175707053",
             "cn": [
@@ -139,9 +234,127 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|userClassName": "MyContainer2",
-                        "designer|displayName": "Evt"
+                        "designer|displayName": "",
+                        "border": 0,
+                        "id": "EvtLst",
+                        "layout": "border"
                     },
-                    "designerId": "9b9c95b5-279f-447a-aff6-906edfeeee1e"
+                    "designerId": "9b9c95b5-279f-447a-aff6-906edfeeee1e",
+                    "cn": [
+                        {
+                            "type": "gridpanel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 0.25,
+                                "layout|region": "west",
+                                "layout|split": true,
+                                "designer|userClassName": "MyGridPanel",
+                                "designer|displayName": "EvtGrpLst",
+                                "border": null,
+                                "margin": 0,
+                                "width": 150,
+                                "autoScroll": true,
+                                "bodyBorder": false,
+                                "title": null,
+                                "columnLines": false,
+                                "rowLines": false,
+                                "store": "EvtGrp"
+                            },
+                            "designerId": "b209d9ac-c13c-4efd-87a0-ab88c3f1d6c7",
+                            "cn": [
+                                {
+                                    "type": "gridview",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyGridView",
+                                        "designer|displayName": "EvtGrpVew",
+                                        "border": 0,
+                                        "stripeRows": false
+                                    },
+                                    "designerId": "faea8e94-0ec8-40e3-b700-5c013451e1aa"
+                                },
+                                {
+                                    "type": "gridcolumn",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyColumn1",
+                                        "border": 0,
+                                        "dataIndex": "Ttl",
+                                        "flex": 1,
+                                        "text": "Group"
+                                    },
+                                    "designerId": "21d6f2ab-8cdc-48b9-b369-e4698e28694f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "gridpanel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "layout|margins": null,
+                                "layout|region": "center",
+                                "layout|split": false,
+                                "designer|userClassName": "MyGridPanel1",
+                                "designer|displayName": "EvtLst",
+                                "border": null,
+                                "autoScroll": true,
+                                "bodyBorder": null,
+                                "title": null,
+                                "store": "Evt"
+                            },
+                            "designerId": "5c689a71-3783-47d0-8cae-b80f5ff36049",
+                            "cn": [
+                                {
+                                    "type": "gridview",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyGridView1",
+                                        "designer|displayName": "EvtVew",
+                                        "border": 0
+                                    },
+                                    "designerId": "410405ad-a198-4c95-9155-9d3851a3f058"
+                                },
+                                {
+                                    "type": "gridcolumn",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyColumn2",
+                                        "border": 0,
+                                        "dataIndex": "Ttl",
+                                        "flex": 1,
+                                        "menuDisabled": true,
+                                        "text": "Event"
+                                    },
+                                    "designerId": "48bea145-33d9-4b9d-80be-54f169ce5bfb"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "type": "container",
@@ -151,13 +364,118 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyContainer3",
-                        "designer|displayName": "Ctc",
-                        "html": [
-                            "'<h1>Contacts</h1><p>Test</p>'"
-                        ]
+                        "designer|userClassName": "MyContainer1",
+                        "designer|displayName": "EvtDtl",
+                        "border": 0,
+                        "id": "EvtDtl",
+                        "layout": "fit"
                     },
-                    "designerId": "f8a3e09c-4988-4801-be7d-c89ff2646391"
+                    "designerId": "243a9424-a93e-488f-8b54-96d43ba66914",
+                    "cn": [
+                        {
+                            "type": "tabpanel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTabPanel",
+                                "designer|displayName": "EvtDtlTab",
+                                "border": 0,
+                                "activeTab": 0
+                            },
+                            "designerId": "1d896844-98e1-4607-8ff1-df222b3bebe4",
+                            "cn": [
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyPanel2",
+                                        "designer|displayName": null,
+                                        "border": 0,
+                                        "title": "Detail"
+                                    },
+                                    "designerId": "57d5515c-552b-400a-9761-b187cd9ed463",
+                                    "cn": [
+                                        {
+                                            "type": "tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "TabConfig",
+                                                "border": null
+                                            },
+                                            "designerId": "ff5c01f6-9472-43cc-9c5f-b05e119d5d4a"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyPanel3",
+                                        "border": 0,
+                                        "title": "Invitations"
+                                    },
+                                    "designerId": "cf79f1c8-8ece-41d0-b308-370da9a4a042",
+                                    "cn": [
+                                        {
+                                            "type": "tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "TabConfig1"
+                                            },
+                                            "designerId": "74ba67f7-5844-46dd-b101-52690d7e8316"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyPanel4",
+                                        "border": 0,
+                                        "title": "Options"
+                                    },
+                                    "designerId": "41975df2-5cbf-4722-a21c-b990dbea7b1f",
+                                    "cn": [
+                                        {
+                                            "type": "tab",
+                                            "reference": {
+                                                "name": "tabConfig",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "TabConfig2"
+                                            },
+                                            "designerId": "80adf025-cd99-4beb-9210-bd3ee78d93f0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

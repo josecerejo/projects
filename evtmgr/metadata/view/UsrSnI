@@ -116,6 +116,7 @@
                     "userConfig": {
                         "layout|margins": "10 0 0 0 ",
                         "designer|userClassName": "MyLabel",
+                        "designer|displayName": "ErrMsg",
                         "disabled": false,
                         "hidden": true,
                         "html": "Invalid User Name and/or Password",
@@ -131,25 +132,6 @@
                     "designerId": "77648da4-e5b5-4792-a7a1-9513649e9b0a"
                 }
             ]
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "SpcKey",
-                "fn": "SpcKey",
-                "designer|params": [
-                    "Fld, Evt, Opt"
-                ],
-                "implHandler": [
-                    "console.log(Fld);"
-                ]
-            },
-            "designerId": "00f595f1-2c76-4b65-bd13-ea9c054c8859"
         }
     ]
 }

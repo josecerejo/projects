@@ -7,10 +7,12 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "Evt"
+            "Evt",
+            "EvtGrp"
         ],
         "stores": [
-            "Evt"
+            "Evt",
+            "EvtGrp"
         ],
         "views": [
             "UsrSnI",
@@ -19,7 +21,7 @@
         "appFolder": "apl",
         "name": "EvtMgr",
         "controllers": [
-            "EvtMgr",
+            "BseCtl",
             "UsrSnI"
         ]
     },
@@ -37,6 +39,7 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
+                    "Ext.getDoc().dom.title = 'amps | Events - Event Manager'; \r",
                     "var BsePnl = Ext.create('EvtMgr.view.BsePnl', {\r",
                     "    renderTo: Ext.getBody()\r",
                     "});\r",

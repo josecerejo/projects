@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Evt",
-        "designer|userAlias": "evt",
+        "designer|userClassName": "EvtGrp",
+        "designer|userAlias": "evtgrp",
         "idProperty": "Idn"
     },
-    "id": "ExtBox1-ext-gen16796",
-    "designerId": "f6e205ea-7453-4d5a-9a5d-47bc653bfbc9",
+    "id": "ExtBox1-ext-gen9270",
+    "designerId": "4853fff4-1c25-4768-aa94-77562042d72c",
     "cn": [
         {
             "type": "datafield",
@@ -26,7 +26,7 @@
                 "sortType": "asInt",
                 "type": "int"
             },
-            "designerId": "76c761c9-4d21-4998-94a8-cad556b5c232"
+            "designerId": "0b51125e-5225-4f77-a524-fcec91ed38d4"
         },
         {
             "type": "datafield",
@@ -41,7 +41,7 @@
                 "sortType": "asText",
                 "type": "string"
             },
-            "designerId": "82eaf4d5-2262-439c-b991-a9fb647b7e57"
+            "designerId": "8e123177-5493-4f45-85ef-5142013ebd7f"
         },
         {
             "type": "datafield",
@@ -56,7 +56,7 @@
                 "sortType": "asText",
                 "type": "string"
             },
-            "designerId": "eb3ce57b-c63d-49e5-8f65-7f4a5d207503"
+            "designerId": "2d3a7359-3c93-494a-8225-7851d0884517"
         }
     ]
 }

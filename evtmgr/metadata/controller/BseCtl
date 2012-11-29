@@ -1,0 +1,244 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BseCtl",
+        "designer|userAlias": "bsectl"
+    },
+    "id": "ExtBox1-ext-gen4734",
+    "designerId": "ea0cc56c-2c59-4e09-be94-67e8c5fd4225",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "AfrRnd",
+                "fn": "AfrRnd",
+                "implHandler": [
+                    "//Ext.Function.defer(function() {\r",
+                    "//    Ext.getBody().unmask();\r",
+                    "//}, 1500, this);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Viewport",
+                "designer|controlQuery": "evtmgr"
+            },
+            "designerId": "4a7f8d35-b0a6-44a8-9af3-c43cb5b3eb6e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "EvtBtn",
+                "fn": "EvtBtn",
+                "implHandler": [
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(0);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[itemId=EvtBtn]"
+            },
+            "designerId": "80b1b23e-6be9-4c31-989f-078a1bed35ef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ClkNewGrp",
+                "fn": "ClkNewGrp",
+                "implHandler": [
+                    "//button.up('viewport').down('panel').getLayout().setActiveItem(0);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[itemId=NewGrpBtn]"
+            },
+            "designerId": "e7f1455f-797f-4d29-8bfd-6c3ac78acbcf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ClkNewEvt",
+                "fn": "ClkNewEvt",
+                "implHandler": [
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(1);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[itemId=NewEvtBtn]"
+            },
+            "designerId": "b698632b-4e87-4dac-8289-715c7db506a8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ClkRtn",
+                "fn": "ClkRtn",
+                "implHandler": [
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(0);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[itemId=RtnBtn]"
+            },
+            "designerId": "e99e7b27-824d-4b0b-890e-4f4782419b3c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ClkSnO",
+                "fn": "ClkSnO",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    url: '../shared/UsrSnO.php',\r",
+                    "    scope: this,\r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.Scs === true) {\r",
+                    "            var UsrSnI = Ext.create('EvtMgr.view.UsrSnI', {\r",
+                    "                renderTo: Ext.getBody()\r",
+                    "            });\r",
+                    "\r",
+                    "            UsrSnI.show();\r",
+                    "        }\r",
+                    "        else {\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "viewport toolbar button[itemId=SnOBtn]"
+            },
+            "designerId": "b9940a74-540a-46f3-9425-fd005e90f8c7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ShwEvtLst",
+                "fn": "ShwEvtLst",
+                "implHandler": [
+                    "TBr = abstractcomponent.up('viewport').down('toolbar');\r",
+                    "TBr.child('button[itemId=NewGrpBtn]').setVisible(true);\r",
+                    "TBr.child('button[itemId=NewEvtBtn]').setVisible(true);"
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "container[id=EvtLst]"
+            },
+            "designerId": "599efce2-8ba7-43e7-82a3-ea34f545bc63"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "HdeEvtLst",
+                "fn": "HdeEvtLst",
+                "implHandler": [
+                    "TBr = abstractcomponent.up('viewport').down('toolbar');\r",
+                    "TBr.child('button[itemId=NewGrpBtn]').setVisible(false);\r",
+                    "TBr.child('button[itemId=NewEvtBtn]').setVisible(false);"
+                ],
+                "name": "hide",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "container[id=EvtLst]"
+            },
+            "designerId": "c5edc28f-c2d7-4d72-87e5-de541ccc4085"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ShwEvtDtl",
+                "fn": "ShwEvtDtl",
+                "implHandler": [
+                    "TBr = abstractcomponent.up('viewport').down('toolbar');\r",
+                    "TBr.child('button[itemId=NewIvtBtn]').setVisible(true);\r",
+                    "TBr.child('button[itemId=RtnBtn]').setVisible(true);"
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "container[id=EvtDtl]"
+            },
+            "designerId": "6712cdd6-3ed9-45de-93ab-8cda3d3a9b04"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "HdeEvtDtl",
+                "fn": "HdeEvtDtl",
+                "implHandler": [
+                    "TBr = abstractcomponent.up('viewport').down('toolbar');\r",
+                    "TBr.child('button[itemId=NewIvtBtn]').setVisible(false);\r",
+                    "TBr.child('button[itemId=RtnBtn]').setVisible(false);"
+                ],
+                "name": "hide",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "container[id=EvtDtl]"
+            },
+            "designerId": "f94fbf36-c942-4500-870b-840fd9cc77a4"
+        }
+    ]
+}

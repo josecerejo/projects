@@ -36,6 +36,7 @@ Ext.application({
     ],
 
     launch: function() {
+        Ext.getDoc().dom.title = 'amps | Events - Contact Manager'; 
         var BsePnl = Ext.create('CtcMgr.view.BsePnl', {
             renderTo: Ext.getBody()
         });

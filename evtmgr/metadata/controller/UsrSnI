@@ -116,7 +116,7 @@
                 "designer|userClassName": "TxtChg",
                 "fn": "TxtChg",
                 "implHandler": [
-                    "field.nextSibling('label').setVisible(false); "
+                    "field.nextSibling('label').setVisible(false);"
                 ],
                 "name": "change",
                 "scope": "me",

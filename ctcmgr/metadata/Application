@@ -37,6 +37,7 @@
                 "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
+                    "Ext.getDoc().dom.title = 'amps | Events - Contact Manager'; \r",
                     "var BsePnl = Ext.create('CtcMgr.view.BsePnl', {\r",
                     "    renderTo: Ext.getBody()\r",
                     "});\r",

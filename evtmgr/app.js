@@ -19,10 +19,12 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Evt'
+        'Evt',
+        'EvtGrp'
     ],
     stores: [
-        'Evt'
+        'Evt',
+        'EvtGrp'
     ],
     views: [
         'UsrSnI',
@@ -31,11 +33,12 @@ Ext.application({
     appFolder: 'apl',
     name: 'EvtMgr',
     controllers: [
-        'EvtMgr',
+        'BseCtl',
         'UsrSnI'
     ],
 
     launch: function() {
+        Ext.getDoc().dom.title = 'amps | Events - Event Manager'; 
         var BsePnl = Ext.create('EvtMgr.view.BsePnl', {
             renderTo: Ext.getBody()
         });

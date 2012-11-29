@@ -17,6 +17,7 @@ Ext.define('EvtMgr.view.BsePnl', {
     extend: 'Ext.container.Viewport',
     alias: 'widget.bsepnl',
 
+    border: 0,
     layout: {
         align: 'stretch',
         type: 'vbox'
@@ -38,13 +39,37 @@ Ext.define('EvtMgr.view.BsePnl', {
                     items: [
                         {
                             xtype: 'button',
-                            href: '../evtmgr/app.html',
-                            text: 'Events'
+                            itemId: 'EvtBtn',
+                            text: 'Events',
+                            tooltip: 'Open the Events page'
                         },
                         {
                             xtype: 'button',
                             href: '../ctcmgr/app.html',
-                            text: 'Contacts'
+                            text: 'Contacts',
+                            tooltip: 'Open the Contacts page'
+                        },
+                        {
+                            xtype: 'tbseparator'
+                        },
+                        {
+                            xtype: 'button',
+                            itemId: 'NewGrpBtn',
+                            text: 'New Group...',
+                            tooltip: 'Create a new event group'
+                        },
+                        {
+                            xtype: 'button',
+                            itemId: 'NewEvtBtn',
+                            text: 'New Event...',
+                            tooltip: 'Create a new event'
+                        },
+                        {
+                            xtype: 'button',
+                            hidden: true,
+                            itemId: 'NewIvtBtn',
+                            text: 'New Invitation...',
+                            tooltip: 'Create a new invitation for the event shown'
                         },
                         {
                             xtype: 'tbfill',
@@ -52,14 +77,20 @@ Ext.define('EvtMgr.view.BsePnl', {
                         },
                         {
                             xtype: 'button',
-                            text: 'Sign Out'
+                            hidden: true,
+                            id: '',
+                            itemId: 'RtnBtn',
+                            icon: 'page-prev.gif',
+                            text: 'Return',
+                            tooltip: 'Return to Event List panel'
+                        },
+                        {
+                            xtype: 'button',
+                            itemId: 'SnOBtn',
+                            text: 'Sign Out',
+                            tooltip: 'Sign out of the Event Manager'
                         }
                     ]
-                },
-                {
-                    xtype: 'container',
-                    border: 0,
-                    height: 30
                 },
                 {
                     xtype: 'panel',
@@ -68,13 +99,96 @@ Ext.define('EvtMgr.view.BsePnl', {
                     layout: {
                         type: 'card'
                     },
+                    bodyBorder: false,
                     items: [
                         {
-                            xtype: 'container'
+                            xtype: 'container',
+                            border: 0,
+                            id: 'EvtLst',
+                            layout: {
+                                type: 'border'
+                            },
+                            items: [
+                                {
+                                    xtype: 'gridpanel',
+                                    flex: 0.25,
+                                    region: 'west',
+                                    split: true,
+                                    margin: 0,
+                                    width: 150,
+                                    autoScroll: true,
+                                    bodyBorder: false,
+                                    columnLines: false,
+                                    rowLines: false,
+                                    store: 'EvtGrp',
+                                    viewConfig: {
+                                        border: 0,
+                                        stripeRows: false
+                                    },
+                                    columns: [
+                                        {
+                                            xtype: 'gridcolumn',
+                                            border: 0,
+                                            dataIndex: 'Ttl',
+                                            flex: 1,
+                                            text: 'Group'
+                                        }
+                                    ]
+                                },
+                                {
+                                    xtype: 'gridpanel',
+                                    flex: 1,
+                                    region: 'center',
+                                    split: false,
+                                    autoScroll: true,
+                                    store: 'Evt',
+                                    viewConfig: {
+                                        border: 0
+                                    },
+                                    columns: [
+                                        {
+                                            xtype: 'gridcolumn',
+                                            border: 0,
+                                            dataIndex: 'Ttl',
+                                            flex: 1,
+                                            menuDisabled: true,
+                                            text: 'Event'
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             xtype: 'container',
-                            html: '<h1>Contacts</h1><p>Test</p>'
+                            border: 0,
+                            id: 'EvtDtl',
+                            layout: {
+                                type: 'fit'
+                            },
+                            items: [
+                                {
+                                    xtype: 'tabpanel',
+                                    border: 0,
+                                    activeTab: 0,
+                                    items: [
+                                        {
+                                            xtype: 'panel',
+                                            border: 0,
+                                            title: 'Detail'
+                                        },
+                                        {
+                                            xtype: 'panel',
+                                            border: 0,
+                                            title: 'Invitations'
+                                        },
+                                        {
+                                            xtype: 'panel',
+                                            border: 0,
+                                            title: 'Options'
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

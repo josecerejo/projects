@@ -125,7 +125,7 @@
             "userConfig": {
                 "layout|flex": 1,
                 "designer|userClassName": "MyPanel",
-                "designer|displayName": "CrdDck",
+                "designer|displayName": "PnlDck",
                 "border": 0,
                 "layout": "card"
             },

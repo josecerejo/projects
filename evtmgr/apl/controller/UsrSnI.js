@@ -63,7 +63,7 @@ Ext.define('EvtMgr.controller.UsrSnI', {
     },
 
     TxtChg: function(field, newValue, oldValue, options) {
-        field.nextSibling('label').setVisible(false); 
+        field.nextSibling('label').setVisible(false);
     },
 
     init: function(application) {
