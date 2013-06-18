@@ -1,0 +1,60 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "AcMMgr",
+        "storeId": "AcMMgr",
+        "designer|userClassName": "AcMMgr"
+    },
+    "designerId": "8988988f-366a-4200-8848-5cd4b904aed1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/AcMMgr.php"
+            },
+            "designerId": "6708cabf-a271-4f27-9ffa-c38ba82247d7",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "45dfb188-4fcb-4ccd-959a-85228e74a234"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "DES",
+                "designer|displayName": "Des"
+            },
+            "designerId": "f169a92a-e621-4c35-8ebf-75510937e53f"
+        }
+    ]
+}

@@ -1,21 +1,20 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "JobPnlCtl",
         "stores": [
             "JobInf",
             "JobInfFle",
             "JobInfLib",
             "JobInfPgm",
             "JobInfSpF"
-        ]
+        ],
+        "designer|userClassName": "JobPnlCtl"
     },
-    "id": "ExtBox1-ext-gen9901",
     "designerId": "43d45050-6d4d-44fa-9ebf-e2a625c2b2da",
     "cn": [
         {
@@ -26,7 +25,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -48,7 +46,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobPnlLod",
                 "fn": "JobPnlLod",
                 "designer|params": [
                     "Rcd"
@@ -123,7 +120,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInfLod",
                 "fn": "JobInfLod",
                 "designer|params": [
                     "Sto"
@@ -149,7 +145,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobLst",
                 "ref": "JobLst",
                 "selector": "joblst"
             },
@@ -163,7 +158,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInf",
                 "ref": "JobInf",
                 "selector": "jobinf"
             },
@@ -177,7 +171,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInfSpF",
                 "ref": "JobInfSpF",
                 "selector": "jobinfspf"
             },
@@ -191,7 +184,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInfPgm",
                 "ref": "JobInfPgm",
                 "selector": "jobinfpgm"
             },
@@ -205,7 +197,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInfLib",
                 "ref": "JobInfLib",
                 "selector": "jobinflib"
             },
@@ -219,7 +210,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobInfFle",
                 "ref": "JobInfFle",
                 "selector": "jobinffle"
             },
@@ -233,11 +223,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SlcChg",
                 "fn": "SlcChg",
                 "implHandler": [
-                    "if (selections[0]) {\r",
-                    "    this.JobPnlLod(selections[0]);\r",
+                    "if (selected[0]) {\r",
+                    "    this.JobPnlLod(selected[0]);\r",
                     "}"
                 ],
                 "name": "selectionchange",
@@ -255,7 +244,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "JobLstRdy",
                 "fn": "JobLstRdy",
                 "implHandler": [
                     "if (this.getJobInfStore().count() > 0) {\r",

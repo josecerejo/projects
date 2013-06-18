@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "FleInf",
-        "autoLoad": true,
-        "autoSync": false,
+        "autoLoad": false,
+        "model": "FleInf",
         "storeId": "FleInf",
-        "model": "FleInf"
+        "designer|userClassName": "FleInf"
     },
-    "id": "ExtBox1-ext-gen26502",
     "designerId": "f8edab1c-19bc-4a71-b791-3c075abbcfef",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/FleInf.php"
             },
             "designerId": "f164dad3-da9c-4eeb-aa78-702fd38cfac1",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

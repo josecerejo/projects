@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkAtcCtl",
         "stores": [
             "FleDrpInf",
             "TrkAtc"
-        ]
+        ],
+        "designer|userClassName": "TrkAtcCtl"
     },
-    "id": "ExtBox1-ext-gen46461",
     "designerId": "95a8353e-84fe-4907-b242-1527ce6e4671",
     "cn": [
         {
@@ -23,11 +22,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SlcChg",
                 "fn": "SlcChg",
                 "implHandler": [
-                    "if (selections[0]) {\r",
-                    "    this.getTrkAtc().down('form').getForm().loadRecord(selections[0]);\r",
+                    "if (selected[0]) {\r",
+                    "    this.getTrkAtc().down('form').getForm().loadRecord(selected[0]);\r",
                     "}"
                 ],
                 "name": "selectionchange",
@@ -45,7 +43,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "OvrAtcDrp",
                 "fn": "OvrAtcDrp",
                 "designer|params": [
                     "Pnl"
@@ -68,7 +65,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LveAtcDrp",
                 "fn": "LveAtcDrp",
                 "designer|params": [
                     "Pnl"
@@ -91,7 +87,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "DrpAtcDrp",
                 "fn": "DrpAtcDrp",
                 "designer|params": [
                     "Pnl"
@@ -114,7 +109,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleDrpStr",
                 "fn": "FleDrpStr",
                 "designer|params": [
                     "Cmp",
@@ -164,7 +158,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodStr",
                 "fn": "LodStr",
                 "designer|params": [
                     "Cmp",
@@ -192,7 +185,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodScs",
                 "fn": "LodScs",
                 "designer|params": [
                     "Cmp",
@@ -249,7 +241,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodAbr",
                 "fn": "LodAbr",
                 "designer|params": [
                     "Cmp",
@@ -276,7 +267,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodErr",
                 "fn": "LodErr",
                 "designer|params": [
                     "Cmp",
@@ -303,7 +293,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodPrg",
                 "fn": "LodPrg",
                 "designer|params": [
                     "Cmp",
@@ -333,7 +322,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "LodEnd",
                 "fn": "LodEnd",
                 "designer|params": [
                     "Cmp",
@@ -360,7 +348,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleDrpSve",
                 "fn": "FleDrpSve",
                 "implHandler": [
                     "var FleDrpInfSto = this.getFleDrpInfStore(),\r",
@@ -423,7 +410,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleDrpCnl",
                 "fn": "FleDrpCnl",
                 "implHandler": [
                     "this.FleTmpClr(button.up('window'));\r",
@@ -444,10 +430,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleDrpEdt",
                 "fn": "FleDrpEdt",
                 "implHandler": [
-                    "Rcd = e.record;\r",
+                    "Rcd = context.record;\r",
                     "Ext.Ajax.request({\r",
                     "    url: '../shared/FleDrp.php',\r",
                     "    scope: this,\r",
@@ -481,7 +466,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtcDlt",
                 "fn": "TrkAtcDlt",
                 "implHandler": [
                     "var Rcd = this.getTrkAtc().down('gridpanel').getSelectionModel().getSelection()[0], \r",
@@ -518,7 +502,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtcSve",
                 "fn": "TrkAtcSve",
                 "implHandler": [
                     "var Sto = this.getTrkAtcStore(),\r",
@@ -555,7 +538,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -578,7 +560,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleTmpClr",
                 "fn": "FleTmpClr",
                 "designer|params": [
                     "Wdw"
@@ -631,7 +612,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "ChkLodCpl",
                 "fn": "ChkLodCpl",
                 "implHandler": [
                     "var Sto = this.getFleDrpInfStore(),\r",
@@ -667,7 +647,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtcLod",
                 "fn": "TrkAtcLod",
                 "designer|params": [
                     "Rcd"
@@ -690,7 +669,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtcBfrSyc",
                 "fn": "TrkAtcBfrSyc",
                 "designer|params": [
                     "Sto",
@@ -719,7 +697,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleDrp",
                 "ref": "FleDrp",
                 "selector": "fledrp"
             },
@@ -733,7 +710,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstDtl",
                 "ref": "TrkMstDtl",
                 "selector": "trkmstdtl"
             },
@@ -747,7 +723,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtc",
                 "ref": "TrkAtc",
                 "selector": "trkatc"
             },

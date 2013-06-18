@@ -1,19 +1,18 @@
 {
-    "type": "panel",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "border": 0,
         "designer|userClassName": "JobPnl",
         "designer|userAlias": "jobpnl",
-        "border": 0,
         "layout": "border",
         "closeAction": null,
         "title": "Jobs"
     },
-    "id": "ExtBox1-ext-gen19456",
     "designerId": "9c43090a-6208-4f7f-8358-c025cbfad457",
     "cn": [
         {
@@ -29,10 +28,10 @@
                 "layout|region": "center"
             },
             "designerId": "43dc5ab2-65b2-41d8-a4f3-269f857c96a1",
-            "masterInstanceId": "ExtBox1-ext-gen2408"
+            "masterInstanceId": "62f46da8-c092-4753-aa29-8dabb2c02063"
         },
         {
-            "type": "tabpanel",
+            "type": "Ext.tab.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -42,10 +41,9 @@
                 "layout|flex": 1,
                 "layout|region": "south",
                 "layout|split": true,
-                "designer|userClassName": "MyTabPanel2",
-                "designer|displayName": "JobDtl",
                 "border": 0,
                 "height": 150,
+                "designer|displayName": "JobDtl",
                 "activeTab": 0,
                 "tabPosition": "bottom"
             },
@@ -62,18 +60,15 @@
                         "itemId": "JobInfTab"
                     },
                     "designerId": "2aa005d4-2651-4c90-b75f-02b4be96e16f",
-                    "masterInstanceId": "ExtBox1-ext-gen46497",
+                    "masterInstanceId": "18127da4-fb03-46b1-800f-32fea2ea4917",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig7"
-                            },
                             "designerId": "47a9b46e-8c23-4788-8f13-9543d9903281"
                         }
                     ]
@@ -86,22 +81,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "JobInfSpFTab",
-                        "itemId": "JobInfSpFTab"
+                        "itemId": "JobInfSpFTab",
+                        "designer|displayName": "JobInfSpFTab"
                     },
                     "designerId": "d595b248-bc51-4557-b00f-03b37d50c547",
-                    "masterInstanceId": "ExtBox1-ext-gen21592",
+                    "masterInstanceId": "b3f6fc59-c653-4c39-9c35-88f8c1d03587",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig11"
-                            },
                             "designerId": "49b016e5-dd44-437f-9ed7-8e0ccbeb8bca"
                         }
                     ]
@@ -114,22 +106,19 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
-                        "itemId": "JobInfPgmTab"
+                        "itemId": "JobInfPgmTab",
+                        "designer|displayName": null
                     },
                     "designerId": "9d9ffa3e-90de-48da-a954-b2450a1b5cc9",
-                    "masterInstanceId": "ExtBox1-ext-gen29709",
+                    "masterInstanceId": "aaab30c3-94ae-4b0c-8676-efcb87aa6c1f",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig8"
-                            },
                             "designerId": "cb00899b-6e73-4f1b-9f03-9959b29e6de1"
                         }
                     ]
@@ -145,18 +134,15 @@
                         "itemId": "JobInfLibTab"
                     },
                     "designerId": "9b18001b-9fe2-48fc-8764-54cdf1774ccd",
-                    "masterInstanceId": "ExtBox1-ext-gen32125",
+                    "masterInstanceId": "a88a9f4d-0e57-4e9e-82da-630420fc3a60",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig9"
-                            },
                             "designerId": "ccc3a36b-c9db-40dd-9431-a177d04e6710"
                         }
                     ]
@@ -172,18 +158,15 @@
                         "designer|displayName": "JobInfFleTab"
                     },
                     "designerId": "350e2130-77a4-49ee-ab3d-3bc213efb7c2",
-                    "masterInstanceId": "ExtBox1-ext-gen34360",
+                    "masterInstanceId": "4350f5e8-be34-465c-9a8e-510053e58644",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig10"
-                            },
                             "designerId": "f6167c03-b091-4229-aa8a-5d90cc570c94"
                         }
                     ]

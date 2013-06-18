@@ -1,27 +1,25 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "idProperty": "Idn",
         "designer|userClassName": "EvtGrp",
-        "designer|userAlias": "evtgrp",
-        "idProperty": "Idn"
+        "designer|userAlias": "evtgrp"
     },
-    "id": "ExtBox1-ext-gen9270",
     "designerId": "4853fff4-1c25-4768-aa94-77562042d72c",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field",
                 "name": "Idn",
                 "sortType": "asInt",
                 "type": "int"
@@ -29,14 +27,27 @@
             "designerId": "0b51125e-5225-4f77-a524-fcec91ed38d4"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field1",
+                "name": "AccIdn",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "designerId": "cfd9b49b-3df7-478d-a88e-15b982c15a1f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "name": "Ttl",
                 "sortType": "asText",
                 "type": "string"
@@ -44,14 +55,13 @@
             "designerId": "8e123177-5493-4f45-85ef-5142013ebd7f"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field2",
                 "name": "Des",
                 "sortType": "asText",
                 "type": "string"

@@ -1,0 +1,65 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": "PRDTCHHIE",
+        "designer|userClassName": "PTcMst"
+    },
+    "designerId": "34c73f18-3082-41d5-b416-8fa0b9d3b1a1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDTCHHIE"
+            },
+            "designerId": "c8927d5e-7306-481f-8846-bb0185c20863"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DES"
+            },
+            "designerId": "e65d4657-3502-40f5-bd62-9b3a209aceb3",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "convert",
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "implHandler": [
+                            "if (v) {\r",
+                            "    return Ext.String.trim(v);\r",
+                            "}\r",
+                            "else {\r",
+                            "    return v;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "466eea45-1728-4b80-8c09-53b397381fc7"
+                }
+            ]
+        }
+    ]
+}

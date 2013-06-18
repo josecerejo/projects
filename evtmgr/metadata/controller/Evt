@@ -1,0 +1,410 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "Evt"
+        ],
+        "designer|userClassName": "Evt",
+        "designer|userAlias": "evt"
+    },
+    "designerId": "36ed1815-1b01-4c9d-b033-7af32c366b1e",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ShwPnl",
+                "implHandler": [
+                    "Btn = component.up('viewport').down('toolbar').child('button[itemId=RtnBtn]');\r",
+                    "Btn.setVisible(true);\r",
+                    "Btn.setText('Return to Event List');"
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "bsepnl container[itemId=EvtDtl]"
+            },
+            "designerId": "6712cdd6-3ed9-45de-93ab-8cda3d3a9b04"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "HdePnl",
+                "implHandler": [
+                    "TBr = component.up('viewport').down('toolbar');\r",
+                    "TBr.child('button[itemId=RtnBtn]').setVisible(false);"
+                ],
+                "name": "hide",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "bsepnl container[itemId=EvtDtl]"
+            },
+            "designerId": "f94fbf36-c942-4500-870b-840fd9cc77a4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "EvtClk",
+                "implHandler": [
+                    "this.LodFrm('Edt');"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "evtlst"
+            },
+            "designerId": "b1ebb046-6ece-4e5a-9ae1-f7ccdce639ae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AddBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Add');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtlst toolbar button[itemId=AddBtn]"
+            },
+            "designerId": "b698632b-4e87-4dac-8289-715c7db506a8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "CnlBtnClk",
+                "implHandler": [
+                    "console.log(button.up('viewport'));\r",
+                    "console.log(button.up('viewport').down('panel'));\r",
+                    "\r",
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(0);\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "bsepnl form[itemId=EvtFrm] button[itemId=CnlBtn]"
+            },
+            "designerId": "6db8d336-1ec8-4423-b41a-fc0afe10a523"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "EdtBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Edt');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtlst toolbar button[itemId=EdtBtn]"
+            },
+            "designerId": "38979b38-7159-4f20-bb9c-69cfb02b7785"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DltBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Dlt');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtlst toolbar button[itemId=DltBtn]"
+            },
+            "designerId": "fddfdaee-6c0c-4dcf-9d72-1a9574a4eb6d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SveBtnClk",
+                "implHandler": [
+                    "var Pnl = button.up('form'),\r",
+                    "    Frm = Pnl.getForm(),\r",
+                    "    VluLst = Frm.getValues(), \r",
+                    "    Sto = this.getEvtStore();\r",
+                    "\r",
+                    "if (!Frm.isValid()) {\r",
+                    "    Pnl.down('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "    return;\r",
+                    "}\r",
+                    "else {\r",
+                    "    Pnl.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "}\r",
+                    "\r",
+                    "switch(Pnl.down('label[itemId=Acn]').text)\r",
+                    "{\r",
+                    "    case 'Add':\r",
+                    "    var Rcd = Ext.create('EvtMgr.model.Evt');\r",
+                    "    Rcd.set(VluLst);\r",
+                    "    Sto.add(Rcd);\r",
+                    "    Frm.reset();\r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Edt':\r",
+                    "    Frm.getRecord().set(VluLst);\r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Dlt':\r",
+                    "    var Lst = this.getEvtLst();\r",
+                    "    Sto.remove(Frm.getRecord());\r",
+                    "\r",
+                    "    DltBtn = this.getEvtGrpLst().down('toolbar button[itemId=DltBtn]');\r",
+                    "\r",
+                    "    if (Sto.getTotalCount() > 0) {\r",
+                    "        if (Lst) {\r",
+                    "            Lst.getSelectionModel().select(0);\r",
+                    "        }\r",
+                    "\r",
+                    "        DltBtn.setDisabled(true);\r",
+                    "    }\r",
+                    "    else {\r",
+                    "        DltBtn.setDisabled(false);\r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "Sto.sync();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "bsepnl form[itemId=EvtFrm] button[itemId=SveBtn]"
+            },
+            "designerId": "37044ded-4879-44e1-9a94-a28df81a32d1"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getEvtStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.StoRdy\r",
+                    "});"
+                ]
+            },
+            "designerId": "d5ce68e3-8263-4fa8-827e-9c0a78715ac9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodSto",
+                "designer|params": [
+                    "EvtGrpIdn"
+                ],
+                "implHandler": [
+                    "this.getEvtStore().load({\r",
+                    "    params: { \r",
+                    "        EvtGrpIdn: EvtGrpIdn\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "7c5a8369-3629-46f8-bbe3-87cc754d34f6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "StoRdy",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "var Lst = this.getEvtLst(),\r",
+                    "    DltBtn = this.getEvtGrpLst().down('toolbar button[itemId=DltBtn]');\r",
+                    "\r",
+                    "if (Sto.getTotalCount() > 0) {\r",
+                    "    Lst.getSelectionModel().select(0);\r",
+                    "\r",
+                    "    DltBtn.setDisabled(true);\r",
+                    "}\r",
+                    "else {\r",
+                    "    DltBtn.setDisabled(false);\r",
+                    "}"
+                ]
+            },
+            "designerId": "8134e672-55b3-46e9-91ed-781bc861e211"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodFrm",
+                "designer|params": [
+                    "Acn"
+                ],
+                "implHandler": [
+                    "console.log(Acn);\r",
+                    "\r",
+                    "var Pnl = this.getEvtFrm(),\r",
+                    "    Frm = Pnl.getForm();\r",
+                    "\r",
+                    "switch(Acn)\r",
+                    "{\r",
+                    "    case 'Add':\r",
+                    "    var StrDte = new Date();\r",
+                    "    StrDte.setMinutes(0);\r",
+                    "    StrDte.setHours(0);\r",
+                    "    Frm.reset();\r",
+                    "\r",
+                    "    Frm.findField('AccIdn').setValue(Ext.util.Cookies.get('AccIdn'));\r",
+                    "    Frm.findField('EvtGrpIdn').setValue(this.getEvtGrpLst().getSelectionModel().getSelection()[0].get('Idn'));\r",
+                    "    Frm.findField('StrDte').setValue(StrDte);\r",
+                    "    Frm.findField('EndDte').setValue(StrDte);\r",
+                    "    Frm.findField('StrTme').setValue('12:00 AM');\r",
+                    "    Frm.findField('EndTme').setValue('12:00 AM');\r",
+                    "    Pnl.query('.field').forEach(function(Fld){\r",
+                    "        Fld.setReadOnly(false);\r",
+                    "    });\r",
+                    "\r",
+                    "    Pnl.down('button[itemId=SveBtn]').setText('Add');\r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Edt':\r",
+                    "    Frm.loadRecord(this.getEvtLst().getSelectionModel().getSelection()[0]);\r",
+                    "    Pnl.query('.field').forEach(function(Fld){\r",
+                    "        Fld.setReadOnly(false);\r",
+                    "    });\r",
+                    "    \r",
+                    "    Pnl.down('button[itemId=SveBtn]').setText('Update');\r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Dlt':\r",
+                    "    Frm.loadRecord(this.getEvtLst().getSelectionModel().getSelection()[0]);\r",
+                    "    Pnl.query('.field').forEach(function(Fld){\r",
+                    "        Fld.setReadOnly(true);\r",
+                    "    });\r",
+                    "    Pnl.down('button[itemId=SveBtn]').setText('Delete');\r",
+                    "    break;\r",
+                    "}\r",
+                    "\r",
+                    "Frm.findField('Ttl').focus(false,200);\r",
+                    "Pnl.down('label[itemId=Acn]').setText(Acn);\r",
+                    "Pnl.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "this.getBsePnlCrd().getLayout().setActiveItem(1);"
+                ]
+            },
+            "designerId": "b1ae567c-4432-48b0-bbf5-13e3a64cf7a0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EvtLst",
+                "selector": "evtlst"
+            },
+            "designerId": "b446f5c9-44d7-41a2-b1b1-f100d5db742b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EvtGrpLst",
+                "selector": "evtgrplst"
+            },
+            "designerId": "8b1243e9-8bf1-48c5-bda8-3fea2c6ae887"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EvtFrm",
+                "selector": "bsepnl form[itemId=EvtFrm]",
+                "xtype": null
+            },
+            "designerId": "f8fd4361-0445-4f90-8c6a-c11306544e82"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BsePnlCrd",
+                "selector": "bsepnl panel[itemId=BsePnlCrd]"
+            },
+            "designerId": "e82487e6-876a-4e5d-a44b-b519094e854e"
+        }
+    ]
+}

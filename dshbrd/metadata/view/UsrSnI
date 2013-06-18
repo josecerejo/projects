@@ -1,0 +1,136 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "height": 150,
+        "maxHeight": 150,
+        "minHeight": 150,
+        "width": 400,
+        "designer|userClassName": "UsrSnI",
+        "designer|userAlias": "usrsni",
+        "layout": "vbox",
+        "closable": false,
+        "title": "Sign In",
+        "modal": true
+    },
+    "designerId": "2aa2c396-f709-4b20-bcea-dad276335e38",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "designer|displayName": "UsrSnIFrm",
+                "layout": "vbox",
+                "bodyPadding": 10,
+                "title": null,
+                "url": "../shared/PrsSnI.php"
+            },
+            "designerId": "24468c4e-bd3e-461f-9201-4039dfbf42b2",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "User Name",
+                        "name": "UsrIdn"
+                    },
+                    "designerId": "6f366305-5e56-4286-b9d8-751591a1e5fd"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "Password",
+                        "name": "Pwd",
+                        "inputType": "password"
+                    },
+                    "designerId": "df4de3c2-c14c-4331-8b4f-143c9eac20e4"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "dock": "bottom",
+                        "designer|displayName": "TolBar"
+                    },
+                    "designerId": "8f0f8682-e463-4abb-82ff-c77805281f3d",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "itemId": "SbmBtn",
+                                "text": "Sign In"
+                            },
+                            "designerId": "81e53140-9ce4-4d3c-b760-680f7387e3a6"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "0dd6d6f1-c893-4944-9caa-d7da148d03a5"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "hidden": true,
+                                "html": "Please correct fields highlighted in <span style=\"color:red\">red</span>",
+                                "id": "",
+                                "itemId": "ErrMsg",
+                                "style": "{font-size: 12px}",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "37f29d48-cbc0-418e-b7d1-2f302d5c5084"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

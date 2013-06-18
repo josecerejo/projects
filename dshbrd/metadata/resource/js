@@ -6,9 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js",
         "url": "../shared/Ext.plugin.extjs.FileDrop.js",
         "id": "FileDrop"
     },
-    "id": "ExtBox1-ext-gen6128",
     "designerId": "5e8fbee6-fd55-4c1b-a1ca-a1c329166c33"
 }

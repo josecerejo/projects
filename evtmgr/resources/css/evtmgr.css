@@ -1,0 +1,36 @@
+.accept {
+    background-image:url(../images/accept.png) !important;
+}
+
+.add {
+    background-image:url(../images/add.png) !important;
+}
+
+
+.cross {
+    background-image:url(../images/cross.png) !important;
+}
+
+
+.delete {
+    background-image:url(../images/delete.png) !important;
+}
+
+
+.edit {
+    background-image:url(../images/edit.png) !important;
+}
+
+
+.key {
+    background-image:url(../images/key.png) !important;
+}
+
+
+.page-next {
+    background-image:url(../images/page-next.png) !important;
+}
+
+.page-prev {
+    background-image:url(../images/page-prev.png) !important;
+}

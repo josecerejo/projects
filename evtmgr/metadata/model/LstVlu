@@ -1,0 +1,86 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "idProperty": "Idn",
+        "designer|userClassName": "LstVlu",
+        "designer|userAlias": "lstvlu"
+    },
+    "designerId": "b6f16df9-2ee0-4c10-ae75-bb8d2c71781b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Idn",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "designerId": "19b8f524-c590-4729-87d9-c1a65d6b517a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LstIdn",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "designerId": "c0e70fa1-7433-4f28-9788-535a8b2f9f40"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LstVlu",
+                "sortType": "asText",
+                "type": "string"
+            },
+            "designerId": "7605ee78-f218-49c4-abce-de1c06223ab8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "VluInf",
+                "sortType": "asText",
+                "type": "string"
+            },
+            "designerId": "99519f69-b444-47c5-92f6-29f56185ed58"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "VluAbv",
+                "sortType": "asText",
+                "type": "string"
+            },
+            "designerId": "e63e2c2e-bbee-457e-b860-4c82db5d9fb8"
+        }
+    ]
+}

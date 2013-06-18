@@ -1,5 +1,5 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,7 +9,6 @@
         "designer|userClassName": "UsrSnI",
         "designer|userAlias": "usrsni"
     },
-    "id": "ExtBox1-ext-gen5678",
     "designerId": "9a07307f-adc2-47bc-a52f-f0567ff62669",
     "cn": [
         {
@@ -20,61 +19,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "ClkSnI",
-                "fn": "ClkSnI",
-                "implHandler": [
-                    "if (button.type == 'button'){\r",
-                    "    Btn = button; \r",
-                    "    Frm = Btn.up('form').getForm();\r",
-                    "} \r",
-                    "else {\r",
-                    "    Frm = button.getForm();\r",
-                    "    Btn = button.down('button');\r",
-                    "}\r",
-                    "\r",
-                    "Fld = Frm.getValues();\r",
-                    "Ext.Ajax.request({\r",
-                    "    url: '../shared/PrsSnI.php',\r",
-                    "    scope: this,\r",
-                    "    params: {\r",
-                    "        UsrNme: Fld.UsrNme,\r",
-                    "        Pwd: Fld.Pwd\r",
-                    "    },\r",
-                    "    success: function(RspJSN){\r",
-                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
-                    "        if (Rsp.Scs === true) {\r",
-                    "            Btn.up('window').close();\r",
-                    "        }\r",
-                    "        else {\r",
-                    "            Btn.nextSibling('label').setVisible(true); \r",
-                    "        }\r",
-                    "    },\r",
-                    "    failure: function(){\r",
-                    "        console.log('Load Error-php');\r",
-                    "    }\r",
-                    "});\r",
-                    "\r",
-                    ""
-                ],
-                "name": "click",
-                "scope": "me",
-                "designer|targetType": "Ext.button.Button",
-                "designer|controlQuery": "usrsni form button[text=Sign In]"
-            },
-            "designerId": "a0dd67cb-1299-444b-a214-86a66a35ff78"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "AfrRnd",
                 "fn": "AfrRnd",
                 "implHandler": [
-                    "abstractcomponent.getForm().findField('UsrNme').focus(false,200);"
+                    "component.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "component.getForm().findField('UsrNme').focus(false,200);"
                 ],
                 "name": "afterrender",
                 "scope": "me",
@@ -91,11 +39,46 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SpcKey",
+                "fn": "SnIBtnClk",
+                "implHandler": [
+                    "Btn = button; \r",
+                    "Frm = Btn.up('form').getForm();\r",
+                    "\r",
+                    "if (Frm.isValid()) {\r",
+                    "    Frm.submit({\r",
+                    "        scope: this,\r",
+                    "        success: function(Frm, Acn) {\r",
+                    "            this.getController('EvtGrp').LodSto(Acn.result.AccIdn);\r",
+                    "            Btn.up('window').close();\r",
+                    "        },\r",
+                    "        failure: function(Frm, Acn) {\r",
+                    "            Btn.nextSibling('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    "else {\r",
+                    "    Btn.nextSibling('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "usrsni form button[itemId=SbmBtn]"
+            },
+            "designerId": "a0dd67cb-1299-444b-a214-86a66a35ff78"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "fn": "SpcKey",
                 "implHandler": [
                     "if (e.keyCode == Ext.EventObject.ENTER) {\r",
-                    "    this.ClkSnI(field.up('form'));\r",
+                    "    this.SnIBtnClk(field.up('form').down('button[itemId=SbmBtn]'));\r",
                     "}"
                 ],
                 "name": "specialkey",
@@ -113,10 +96,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TxtChg",
-                "fn": "TxtChg",
+                "fn": "TxtFldChg",
                 "implHandler": [
-                    "field.nextSibling('label').setVisible(false);"
+                    "field.up('panel').down('label[itemId=ErrMsg]').setVisible(false);"
                 ],
                 "name": "change",
                 "scope": "me",

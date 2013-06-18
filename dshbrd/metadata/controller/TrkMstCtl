@@ -1,12 +1,11 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkMstCtl",
         "stores": [
             "TrkAsg",
             "TrkAtc",
@@ -19,11 +18,42 @@
             "TrkMstLst",
             "TrkMstFlt",
             "AplPrf"
-        ]
+        ],
+        "designer|userClassName": "TrkMstCtl"
     },
-    "id": "ExtBox1-ext-gen9724",
     "designerId": "2b0d2bc7-3aac-4ec6-b07d-1dee20b7ae74",
     "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "CllPriChg",
+                "implHandler": [
+                    "var CBx = field.up('form').getForm().findField('CllCls');\r",
+                    "CllPriPfx = newValue.substring(0,3);\r",
+                    "\r",
+                    "if (CllPriPfx == 'Pro') {\r",
+                    "    CBx.setValue('Project');\r",
+                    "}\r",
+                    "else if (CllPriPfx == 'SCR') {\r",
+                    "    CBx.setValue('SCR');\r",
+                    "}\r",
+                    "else {\r",
+                    "    CBx.setValue('Incident');\r",
+                    "}\r",
+                    ""
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "trkmstdtl combobox[name=CllPri]"
+            },
+            "designerId": "984a57cc-1ece-478a-a23a-d45881f0847d"
+        },
         {
             "type": "fixedfunction",
             "reference": {
@@ -32,7 +62,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -69,7 +98,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstSve",
                 "fn": "TrkMstSve",
                 "implHandler": [
                     "this.SveChg('yes',this.getTrkMstLst().getSelectionModel().getSelection()[0]);"
@@ -89,14 +117,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "BfrSlc",
                 "fn": "BfrSlc",
                 "implHandler": [
                     "var Frm = this.getTrkMstDtl().getForm();\r",
                     "if (Frm) {\r",
                     "    if (Frm.isDirty()) {\r",
                     "        if (this.getAplPrfStore().first().getData().AtoSve){\r",
-                    "            this.SveChg('yes', selections);\r",
+                    "            this.SveChg('yes', index);\r",
                     "        }\r",
                     "        else {\r",
                     "            Ext.MessageBox.show({\r",
@@ -106,11 +133,11 @@
                     "                icon: Ext.MessageBox.QUESTION, \r",
                     "                scope: {\r",
                     "                    Obj: this,\r",
-                    "                    Slc: selections\r",
+                    "                    Slc: index\r",
                     "                },\r",
                     "                fn: function(BtnIdn) {\r",
                     "                    var Obj = this.Obj,\r",
-                    "                    Slc = this.Slc;\r",
+                    "                        Slc = this.Slc;\r",
                     "                    Obj.SveChg(BtnIdn, Slc);\r",
                     "                }\r",
                     "            });\r",
@@ -134,11 +161,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SlcChg",
                 "fn": "SlcChg",
                 "implHandler": [
-                    "if (selections[0]) {\r",
-                    "    this.TrkPnlLod(selections[0]);\r",
+                    "if (selected[0]) {\r",
+                    "    this.TrkPnlLod(selected[0]);\r",
                     "}"
                 ],
                 "name": "selectionchange",
@@ -156,7 +182,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkPnlLod",
                 "fn": "TrkPnlLod",
                 "designer|params": [
                     "Rcd"
@@ -227,7 +252,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "PrjDtlLod",
                 "fn": "PrjDtlLod",
                 "designer|params": [
                     "Sto"
@@ -269,7 +293,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstLstLod",
                 "fn": "TrkMstLstLod",
                 "implHandler": [
                     "if (this.getTrkMstLstStore().getTotalCount() > 0) {\r",
@@ -289,7 +312,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstDtlLod",
                 "fn": "TrkMstDtlLod",
                 "designer|params": [
                     "Sto"
@@ -308,7 +330,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstFltLod",
                 "fn": "TrkMstFltLod",
                 "designer|params": [
                     "Sto"
@@ -338,7 +359,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SveChg",
                 "fn": "SveChg",
                 "designer|params": [
                     "BtnIdn, Slc"
@@ -385,7 +405,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstLst",
                 "ref": "TrkMstLst",
                 "selector": "trkmstlst"
             },
@@ -399,7 +418,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstDtl",
                 "ref": "TrkMstDtl",
                 "selector": "trkmstdtl"
             },
@@ -413,7 +431,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "PrjDtl",
                 "ref": "PrjDtl",
                 "selector": "prjdtl"
             },
@@ -427,7 +444,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstFlt",
                 "ref": "TrkMstFlt",
                 "selector": "trkmstflt"
             },
@@ -441,7 +457,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstLstRdy",
                 "fn": "TrkMstLstRdy",
                 "implHandler": [
                     "if (this.getTrkMstLstStore().count() > 0) {\r",
@@ -463,11 +478,33 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkAtc",
                 "ref": "TrkAtc",
                 "selector": "trkatc"
             },
             "designerId": "013eb06c-bb6f-4fb7-97f4-38ff250b2d55"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "CllTypChg",
+                "implHandler": [
+                    "var CBx = field.up('form').getForm().findField('CllCtg');\r",
+                    "CBx.clearValue();\r",
+                    "CBx.store.clearFilter();\r",
+                    "CBx.store.filter('CllTyp',newValue);\r",
+                    "CBx.setDisabled(false);"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "trkmstdtl combobox[name=CllTyp]"
+            },
+            "designerId": "f9c34a0c-1ae4-4ff4-84f6-95f0069083da"
         }
     ]
 }

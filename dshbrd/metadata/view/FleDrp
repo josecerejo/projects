@@ -1,25 +1,24 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "FleDrp",
-        "designer|userAlias": "fledrp",
         "height": 430,
         "width": 1000,
+        "designer|userClassName": "FleDrp",
+        "designer|userAlias": "fledrp",
         "layout": "border",
         "closable": false,
         "title": "File Drop",
         "modal": true
     },
-    "id": "ExtBox1-ext-gen5388",
     "designerId": "420d1f1f-c0f4-4da7-8435-cf0e5ac6278e",
     "cn": [
         {
-            "type": "gridpanel",
+            "type": "Ext.grid.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -28,65 +27,54 @@
             "userConfig": {
                 "layout|flex": 2,
                 "layout|region": "center",
-                "designer|userClassName": "MyGridPanel6",
-                "designer|displayName": "FleDrpInfLst",
                 "border": 0,
+                "designer|displayName": "FleDrpInfLst",
                 "title": null,
                 "store": "FleDrpInf"
             },
             "designerId": "c52e5adb-420c-4255-9b0a-df4170c05b60",
             "cn": [
                 {
-                    "type": "gridroweditingplugin",
+                    "type": "Ext.grid.plugin.RowEditing",
                     "reference": {
                         "name": "plugins",
                         "type": "array"
                     },
                     "codeClass": "Ext.grid.plugin.RowEditing",
                     "userConfig": {
-                        "designer|userClassName": "MyRowEditingPlugin",
                         "clicksToEdit": 1
                     },
                     "designerId": "1a0523b3-80d8-411d-9b7d-b390978bc7b8"
                 },
                 {
-                    "type": "gridview",
+                    "type": "Ext.grid.View",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "preserveScrollOnRefresh": true,
-                        "designer|userClassName": "MyGridView6",
                         "border": null,
                         "loadMask": false,
+                        "preserveScrollOnRefresh": true,
                         "markDirty": false
                     },
                     "configAlternates": {
                         "preserveScrollOnRefresh": "boolean",
                         "loadMask": "boolean"
                     },
-                    "designerId": "aa7d707b-cfae-47a2-8aa3-6410bcf30499",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "preserveScrollOnRefresh",
-                            "type": "string"
-                        }
-                    ]
+                    "designerId": "aa7d707b-cfae-47a2-8aa3-6410bcf30499"
                 },
                 {
-                    "type": "actioncolumn",
+                    "type": "Ext.grid.column.Action",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyActionColumn",
-                        "designer|displayName": "Remove",
                         "width": 25,
+                        "designer|displayName": "Remove",
                         "align": "center",
                         "flex": null
                     },
@@ -100,7 +88,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyActionColumnItem",
                                 "designer|displayName": "Remove",
                                 "icon": "../shared/delete.png",
                                 "tooltip": "Remove file from list"
@@ -115,7 +102,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "handler",
                                         "fn": "handler",
                                         "designer|params": [
                                             "view",
@@ -137,44 +123,41 @@
                     ]
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn49",
                         "dataIndex": "FleNmeDrp",
-                        "flex": 1,
-                        "text": "Dropped File"
+                        "text": "Dropped File",
+                        "flex": 1
                     },
                     "designerId": "efae8f53-64f5-4460-87eb-e513c9a8cb28"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn46",
                         "dataIndex": "FleNme",
-                        "flex": 1,
-                        "text": "File"
+                        "text": "File",
+                        "flex": 1
                     },
                     "designerId": "d90e506d-3729-41d2-a87b-b682e5dd0564",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.form.field.Text",
                             "reference": {
                                 "name": "editor",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField4",
                                 "designer|displayName": "File Editor"
                             },
                             "designerId": "0c853860-e253-4428-a0d0-f1526a498880"
@@ -182,30 +165,28 @@
                     ]
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn48",
                         "designer|displayName": "Description",
                         "dataIndex": "Des",
-                        "flex": 1.5,
-                        "text": "Description"
+                        "text": "Description",
+                        "flex": 1.5
                     },
                     "designerId": "bef2a26e-b87b-4224-be5c-5516fa1f0d6e",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.form.field.Text",
                             "reference": {
                                 "name": "editor",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField1",
                                 "designer|displayName": "Description Editor"
                             },
                             "designerId": "818ca6b0-cf23-43d6-bf23-42abce886daf"
@@ -213,18 +194,17 @@
                     ]
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn47",
                         "align": "center",
                         "dataIndex": "FleExs",
-                        "flex": 0.3,
-                        "text": "Exists?"
+                        "text": "Exists?",
+                        "flex": 0.3
                     },
                     "designerId": "4478793a-6df3-487c-ac51-95931e84c396",
                     "cn": [
@@ -236,7 +216,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "renderer",
                                 "fn": "renderer",
                                 "designer|params": [
                                     "value",
@@ -260,17 +239,16 @@
                     ]
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn52",
                         "dataIndex": "PrsSts",
-                        "flex": 1,
-                        "text": "Status"
+                        "text": "Status",
+                        "flex": 1
                     },
                     "designerId": "ae64b122-ac23-44ea-8705-da6481a74a40",
                     "cn": [
@@ -282,7 +260,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "renderer",
                                 "fn": "renderer",
                                 "designer|params": [
                                     "value",
@@ -318,7 +295,7 @@
             ]
         },
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -328,18 +305,17 @@
                 "layout|flex": 1,
                 "layout|region": "south",
                 "layout|split": true,
-                "designer|userClassName": "MyForm6",
-                "designer|displayName": "FleDrpFrm",
                 "border": 0,
                 "height": 150,
                 "hidden": true,
+                "designer|displayName": "FleDrpFrm",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "a700b410-d890-4575-9e3d-3d4f88dcf86c"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
@@ -347,13 +323,12 @@
             "codeClass": null,
             "userConfig": {
                 "dock": "bottom",
-                "designer|userClassName": "MyToolbar4",
                 "designer|displayName": "Toolbar"
             },
             "designerId": "bd9f26dc-f344-4e55-86f3-ea72b54b1104",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -361,14 +336,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton10",
                         "disabled": true,
                         "text": "Save"
                     },
                     "designerId": "f1c38c0c-1d7e-4857-a1ce-a82bd97313da"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -376,13 +350,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton11",
                         "text": "Cancel"
                     },
                     "designerId": "a37b9842-4aa6-4bbb-a9e2-72b97e9550e4"
                 },
                 {
-                    "type": "displayfield",
+                    "type": "Ext.form.field.Display",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -390,15 +363,14 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyDisplayField15",
-                        "designer|displayName": "FleIdnMst",
                         "hidden": true,
                         "itemId": "FleIdnMst",
                         "width": 174,
-                        "name": "FleIdnMst",
-                        "value": null,
+                        "designer|displayName": "FleIdnMst",
                         "fieldLabel": null,
-                        "hideLabel": true
+                        "hideLabel": true,
+                        "name": "FleIdnMst",
+                        "value": null
                     },
                     "designerId": "07320a83-1516-494a-ac7c-7722b7b0c2fa"
                 }

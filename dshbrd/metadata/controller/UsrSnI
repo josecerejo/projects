@@ -1,0 +1,76 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "UsrSnI"
+    },
+    "designerId": "f8facb07-c067-470b-9618-bf70d2a1d474",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AftRnr",
+                "implHandler": [
+                    "//component.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "component.getForm().findField('UsrIdn').focus(false,200);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "usrsni panel"
+            },
+            "designerId": "5fcb5226-8e36-451e-9df7-837f4781d8b8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SnIBtnClk",
+                "implHandler": [
+                    "//if (button.type == 'submit'){\r",
+                    "Btn = button; \r",
+                    "Frm = Btn.up('form').getForm();\r",
+                    "//} \r",
+                    "//else {\r",
+                    "//    Frm = button.getForm();\r",
+                    "//    Btn = button.down('button');\r",
+                    "//}\r",
+                    "\r",
+                    "if (Frm.isValid()) {\r",
+                    "    Frm.submit({\r",
+                    "        scope: this,\r",
+                    "        success: function(Frm, Rsp) {\r",
+                    "            this.getController('DshBrdCtl').LodSto();\r",
+                    "            Btn.up('window').close();\r",
+                    "        },\r",
+                    "        failure: function(Frm, Acn) {\r",
+                    "            Btn.nextSibling('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    "else {\r",
+                    "    Btn.nextSibling('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "usrsni form button[itemId=SbmBtn]"
+            },
+            "designerId": "f4c09067-2eee-434b-a056-b863c668573b"
+        }
+    ]
+}

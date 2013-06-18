@@ -1,177 +1,159 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "border": 0,
         "designer|userClassName": "TrkMstLst",
         "designer|userAlias": "trkmstlst",
-        "border": 0,
         "title": null,
         "store": "TrkMstLst"
     },
-    "id": "ExtBox1-ext-gen28970",
     "designerId": "07c7a29e-4796-419b-8180-a65bc9087089",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "preserveScrollOnRefresh": true,
-                "designer|userClassName": "MyGridView5",
                 "designer|displayName": "TrkLst",
+                "preserveScrollOnRefresh": true,
                 "markDirty": false
             },
             "configAlternates": {
                 "preserveScrollOnRefresh": "boolean"
             },
-            "designerId": "b0ba1ed2-7724-4479-9e4d-2729320d23a9",
-            "customConfigs": [
-                {
-                    "group": "(Custom Properties)",
-                    "name": "preserveScrollOnRefresh",
-                    "type": "string"
-                }
-            ]
+            "designerId": "b0ba1ed2-7724-4479-9e4d-2729320d23a9"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn",
                 "dataIndex": "TrkIdn",
-                "flex": 1,
-                "text": "Idn"
+                "text": "Idn",
+                "flex": 1
             },
             "designerId": "d5921051-6bea-4c31-8230-e36325d69b04"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn2",
                 "dataIndex": "CllDes",
-                "flex": 3,
-                "text": "Description"
+                "text": "Description",
+                "flex": 3
             },
             "designerId": "157ea4c1-1c60-4936-beed-9f39766078f6"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn3",
                 "dataIndex": "CllSts",
-                "flex": 1,
-                "text": "Status"
+                "text": "Status",
+                "flex": 1
             },
             "designerId": "310cf9fe-bbc7-4f95-90e9-c99bc506813e"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn6",
                 "dataIndex": "CllCls",
-                "flex": 1,
-                "text": "Class"
+                "text": "Class",
+                "flex": 1
             },
             "designerId": "41c6347d-ba36-4670-9d94-f9a1186e3fcc"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn41",
                 "dataIndex": "ITRNbr",
-                "flex": 1,
-                "text": "ITR"
+                "text": "ITR",
+                "flex": 1
             },
             "designerId": "18809ce2-f505-472a-b2f2-d41017b17b0e"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn10",
                 "dataIndex": "RcvDte",
-                "flex": 1,
-                "text": "Received Date"
+                "text": "Received Date",
+                "flex": 1
             },
             "designerId": "28d60c27-d901-4eed-8aad-e7097608bcf5"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn11",
                 "dataIndex": "RcvTme",
-                "flex": 1,
-                "text": "Received Time"
+                "text": "Received Time",
+                "flex": 1
             },
             "designerId": "ce848e0a-524b-4f54-9dbc-2b7592a6df3c"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn17",
                 "dataIndex": "UsrNme",
-                "flex": 1,
-                "text": "User"
+                "text": "User",
+                "flex": 1
             },
             "designerId": "6a05354d-3007-40a7-af53-361d9f688a63"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn18",
                 "dataIndex": "EmlAdrUsr",
-                "flex": 2,
-                "text": "Email Address"
+                "text": "Email Address",
+                "flex": 2
             },
             "designerId": "eb072f98-9908-496b-a47e-798620569921"
         }

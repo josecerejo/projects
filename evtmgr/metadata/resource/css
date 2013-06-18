@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "resources/css/evtmgr.css"
+    },
+    "designerId": "ba20169e-22f1-43af-bca3-ce958d8f27f3"
+}

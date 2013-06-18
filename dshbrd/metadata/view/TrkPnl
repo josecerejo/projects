@@ -1,20 +1,18 @@
 {
-    "type": "panel",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "border": 0,
         "designer|userClassName": "TrkPnl",
         "designer|userAlias": "trkpnl",
-        "border": 0,
         "layout": "border",
-        "closable": false,
         "closeAction": null,
         "title": "Tracking"
     },
-    "id": "ExtBox1-ext-gen19439",
     "designerId": "682bbe4c-0356-4479-b725-83f7fd6aad66",
     "cn": [
         {
@@ -30,10 +28,10 @@
                 "layout|region": "center"
             },
             "designerId": "b0162265-0642-4081-8be1-1f2b76f535d5",
-            "masterInstanceId": "ExtBox1-ext-gen28970"
+            "masterInstanceId": "07c7a29e-4796-419b-8180-a65bc9087089"
         },
         {
-            "type": "tabpanel",
+            "type": "Ext.tab.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -43,10 +41,9 @@
                 "layout|flex": 1,
                 "layout|region": "south",
                 "layout|split": true,
-                "designer|userClassName": "MyTabPanel1",
-                "designer|displayName": "TrkMstDtl",
                 "border": 0,
                 "height": null,
+                "designer|displayName": "TrkMstDtl",
                 "title": null,
                 "activeTab": 0,
                 "tabPosition": "bottom"
@@ -61,24 +58,23 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "border": null,
                         "itemId": "DtlTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "title": "Detail"
                     },
                     "designerId": "2fb6b4d5-f98d-470a-a311-cde9c5be9705",
-                    "masterInstanceId": "ExtBox1-ext-gen29962",
+                    "masterInstanceId": "9d2dc3f7-7dd5-4bea-bcce-4d7872713ba0",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "TabConfig",
                                 "closable": null
                             },
                             "designerId": "1aae6388-77f2-4427-a4a7-231cb9910210"
@@ -93,23 +89,20 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "itemId": "AsgTab",
+                        "designer|displayName": null,
                         "title": "Assignments"
                     },
                     "designerId": "92ce7b91-8942-40e8-8e98-f0c77f27da4e",
-                    "masterInstanceId": "ExtBox1-ext-gen29979",
+                    "masterInstanceId": "17e7709e-31aa-4a72-b3c0-1f55ab94a418",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig1"
-                            },
                             "designerId": "5ddff41a-a963-4016-b7c3-1aacfafb8b06"
                         }
                     ]
@@ -122,24 +115,21 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "border": 0,
                         "itemId": "AtcTab",
+                        "designer|displayName": null,
                         "title": "Attachments"
                     },
                     "designerId": "0a22be40-46d9-4688-9093-6bd9ecf871dd",
-                    "masterInstanceId": "ExtBox1-ext-gen21206",
+                    "masterInstanceId": "f8b7b8b7-5e7e-4ec1-9886-dc5af01f820a",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "TabConfig11"
-                            },
                             "designerId": "0ec28003-315c-4428-9ca0-857dab88c3f2"
                         }
                     ]
@@ -152,24 +142,23 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "hidden": true,
                         "itemId": "ObjTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "title": "Objects"
                     },
                     "designerId": "c7a4f2c0-5fac-4b14-a2da-0b22d313f52b",
-                    "masterInstanceId": "ExtBox1-ext-gen22147",
+                    "masterInstanceId": "52e5c4fd-cd4f-42d6-9748-322484f448b0",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "TabConfig2",
                                 "border": null,
                                 "closable": null
                             },
@@ -185,25 +174,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "hidden": true,
                         "itemId": "MveTab",
+                        "designer|displayName": null,
                         "bodyBorder": null,
                         "closable": null,
                         "title": "Moves"
                     },
                     "designerId": "fc0089c5-57db-4b75-91fc-0f1286d2b219",
-                    "masterInstanceId": "ExtBox1-ext-gen33208",
+                    "masterInstanceId": "62193f20-cbb1-4968-9b5a-998bca44c6de",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "TabConfig3",
                                 "closable": null
                             },
                             "designerId": "ad263f84-c620-4c25-8901-6e48e6335cd8"
@@ -218,24 +206,23 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "hidden": true,
                         "itemId": "PrjTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "title": "Project"
                     },
                     "designerId": "50cfef1b-7858-483b-bc94-b9198c6d466e",
-                    "masterInstanceId": "ExtBox1-ext-gen8901",
+                    "masterInstanceId": "e02e143b-ba44-4afa-a668-d64ed7d08eb5",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "TabConfig4",
                                 "closable": null
                             },
                             "designerId": "e5421a45-2c24-44ba-80a7-46783a846509"
@@ -250,25 +237,24 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "border": null,
                         "hidden": true,
                         "itemId": "TskTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "title": "Tasks"
                     },
                     "designerId": "090d42fd-4ef9-4d99-923d-197a4b4017b2",
-                    "masterInstanceId": "ExtBox1-ext-gen13963",
+                    "masterInstanceId": "8cec8903-1222-4db5-b4c5-24c33cdeb3c0",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "TabConfig5",
                                 "closable": null
                             },
                             "designerId": "de653150-3f8f-48fe-95b9-2e8a8d2881d9"

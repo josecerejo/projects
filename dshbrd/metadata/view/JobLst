@@ -1,150 +1,137 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "border": 0,
         "designer|userClassName": "JobLst",
         "designer|userAlias": "joblst",
-        "designer|displayName": "JobLst",
-        "border": 0,
         "title": null,
         "store": "JobInf"
     },
-    "id": "ExtBox1-ext-gen2408",
     "designerId": "62f46da8-c092-4753-aa29-8dabb2c02063",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGridView7"
-            },
             "designerId": "13cc700d-b7fc-4f49-9eaf-65d980201fe9"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn48",
                 "dataIndex": "JOB",
-                "flex": 1,
-                "text": "Job"
+                "text": "Job",
+                "flex": 1
             },
             "designerId": "25295cf6-8b81-4097-9c94-cf929b8f50b1"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn49",
                 "dataIndex": "USR",
-                "flex": 1,
-                "text": "User"
+                "text": "User",
+                "flex": 1
             },
             "designerId": "6f451c79-6d6d-4ca1-8678-80e0dadd6fea"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn50",
                 "dataIndex": "JOBNBRA",
-                "flex": 1,
-                "text": "Job Number"
+                "text": "Job Number",
+                "flex": 1
             },
             "designerId": "5b53b25d-cf1c-4b6f-82f4-f34d19a7fdfe"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn51",
                 "dataIndex": "SBS",
-                "flex": 1,
-                "text": "Subsystem"
+                "text": "Subsystem",
+                "flex": 1
             },
             "designerId": "3dea5775-6242-4d62-9f50-ed0997e8f01e"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn52",
                 "dataIndex": "SBSLIB",
-                "flex": 1,
-                "text": "Subsystem Library"
+                "text": "Subsystem Library",
+                "flex": 1
             },
             "designerId": "42127476-15d8-4287-9102-f780742dcaaf"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn53",
                 "dataIndex": "JOBTYP",
-                "flex": 1,
-                "text": "Job Typ"
+                "text": "Job Typ",
+                "flex": 1
             },
             "designerId": "6f5af412-0a31-4807-85fc-45ebdcfb12d4"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn54",
                 "dataIndex": "JOBSTS",
-                "flex": 1,
-                "text": "Job Status"
+                "text": "Job Status",
+                "flex": 1
             },
             "designerId": "9e1e1550-9f52-44f1-b129-bd2354f6aad8"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn58",
                 "dataIndex": "JOBSTSACV",
-                "flex": 1,
-                "text": "Active Status"
+                "text": "Active Status",
+                "flex": 1
             },
             "designerId": "ad6b7b66-76c9-4968-b237-1c15a2103a11"
         }

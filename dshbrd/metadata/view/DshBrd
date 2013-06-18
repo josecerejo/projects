@@ -1,5 +1,5 @@
 {
-    "type": "viewport",
+    "type": "Ext.container.Viewport",
     "reference": {
         "name": "items",
         "type": "array"
@@ -11,11 +11,10 @@
         "designer|userAlias": "dshbrd",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen13397",
     "designerId": "71519876-b235-4f92-9abe-48251ac4ada2",
     "cn": [
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -23,14 +22,13 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": null,
-                "designer|userClassName": "MyToolbar",
-                "designer|displayName": "ToolBar",
-                "border": 0
+                "border": 0,
+                "designer|displayName": "ToolBar"
             },
             "designerId": "ed8621a6-a29d-4e30-8899-22b9270f096a",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -38,34 +36,31 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton",
                         "designer|displayName": "Edit",
                         "text": "Edit"
                     },
                     "designerId": "653d48d0-ba50-4795-836d-68a07291cc30",
                     "cn": [
                         {
-                            "type": "menu",
+                            "type": "Ext.menu.Menu",
                             "reference": {
                                 "name": "menu",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyMenu",
                                 "designer|displayName": "Edit Menu"
                             },
                             "designerId": "9b39ef4e-bae2-432a-bbcc-4f1be42a8f38",
                             "cn": [
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem",
                                         "text": "Preferences"
                                     },
                                     "designerId": "125e620b-fd06-491e-9196-fa622e43788b"
@@ -75,7 +70,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -83,15 +78,14 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton5",
-                        "designer|displayName": "Filter",
                         "itemId": "FltBtn",
+                        "designer|displayName": "Filter",
                         "text": "Filter"
                     },
                     "designerId": "3e4a3097-343f-4002-a247-6ab84b8f4cff"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -99,14 +93,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton7",
                         "designer|displayName": "Refresh",
                         "text": "Refresh"
                     },
                     "designerId": "741b8eaa-77c7-4d06-b9ec-743dadeb27ff"
                 },
                 {
-                    "type": "tbfill",
+                    "type": "Ext.toolbar.Fill",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -114,13 +107,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyFill",
                         "designer|displayName": "right justifier"
                     },
                     "designerId": "54e674b8-d997-4956-9148-fd96231b7c35"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -128,7 +120,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton6",
                         "designer|displayName": "Sign Out",
                         "href": "../shared/usrsno.php",
                         "text": "Sign Out"
@@ -138,7 +129,7 @@
             ]
         },
         {
-            "type": "tabpanel",
+            "type": "Ext.tab.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -146,7 +137,6 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
-                "designer|userClassName": "MyTabPanel",
                 "designer|displayName": "TabPnl",
                 "closable": null,
                 "activeTab": 0
@@ -161,17 +151,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
-                        "hidden": false,
                         "itemId": "TrkTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "title": "Tracking "
                     },
                     "designerId": "9c9ee56e-8fd4-446f-8cde-1bb88e8027c6",
-                    "masterInstanceId": "ExtBox1-ext-gen19439",
+                    "masterInstanceId": "682bbe4c-0356-4479-b725-83f7fd6aad66",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
@@ -179,7 +168,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "closeAction": null,
-                                "designer|userClassName": "TabConfig7",
                                 "closable": null
                             },
                             "designerId": "90427f46-5af9-482d-a445-5356757489b5",
@@ -208,10 +196,10 @@
                         "title": "Jobs "
                     },
                     "designerId": "98880200-d33c-4ee9-ad50-0454ba13146e",
-                    "masterInstanceId": "ExtBox1-ext-gen19456",
+                    "masterInstanceId": "9c43090a-6208-4f7f-8358-c025cbfad457",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
@@ -219,7 +207,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "closeAction": null,
-                                "designer|userClassName": "TabConfig8",
                                 "itemId": null,
                                 "closable": null,
                                 "closeText": null
@@ -250,10 +237,10 @@
                         "title": "Documentation "
                     },
                     "designerId": "19fc196a-503d-4b1d-8128-c514dbf4bae8",
-                    "masterInstanceId": "ExtBox1-ext-gen19473",
+                    "masterInstanceId": "f34ca242-1902-4979-8f35-e12050196b78",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
@@ -261,7 +248,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "closeAction": null,
-                                "designer|userClassName": "TabConfig9",
                                 "closable": null,
                                 "closeText": null
                             },
@@ -291,10 +277,10 @@
                         "title": "Links "
                     },
                     "designerId": "5c6f589f-6e09-4026-a2e5-ef5fc826141d",
-                    "masterInstanceId": "ExtBox1-ext-gen21896",
+                    "masterInstanceId": "43ebc710-ac5b-4d5d-9e35-4a515edfeeca",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
@@ -302,7 +288,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "closeAction": null,
-                                "designer|userClassName": "TabConfig10",
                                 "closable": null,
                                 "closeText": null
                             },
@@ -325,18 +310,18 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": null,
                         "hidden": true,
                         "itemId": "CogTab",
+                        "designer|displayName": null,
                         "closable": null,
                         "closeAction": null,
                         "title": "Cognos "
                     },
                     "designerId": "9cf2e141-21f4-4326-a783-4c7306823a4d",
-                    "masterInstanceId": "ExtBox1-ext-gen23087",
+                    "masterInstanceId": "4f2954eb-06e3-440d-9e9e-c0ad3f36461f",
                     "cn": [
                         {
-                            "type": "tab",
+                            "type": "Ext.tab.Tab",
                             "reference": {
                                 "name": "tabConfig",
                                 "type": "object"
@@ -344,7 +329,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "closeAction": null,
-                                "designer|userClassName": "TabConfig11",
                                 "closable": null,
                                 "closeText": null
                             },

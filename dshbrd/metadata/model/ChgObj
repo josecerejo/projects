@@ -1,143 +1,132 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ChgObj",
-        "idProperty": "Idn"
+        "idProperty": "Idn",
+        "designer|userClassName": "ChgObj"
     },
-    "id": "ExtBox1-ext-gen4658",
     "designerId": "9339c262-fc27-4ec9-8d56-54d1af8eecfb",
     "cn": [
         {
-            "type": "sequentialidgenerator",
+            "type": "Ext.data.SequentialIdGenerator",
             "reference": {
                 "name": "idgen",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySequentialIdGenerator",
                 "id": "Idn"
             },
             "designerId": "7b64fc17-ec88-4ff6-8f02-f391366189d9"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField172",
                 "name": "TRKIDN"
             },
             "designerId": "3179083d-91f3-4895-9d63-a00cd0eaad26"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField140",
                 "name": "OBJNME"
             },
             "designerId": "2c11c5df-8b3a-4093-989c-eb0f653fe77c"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField141",
                 "name": "OBJTYP"
             },
             "designerId": "9844aa83-9433-4317-bb51-3b5e452edb71"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField142",
                 "name": "TRGENV"
             },
             "designerId": "6ff39b7e-5740-4cc2-9112-c9a8b7788fb5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField143",
                 "name": "LCKUSR"
             },
             "designerId": "e1b1efa1-48c1-412d-acd1-4d3d4fa19ba5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField144",
                 "name": "LCKDTE"
             },
             "designerId": "8616f05c-00f8-40a8-a90a-e3fe4ad068ca"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField145",
                 "name": "PRSSTP"
             },
             "designerId": "828514c7-0796-4fc1-8417-8e36c6b79eb5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field244",
                 "name": "ENVTYP"
             },
             "designerId": "77d41408-a041-42f5-b111-e5989f8834c8"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field245",
                 "name": "ENVNME"
             },
             "designerId": "3d061d5f-33ba-43bc-b1ec-8e58b999f7ac"

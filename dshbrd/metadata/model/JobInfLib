@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,44 +8,40 @@
     "userConfig": {
         "designer|userClassName": "JobInfLib"
     },
-    "id": "ExtBox1-ext-gen7301",
     "designerId": "7f2035f7-6940-4683-a54a-4041ad8722cb",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field211",
                 "name": "LIB"
             },
             "designerId": "8c8c8af8-7f51-4d4c-a949-1a5cd31c4a6f"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field212",
                 "name": "LIBTXT"
             },
             "designerId": "59fb33bb-51a4-4668-bd41-7d0d194167c0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field210",
                 "name": "LIBTYP"
             },
             "designerId": "cd7d08c5-0169-41d7-a811-be52b8035607"

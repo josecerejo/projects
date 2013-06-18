@@ -15,11 +15,11 @@
         "saveOnDeploy": false,
         "appName": "MyApp"
     },
-    "xdsVersion": "2.1.0",
-    "xdsBuild": 670,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000498,
-    "framework": "ext41",
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
     "topInstanceFileMap": {
         "71519876-b235-4f92-9abe-48251ac4ada2": {
             "paths": [
@@ -712,6 +712,22 @@
                 "app/controller/TrkAsgCtl.js"
             ],
             "className": "TrkAsgCtl"
+        },
+        "2aa2c396-f709-4b20-bcea-dad276335e38": {
+            "paths": [
+                "metadata/view/UsrSnI",
+                "app/view/override/UsrSnI.js",
+                "app/view/UsrSnI.js"
+            ],
+            "className": "UsrSnI"
+        },
+        "f8facb07-c067-470b-9618-bf70d2a1d474": {
+            "paths": [
+                "metadata/controller/UsrSnI",
+                "app/controller/override/UsrSnI.js",
+                "app/controller/UsrSnI.js"
+            ],
+            "className": "UsrSnI"
         }
     },
     "viewOrderMap": {
@@ -738,7 +754,8 @@
             "b3f6fc59-c653-4c39-9c35-88f8c1d03587",
             "aaab30c3-94ae-4b0c-8676-efcb87aa6c1f",
             "a88a9f4d-0e57-4e9e-82da-630420fc3a60",
-            "4350f5e8-be34-465c-9a8e-510053e58644"
+            "4350f5e8-be34-465c-9a8e-510053e58644",
+            "2aa2c396-f709-4b20-bcea-dad276335e38"
         ],
         "store": [
             "9fcf36b1-b995-40a6-9e14-d5376199eb79",
@@ -777,7 +794,8 @@
             "2b0d2bc7-3aac-4ec6-b07d-1dee20b7ae74",
             "824ad0a7-8714-4631-a649-eb240c7d833f",
             "43d45050-6d4d-44fa-9ebf-e2a625c2b2da",
-            "0818de2e-28d5-4251-aa87-6e12e03f23c2"
+            "0818de2e-28d5-4251-aa87-6e12e03f23c2",
+            "f8facb07-c067-470b-9618-bf70d2a1d474"
         ],
         "model": [
             "ea9144bb-3b82-4c40-8416-e8c1ced349d7",

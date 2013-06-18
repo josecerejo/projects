@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "ChgRqs",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "ChgRqs",
         "storeId": "ChgRqs",
-        "model": "ChgRqs"
+        "designer|userClassName": "ChgRqs"
     },
-    "id": "ExtBox1-ext-gen29177",
     "designerId": "06d0a40f-c794-4485-b09c-b421e850d38e",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/ChgRqs.php"
             },
             "designerId": "184f02f2-6754-4a8e-9454-b8b484db5b29",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

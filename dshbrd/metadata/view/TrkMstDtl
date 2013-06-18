@@ -1,5 +1,5 @@
 {
-    "type": "form",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,21 +8,20 @@
     "userConfig": {
         "container|align": "stretch",
         "container|padding": null,
-        "designer|userClassName": "TrkMstDtl",
-        "designer|userAlias": "trkmstdtl",
         "border": 0,
         "id": null,
         "itemId": null,
+        "designer|userClassName": "TrkMstDtl",
+        "designer|userAlias": "trkmstdtl",
         "defaults": null,
         "layout": "vbox",
         "title": null,
         "trackResetOnLoad": true
     },
-    "id": "ExtBox1-ext-gen29962",
     "designerId": "9d2dc3f7-7dd5-4bea-bcce-4d7872713ba0",
     "cn": [
         {
-            "type": "container",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -31,196 +30,211 @@
             "userConfig": {
                 "layout|flex": 0.5,
                 "container|align": "stretch",
-                "designer|userClassName": "MyContainer",
-                "designer|displayName": "Dtl",
                 "height": 84,
+                "designer|displayName": "Dtl",
                 "layout": "hbox"
             },
             "designerId": "dbf0bb86-76c6-4d1c-acad-9439eae6b7a5",
             "cn": [
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
+                        "layout|flex": null,
                         "layout|margins": null,
-                        "designer|userClassName": "MyContainer2",
-                        "designer|displayName": "Column 1",
-                        "padding": 5
+                        "minWidth": 240,
+                        "padding": 5,
+                        "width": null,
+                        "designer|displayName": "Column 1"
                     },
                     "designerId": "18b6a692-9374-4a16-b371-d5471d795484",
                     "cn": [
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.Display",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField",
-                                "name": "TrkIdn",
                                 "fieldLabel": "Identifier",
-                                "hideLabel": false,
                                 "labelAlign": null,
                                 "labelSeparator": null,
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "TrkIdn"
                             },
                             "designerId": "2e212e2a-8ad1-4f7b-ba84-fbec1c45199d"
                         },
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField1",
-                                "name": "CllSts",
                                 "fieldLabel": "Status",
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "CllSts",
+                                "displayField": "CllSts",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "store": "CllSts",
+                                "typeAhead": true,
+                                "valueField": "CllSts"
                             },
                             "designerId": "8f26ee53-e3e8-4d09-83b9-c3f228333466"
                         },
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField12",
-                                "designer|displayName": "CllPri",
-                                "value": null,
+                                "designer|displayName": null,
                                 "fieldLabel": "Priority",
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "CllPri",
+                                "value": null,
+                                "displayField": "CllPri",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "store": "CllPri",
+                                "typeAhead": true,
+                                "valueField": "CllPri"
                             },
                             "designerId": "1ed0d6d8-acd5-4e9e-a9f0-9fe821b0dff3"
                         }
                     ]
                 },
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
-                        "designer|userClassName": "MyContainer3",
+                        "layout|flex": null,
+                        "minWidth": 240,
                         "designer|displayName": "Column 2"
                     },
                     "designerId": "10387fb9-a4c8-4d83-ab91-3396cc78ed1a",
                     "cn": [
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField10",
-                                "designer|displayName": "CllTyp",
+                                "designer|displayName": null,
+                                "fieldLabel": "Type",
+                                "labelWidth": 70,
                                 "name": "CllTyp",
                                 "value": null,
-                                "fieldLabel": "Type",
-                                "labelWidth": 70
+                                "displayField": "CllTyp",
+                                "forceSelection": true,
+                                "queryMode": "local",
+                                "store": "CllTyp",
+                                "typeAhead": true,
+                                "valueField": "CllTyp"
                             },
                             "designerId": "173a316a-600d-4769-8ff6-d244e43777ac"
                         },
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.ComboBox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField11",
-                                "designer|displayName": "CllCtg",
+                                "designer|displayName": null,
+                                "fieldLabel": "Category",
+                                "labelWidth": 70,
                                 "name": "CllCtg",
                                 "value": null,
-                                "fieldLabel": "Category",
-                                "labelWidth": 70
+                                "displayField": "CllCtg",
+                                "queryMode": "local",
+                                "store": "CllCtg",
+                                "typeAhead": true,
+                                "valueField": "CllCtg"
                             },
                             "designerId": "bd90645d-4129-4028-82f6-849edaee57fd"
                         },
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.Display",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField2",
-                                "name": "CllCls",
-                                "tabIndex": null,
                                 "fieldLabel": "Class",
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "CllCls",
+                                "tabIndex": null
                             },
                             "designerId": "19da01db-2e9e-429d-9e51-849ab17c514f"
                         }
                     ]
                 },
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout|flex": 1,
-                        "designer|userClassName": "MyContainer5",
+                        "layout|flex": null,
+                        "minWidth": 240,
                         "designer|displayName": "Column 3"
                     },
                     "designerId": "1f5f2e81-1ed9-4f65-abc7-0f8b78d7b52b",
                     "cn": [
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.Display",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField3",
-                                "name": "UsrNme",
-                                "value": null,
                                 "fieldLabel": "User",
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "UsrNme",
+                                "value": null
                             },
                             "designerId": "3cf51532-36e1-4f3a-a33b-f54e16ef7a2b"
                         },
                         {
-                            "type": "displayfield",
+                            "type": "Ext.form.field.Display",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyDisplayField4",
-                                "name": "EmlAdrUsr",
-                                "value": null,
                                 "fieldLabel": "Email",
-                                "labelWidth": 70
+                                "labelWidth": 70,
+                                "name": "EmlAdrUsr",
+                                "value": null
                             },
                             "designerId": "9ea7ae6e-48d1-44a3-9c79-d7a1523c61d2"
                         }
                     ]
                 },
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -230,7 +244,6 @@
                         "layout|flex": 1,
                         "container|align": "stretch",
                         "container|padding": 5,
-                        "designer|userClassName": "MyContainer4",
                         "designer|displayName": "Column 4",
                         "layout": "vbox"
                     },
@@ -239,7 +252,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -250,15 +263,14 @@
                 "layout|margins": null,
                 "container|align": "stretch",
                 "container|padding": null,
-                "designer|userClassName": "MyContainer1",
-                "designer|displayName": "Txt",
                 "padding": 5,
+                "designer|displayName": "Txt",
                 "layout": "hbox"
             },
             "designerId": "a9c95b64-fd52-4d32-82cd-3de556a223ec",
             "cn": [
                 {
-                    "type": "textareafield",
+                    "type": "Ext.form.field.TextArea",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -268,18 +280,17 @@
                         "layout|flex": 1,
                         "layout|margins": "0 2 0 0",
                         "formBind": true,
-                        "designer|userClassName": "MyTextArea",
                         "id": null,
                         "padding": null,
-                        "name": "CllDes",
                         "fieldLabel": "Description",
                         "labelAlign": "top",
-                        "labelSeparator": null
+                        "labelSeparator": null,
+                        "name": "CllDes"
                     },
                     "designerId": "058bad7c-915c-493f-98e6-89e25dd2e4e3"
                 },
                 {
-                    "type": "textareafield",
+                    "type": "Ext.form.field.TextArea",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -288,19 +299,17 @@
                     "userConfig": {
                         "layout|flex": 1,
                         "layout|margins": "0 0 0 2",
-                        "designer|userClassName": "MyTextArea1",
                         "padding": null,
-                        "name": "CllSln",
                         "fieldLabel": "Solution",
-                        "hideLabel": false,
-                        "labelAlign": "top"
+                        "labelAlign": "top",
+                        "name": "CllSln"
                     },
                     "designerId": "5379e359-e5cb-4bad-948c-7e2b1e37701c"
                 }
             ]
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
@@ -309,13 +318,12 @@
             "userConfig": {
                 "layout|flex": 1,
                 "dock": "bottom",
-                "designer|userClassName": "MyToolbar1",
                 "designer|displayName": "Toolbar"
             },
             "designerId": "23e7d5e4-9f73-4e1a-b920-2cc961de39a6",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -324,11 +332,9 @@
                     "userConfig": {
                         "layout|flex": null,
                         "formBind": true,
-                        "designer|userClassName": "MyButton1",
                         "disabled": null,
                         "hidden": null,
-                        "text": "Save",
-                        "type": null
+                        "text": "Save"
                     },
                     "designerId": "acd0e94b-d2f4-4b6e-85d5-361156704a33"
                 }

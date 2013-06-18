@@ -1,43 +1,39 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkMstLst",
-        "autoLoad": true,
-        "autoSync": false,
+        "autoLoad": null,
+        "model": "TrkMst",
         "storeId": "TrkMstLst",
-        "model": "TrkMst"
+        "designer|userClassName": "TrkMstLst"
     },
-    "id": "ExtBox1-ext-gen65669",
     "designerId": "dfa3c3ab-3a30-46c1-890f-e348aa05a332",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "limitParam": null,
                 "url": "data/TrkMst.php"
             },
             "designerId": "358d3adb-5f5a-4b3f-b5e3-cc6fc3fa0659",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"
@@ -47,14 +43,13 @@
             ]
         },
         {
-            "type": "sorter",
+            "type": "Ext.util.Sorter",
             "reference": {
                 "name": "sorters",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter",
                 "direction": "DESC",
                 "property": "TrkIdn"
             },

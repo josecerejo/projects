@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "JobInfSpF",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "JobInfSpF",
         "storeId": "JobInfSpF",
-        "model": "JobInfSpF"
+        "designer|userClassName": "JobInfSpF"
     },
-    "id": "ExtBox1-ext-gen18210",
     "designerId": "72d0b243-7dba-4352-8258-683d23e824ad",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/JobInf.php"
             },
             "designerId": "1d158ce9-9bb3-4de7-905a-1a872c3d3a89",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

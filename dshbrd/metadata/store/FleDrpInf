@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "FleDrpInf",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "FleDrpInf",
         "storeId": "FleDrpInf",
-        "model": "FleDrpInf"
+        "designer|userClassName": "FleDrpInf"
     },
-    "id": "ExtBox1-ext-gen4870",
     "designerId": "47ecb3e5-06b1-48a7-a44a-5039fc4777c5",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "../shared/FleDrp.php"
             },
             "designerId": "94610582-4f5f-4227-a0e8-7898a5f293c8",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

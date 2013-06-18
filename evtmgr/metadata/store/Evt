@@ -1,50 +1,60 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Evt",
-        "designer|userAlias": "evt",
+        "model": "Evt",
         "storeId": "MyStore1",
-        "model": "Evt"
+        "designer|userClassName": "Evt",
+        "designer|userAlias": "evt"
     },
-    "id": "ExtBox1-ext-gen17105",
     "designerId": "18fd8123-bf65-419a-806f-c44c71e1e977",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "designer|displayName": "Pxy",
                 "url": "data/Evt.php"
             },
             "designerId": "1ad99961-a3f0-482f-afd8-37f9d3f2135a",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
-                        "designer|displayName": "DtaRdr",
                         "root": "Dta",
                         "successProperty": "Scs",
-                        "totalProperty": "Ttl"
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "DtaRdr"
                     },
                     "designerId": "4b022da0-9cd0-4ba4-b82d-770a1dc019b0"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "Ttl",
+                "designer|displayName": "Srt"
+            },
+            "designerId": "aee31c4e-5da6-46b7-90f7-264e1ad1a247"
         }
     ]
 }

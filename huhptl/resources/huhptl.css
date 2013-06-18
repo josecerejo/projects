@@ -1,0 +1,22 @@
+.red-row .x-grid-cell { 
+    background-color: #ffe2e2; 
+    color: #900; 
+} 
+
+.ylw-row .x-grid-cell { 
+    background-color: #ffffcc;
+    color: #660; 
+}
+
+.grn-row .x-grid-cell { 
+    background-color: #e2ffe2; 
+    color: #090; 
+}
+
+.hdn-row .x-grid-cell { 
+	display: none;
+}
+
+.x-tip-header-text-container-default {
+/*  font-size: 11px; */
+}

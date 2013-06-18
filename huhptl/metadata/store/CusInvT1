@@ -1,0 +1,87 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "CusInv",
+        "storeId": "CusInvT1",
+        "designer|userClassName": "CusInvT1"
+    },
+    "designerId": "8bb6abab-0478-4158-80a5-8e1efdb575f3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/CusInvT1.php"
+            },
+            "designerId": "5149d21e-d796-4be3-9b0e-17c678aaf0a4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "7e15f9a7-9409-4470-b302-93c65fd14230"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "YRS",
+                "root": null,
+                "designer|displayName": "Yrs"
+            },
+            "designerId": "337c9589-c7e5-4779-a7da-81338458169a"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "MTH",
+                "designer|displayName": "Mth"
+            },
+            "designerId": "64bb8e3d-7fd5-4838-a2f8-8c458296e464"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "TYP",
+                "designer|displayName": "Typ"
+            },
+            "designerId": "80573bd3-f63d-4dc0-84b1-cab701f1512e"
+        }
+    ]
+}

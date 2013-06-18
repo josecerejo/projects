@@ -1,0 +1,78 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "model": "LstVlu",
+        "remoteFilter": true,
+        "storeId": "IvtTyp",
+        "designer|userClassName": "IvtTyp",
+        "designer|userAlias": "ivttyp"
+    },
+    "designerId": "889e5f87-c6f8-42af-a883-4f0f02a1365d",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "LstVlu",
+                "designer|displayName": "Srt"
+            },
+            "designerId": "ad29d2f4-f200-4c23-8dc4-f5740a5ca4f6"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/LstVlu.php"
+            },
+            "designerId": "ec9a1ea8-3fd7-4958-99ab-06b3f312df20",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "DtaRdr"
+                    },
+                    "designerId": "92b5666f-394c-44c2-83cb-894e2fcd1660"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Filter",
+            "reference": {
+                "name": "filters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "LstIdn",
+                "value": [
+                    "    4"
+                ]
+            },
+            "designerId": "58827d11-eff4-43fa-9814-5dd822faad25"
+        }
+    ]
+}

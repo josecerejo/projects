@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,6 +8,5 @@
     "userConfig": {
         "designer|userClassName": "JobInfLog"
     },
-    "id": "ExtBox1-ext-gen9381",
     "designerId": "d2a8c593-24bf-4401-9439-00358bd8b5fd"
 }

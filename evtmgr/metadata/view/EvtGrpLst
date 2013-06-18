@@ -1,0 +1,157 @@
+{
+    "type": "Ext.grid.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "border": false,
+        "height": null,
+        "itemId": "EvtGrpLst",
+        "margin": 0,
+        "width": 150,
+        "designer|userClassName": "EvtGrpLst",
+        "designer|userAlias": "evtgrplst",
+        "autoScroll": true,
+        "bodyBorder": false,
+        "title": null,
+        "columnLines": false,
+        "rowLines": false,
+        "store": "EvtGrp"
+    },
+    "designerId": "b209d9ac-c13c-4efd-87a0-ab88c3f1d6c7",
+    "cn": [
+        {
+            "type": "Ext.grid.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 0,
+                "cls": "EvtGrp",
+                "designer|displayName": "EvtGrpVew",
+                "stripeRows": false
+            },
+            "designerId": "faea8e94-0ec8-40e3-b700-5c013451e1aa"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 0,
+                "dataIndex": "Ttl",
+                "text": "Title",
+                "flex": 1
+            },
+            "designerId": "21d6f2ab-8cdc-48b9-b369-e4698e28694f"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|displayName": "TBr"
+            },
+            "designerId": "52d893e4-780d-4a8b-88e0-383cd28d4bec",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.TextItem",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Groups"
+                    },
+                    "designerId": "3fa31431-35ba-412b-a318-4999b5be6f73"
+                },
+                {
+                    "type": "Ext.toolbar.Separator",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|displayName": "Spr"
+                    },
+                    "designerId": "88966a5d-620c-4242-ab50-ea2ea22942e2"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "AddBtn",
+                        "designer|displayName": "Add",
+                        "iconCls": "add",
+                        "text": null,
+                        "tooltip": "Create a new event group"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "2d891839-c652-486d-adef-c6432da086cf"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "EdtBtn",
+                        "designer|displayName": "Edit",
+                        "iconCls": "edit",
+                        "text": null,
+                        "tooltip": "Edit the selected event group"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "c3d3baf9-01f1-43d7-b295-4289a06db9d0"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "itemId": "DltBtn",
+                        "designer|displayName": "Delete",
+                        "iconCls": "delete",
+                        "text": null,
+                        "tooltip": "Delete the selected event group"
+                    },
+                    "configAlternates": {
+                        "tooltip": "string"
+                    },
+                    "designerId": "59a17ff0-bd3e-4fa2-852a-0382a330a453"
+                }
+            ]
+        }
+    ]
+}

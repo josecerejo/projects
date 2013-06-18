@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PSzMst"
+    },
+    "designerId": "dc39f58d-1f78-4f6f-b281-960bb2f8cb8c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDTCHHIE"
+            },
+            "designerId": "f400972f-f46d-4a66-a40e-f46d8f28166f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDGRPHIE"
+            },
+            "designerId": "df459923-9276-4a9d-8201-ba62db6052fd"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDSUBHIE"
+            },
+            "designerId": "59251975-f8d3-4462-bfe0-590adec643ef"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDSIZHIE"
+            },
+            "designerId": "b172ccf1-b76d-4022-b181-41d9e3d7eb09"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DES"
+            },
+            "designerId": "a46d524d-ac97-459d-a50f-89c2b86afc35",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "convert",
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "implHandler": [
+                            "if (v) {\r",
+                            "    return Ext.String.trim(v);\r",
+                            "}\r",
+                            "else {\r",
+                            "    return v;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "2d7980f4-adf2-4b72-b570-1d6da23d327a"
+                }
+            ]
+        }
+    ]
+}

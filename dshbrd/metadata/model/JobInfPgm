@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,31 +8,28 @@
     "userConfig": {
         "designer|userClassName": "JobInfPgm"
     },
-    "id": "ExtBox1-ext-gen7477",
     "designerId": "ffe333ad-2e27-4c8c-b620-582519ac28ce",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field241",
                 "name": "PgmNme"
             },
             "designerId": "5a8dc226-b5bc-4e49-9f16-8bab0453551e"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field242",
                 "name": "PgmLib"
             },
             "designerId": "5c0785ef-25b7-436a-b5fb-af746f897fba"

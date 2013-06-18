@@ -1,0 +1,241 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "height": 220,
+        "hidden": false,
+        "maxWidth": null,
+        "minWidth": null,
+        "width": 500,
+        "designer|userClassName": "EvtGrpWdw",
+        "designer|userAlias": "evtgrpwdw",
+        "layout": "vbox",
+        "title": "Event Group",
+        "modal": true
+    },
+    "designerId": "fce4b2af-5656-41d9-8b9a-63ec56009834",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "border": 0,
+                "height": null,
+                "itemId": "EvtGrpFrm",
+                "maxWidth": 500,
+                "width": 500,
+                "designer|displayName": "EvtGrpFrm",
+                "defaults": [
+                    "{\r",
+                    "    labelWidth: 75,\r",
+                    "    labelSeparator: ' '\r",
+                    "}"
+                ],
+                "layout": "vbox",
+                "bodyPadding": 10,
+                "title": null,
+                "url": null
+            },
+            "designerId": "0351ff32-ec3d-4fe2-9f0b-7b0d6abd52b6",
+            "cn": [
+                {
+                    "type": "Ext.form.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "hidden": true,
+                        "itemId": "Acn",
+                        "text": null
+                    },
+                    "designerId": "72b56533-04db-4c96-b281-56fe4c819dee"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "Idn",
+                        "name": "Idn"
+                    },
+                    "designerId": "35dd70c0-204c-443c-b769-e60d4e37ac78"
+                },
+                {
+                    "type": "Ext.form.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "AccIdn",
+                        "name": "AccIdn"
+                    },
+                    "designerId": "2f6ea0ca-ef84-46bb-93fa-5b7b64ed6aa9"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "Title",
+                        "name": "Ttl",
+                        "allowBlank": false,
+                        "blankText": "The group title is required.",
+                        "enforceMaxLength": true,
+                        "maxLength": 50,
+                        "vtype": null
+                    },
+                    "designerId": "66198ae2-3024-4bdd-88e6-78d3ab8f3aa3"
+                },
+                {
+                    "type": "Ext.form.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "fieldLabel": "Description",
+                        "name": "Des"
+                    },
+                    "designerId": "9cabdb80-d141-4471-a99d-c237a07f2ab7"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "dock": "bottom",
+                        "designer|displayName": "TBr",
+                        "defaults": [
+                            "{\r",
+                            "    minWidth: 50\r",
+                            "}"
+                        ]
+                    },
+                    "configAlternates": {
+                        "style": "string"
+                    },
+                    "designerId": "04f2282f-8513-44ce-ab15-9e1e2a6120fa",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "itemId": "SveBtn",
+                                "minWidth": null,
+                                "text": "Save"
+                            },
+                            "designerId": "40472c12-d869-4d5e-9ce0-6780f1fc0dbf"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "itemId": "CnlBtn",
+                                "margin": "0 0 0 5",
+                                "minWidth": 50,
+                                "designer|displayName": null,
+                                "text": "Cancel"
+                            },
+                            "designerId": "345f8d2f-2523-4f26-8784-0bbf492505ad",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "CnlBtnClk",
+                                        "implHandler": [
+                                            "button.up('window').destroy();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "e63e06f5-b593-4222-9a42-9edac847f608"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|displayName": "RgtAln"
+                            },
+                            "designerId": "c8ec3253-d2fe-44a0-bc28-92ea0770dd3b"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "layout|margins": "0 8 0 0",
+                                "hidden": true,
+                                "html": "Please correct fields highlighted in <span style=\"color:red\">red</span>",
+                                "itemId": "ErrMsg",
+                                "padding": "",
+                                "style": "{font-size: 12px;}",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "dcb69974-4b1d-4d7b-91cd-be8b514dd7b8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

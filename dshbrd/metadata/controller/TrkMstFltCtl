@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkMstFltCtl",
         "stores": [
             "TrkMstFlt",
             "TrkMstLst"
-        ]
+        ],
+        "designer|userClassName": "TrkMstFltCtl"
     },
-    "id": "ExtBox1-ext-gen10275",
     "designerId": "824ad0a7-8714-4631-a649-eb240c7d833f",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltBfrRnr",
                 "fn": "FltBfrRnr",
                 "implHandler": [
                     "this.FltTrkIdn(null,null,null,null);\r",
@@ -44,12 +42,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltApy",
                 "fn": "FltApy",
                 "implHandler": [
                     "var Frm = button.up('form'),\r",
-                    "Sto = this.getTrkMstLstStore(),\r",
-                    "ExpDte = new Date();\r",
+                    "    Sto = this.getTrkMstLstStore(),\r",
+                    "    ExpDte = new Date();\r",
                     "\r",
                     "ExpDte.setDate(ExpDte.getDate() + 3650);\r",
                     "Ext.util.Cookies.set('TrkMstFlt',Ext.JSON.encode(Frm.getForm().getValues()), ExpDte);\r",
@@ -72,7 +69,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltRst",
                 "fn": "FltRst",
                 "implHandler": [
                     "var Frm = button.up('form').getForm();\r",
@@ -98,7 +94,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltCnl",
                 "fn": "FltCnl",
                 "implHandler": [
                     "button.up('window').close();"
@@ -118,7 +113,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstFlt",
                 "ref": "TrkMstFlt",
                 "selector": "trkmstflt"
             },
@@ -132,7 +126,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltTrkIdn",
                 "fn": "FltTrkIdn",
                 "implHandler": [
                     "try {\r",
@@ -170,7 +163,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltSchCBx",
                 "fn": "FltSchCBx",
                 "implHandler": [
                     "try {\r",
@@ -200,7 +192,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltCllTyp",
                 "fn": "FltCllTyp",
                 "implHandler": [
                     "try {\r",
@@ -235,7 +226,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FltCllAsgGrp",
                 "fn": "FltCllAsgGrp",
                 "implHandler": [
                     "try {\r",
@@ -270,7 +260,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstLst",
                 "ref": "TrkMstLst",
                 "selector": "trkmst"
             },

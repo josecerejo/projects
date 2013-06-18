@@ -1,52 +1,48 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CllTyp",
-        "idProperty": "CllTyp"
+        "idProperty": "CllTyp",
+        "designer|userClassName": "CllTyp"
     },
-    "id": "ExtBox1-ext-gen3463",
     "designerId": "2d0cb326-5f65-486a-91d9-258532ddbcf0",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField22",
                 "name": "CllTyp"
             },
             "designerId": "e6e857c7-e414-418a-bf4b-32ccc53f7d36"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField23",
                 "name": "Des"
             },
             "designerId": "b08d896d-708e-4491-8edd-0e9735674370"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField24",
                 "name": "RslOrd"
             },
             "designerId": "ad9ae494-c760-4a1d-953f-449d5d4a7230"

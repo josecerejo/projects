@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,70 +8,64 @@
     "userConfig": {
         "designer|userClassName": "JobInfFle"
     },
-    "id": "ExtBox1-ext-gen7933",
     "designerId": "6f522761-5eca-4f49-9fe8-f551603f91b6",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field213",
                 "name": "FLENME"
             },
             "designerId": "9c2f6041-db6c-45e7-82ef-36b345bae8db"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field214",
                 "name": "FLELIB"
             },
             "designerId": "451b4d5f-6fef-4aad-8c1f-e4b053763ea0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field215",
                 "name": "FLETYP"
             },
             "designerId": "d9f0d1bf-272e-46f0-a1fd-90b22aa8e662"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field216",
                 "name": "RELRCDNBR"
             },
             "designerId": "dc05a46e-911d-4867-9b39-afe18d9be47f"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field217",
                 "name": "REDCNT"
             },
             "designerId": "c75d33e3-f9e3-4f09-b2ec-becb6c346326"

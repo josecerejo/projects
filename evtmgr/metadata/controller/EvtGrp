@@ -1,0 +1,381 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "EvtGrp",
+            "Evt"
+        ],
+        "designer|userClassName": "EvtGrp",
+        "designer|userAlias": "evtgrp"
+    },
+    "designerId": "133135e3-978a-4a30-ac7d-1b8940bd57d0",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AfrRndFrm",
+                "implHandler": [
+                    "var Cmp = component;\r",
+                    "var map = new Ext.util.KeyMap({\r",
+                    "    target: Cmp.getEl(),\r",
+                    "    key: 13,\r",
+                    "    fn: function(Evt){\r",
+                    "        var Elm = Ext.Element.getActiveElement();\r",
+                    "        if(Elm.type != 'textarea'){\r",
+                    "            this.SveBtnClk(Cmp.down('button[itemId=SveBtn]'), Evt, null);\r",
+                    "        } \r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    "\r",
+                    "Cmp.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "Cmp.getForm().findField('Ttl').focus(false,500);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "evtgrpwdw form"
+            },
+            "designerId": "458fcaef-a819-4b64-9641-9f400444d3fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AddBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Add');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtgrplst toolbar button[itemId=AddBtn]"
+            },
+            "designerId": "e7f1455f-797f-4d29-8bfd-6c3ac78acbcf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SveBtnClk",
+                "implHandler": [
+                    "var Wdw = button.up('window'),\r",
+                    "    Pnl = Wdw.down('form'),\r",
+                    "    Frm = Pnl.getForm(),\r",
+                    "    Rcd = Frm.getRecord(),\r",
+                    "    VluLst = Frm.getValues();\r",
+                    "\r",
+                    "if (!Frm.isValid()) {\r",
+                    "    button.up('window').down('label[itemId=ErrMsg]').setVisible(true);\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "switch(Pnl.down('label[itemId=Acn]').text)\r",
+                    "{\r",
+                    "    case 'Add':\r",
+                    "    Rcd = Ext.create('EvtMgr.model.EvtGrp');\r",
+                    "    Rcd.set(VluLst);\r",
+                    "    this.getEvtGrpStore().add(Rcd);\r",
+                    "    Pnl.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "    Frm.reset();\r",
+                    "    Frm.findField('AccIdn').setValue(Ext.util.Cookies.get('AccIdn'));\r",
+                    "    Pnl.down('label[itemId=Acn]').setText('Add');        \r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Edt':\r",
+                    "    Frm.getRecord().set(VluLst);\r",
+                    "    Wdw.close();\r",
+                    "    break;\r",
+                    "\r",
+                    "    case 'Dlt':\r",
+                    "    this.getEvtGrpStore().remove(Frm.getRecord());\r",
+                    "    Lst = this.getEvtGrpLst();\r",
+                    "    Sto = this.getEvtGrpStore();\r",
+                    "    if (Sto.getTotalCount() > 0) {\r",
+                    "        Lst.getSelectionModel().select(0);\r",
+                    "        this.getController('Evt').LodSto(Sto.first().get('Idn'));\r",
+                    "    }\r",
+                    "    Wdw.close();\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtgrpwdw form button[itemId=SveBtn]"
+            },
+            "designerId": "7c7a13bb-5f3f-490b-af4d-27046185013c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DltBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Dlt');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtgrplst toolbar button[itemId=DltBtn]"
+            },
+            "designerId": "557439a8-4ba7-4aa6-9734-464cb4b68ed2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "EdtBtnClk",
+                "implHandler": [
+                    "this.LodFrm('Edt');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtgrplst toolbar button[itemId=EdtBtn]"
+            },
+            "designerId": "bf19ebf7-625a-48a3-9ed3-f615460a1c71"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "CnlBtnClk",
+                "implHandler": [
+                    "button.up('window').destroy();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "evtgrplst toolbar button[itemId=CnlBtn]"
+            },
+            "designerId": "cd0a2cee-a9b8-4cc0-b10a-946877300bc6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SlcChg",
+                "implHandler": [
+                    "this.getController('Evt').LodSto(selected[0].get('Idn'));"
+                ],
+                "name": "selectionchange",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "evtgrplst"
+            },
+            "designerId": "b4d671f2-219f-4036-a117-4b510fd90649"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getEvtGrpStore().on({\r",
+                    "    scope: this,\r",
+                    "    load : this.StoRdy\r",
+                    "});"
+                ]
+            },
+            "designerId": "fac20c53-46dd-4333-9847-78fe3a094002"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodSto",
+                "designer|params": [
+                    "AccIdn"
+                ],
+                "implHandler": [
+                    "this.getEvtGrpStore().load({\r",
+                    "    params: { \r",
+                    "        AccIdn: AccIdn\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "e22eb04a-5d60-47e7-af71-23d718a68323"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "StoRdy",
+                "designer|params": [
+                    "Sto"
+                ],
+                "implHandler": [
+                    "var Rcd = Sto.first();\r",
+                    "var Ctl = this;\r",
+                    "\r",
+                    "if(Rcd) {\r",
+                    "    this.getController('Evt').LodSto(Rcd.get('Idn'));\r",
+                    "}\r",
+                    "\r",
+                    "if (Sto.getTotalCount() > 0) {\r",
+                    "    this.getEvtGrpLst().getSelectionModel().select(0);\r",
+                    "}\r",
+                    "\r",
+                    "var DrpTrg = Ext.create('Ext.dd.DropZone', this.getEvtGrpLst().getView().el, {\r",
+                    "    ddGroup: 'EvtLst',\r",
+                    "\r",
+                    "    getTargetFromEvent: function(Evt) {\r",
+                    "        Dta = {\"Sel\":Ctl.getEvtGrpLst().getSelectionModel().getSelection()[0], \"Trg\":Evt.getTarget('.x-grid-row')};\r",
+                    "        return Dta;\r",
+                    "    },\r",
+                    "\r",
+                    "    onNodeEnter : function(TrgDta, DaD, Evt, DrgDta){\r",
+                    "    },\r",
+                    "\r",
+                    "    onNodeDrop : function(TrgDta, DaD, Evt, DrgDta){\r",
+                    "        var Trg = TrgDta.Trg;\r",
+                    "        var Sel = TrgDta.Sel;\r",
+                    "        var EvtGrpIdnNew = Ctl.getEvtGrpLst().getView().getRecord(Trg).getData().Idn;\r",
+                    "        var EvtGrpIdnOld = Ctl.getEvtGrpLst().getView().getRecord(Sel).getData().Idn;\r",
+                    "\r",
+                    "        Ext.each(DrgDta.records, function (Evt) {\r",
+                    "            Evt.set('EvtGrpIdn',EvtGrpIdnNew);\r",
+                    "        });\r",
+                    "\r",
+                    "        Ctl.getEvtStore().sync();\r",
+                    "\r",
+                    "        Ext.Function.defer(function(){\r",
+                    "            Ctl.getController('Evt').LodSto(EvtGrpIdnOld);\r",
+                    "            Ctl.getEvtGrpLst().getView().select(Ctl.getEvtGrpLst().getView().getRecord(Sel));\r",
+                    "        }, 1000);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "b15de691-a900-4625-9862-6d273f44b60e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodFrm",
+                "designer|params": [
+                    "Acn"
+                ],
+                "implHandler": [
+                    "var EvtGrpWdw = Ext.create('EvtMgr.view.EvtGrpWdw', {\r",
+                    "    renderTo: Ext.getBody()\r",
+                    "});\r",
+                    "var Pnl = EvtGrpWdw.down('form'),\r",
+                    "    Frm = Pnl.getForm();\r",
+                    "\r",
+                    "Frm.findField('AccIdn').setValue(Ext.util.Cookies.get('AccIdn'));\r",
+                    "Pnl.down('label[itemId=Acn]').setText(Acn);\r",
+                    "\r",
+                    "if (Acn != 'Add') {\r",
+                    "    var Rcd = this.getEvtGrpLst().getSelectionModel().getSelection()[0];\r",
+                    "    Frm.loadRecord(Rcd);\r",
+                    "}\r",
+                    "\r",
+                    "if (Acn == 'Dlt') {\r",
+                    "    Pnl.query('.field').forEach(function(Fld){\r",
+                    "        Fld.setReadOnly(true);\r",
+                    "    });\r",
+                    "    Pnl.down('toolbar button[itemId=SveBtn]').setText('Delete');\r",
+                    "}\r",
+                    "\r",
+                    "EvtGrpWdw.show();"
+                ]
+            },
+            "designerId": "f7f42568-672e-48a6-8413-634ad209b4c6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BsePnl",
+                "selector": "bsepnl"
+            },
+            "designerId": "524aa30c-3923-49e9-82f6-28b81c7f01cc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EvtGrpLst",
+                "selector": "evtgrplst"
+            },
+            "designerId": "ed1fa718-8cac-402b-8b9d-2b3422a0393d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EvtLst",
+                "selector": "evtlst"
+            },
+            "designerId": "ce94270f-135b-4b66-b7bd-54469d25437a"
+        }
+    ]
+}

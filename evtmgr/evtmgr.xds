@@ -3,17 +3,18 @@
     "settings": {
         "urlPrefix": "http://localhost/ampsent/evtmgr",
         "spacesToIndent": 4,
-        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/ampsent/evtmgr",
+        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/evtmgr",
         "sdkPath": "",
         "lineEnding": "CRLF",
         "genTimestamps": false,
-        "cacheBust": false
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.1.0",
-    "xdsBuild": 676,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000498,
-    "framework": "ext41",
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
     "topInstanceFileMap": {
         "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82": {
             "paths": [
@@ -24,87 +25,157 @@
         "7b6f98d7-c9eb-4cec-a2f4-49e736d4e67f": {
             "paths": [
                 "metadata/view/BsePnl",
-                "apl/view/override/BsePnl.js",
-                "apl/view/BsePnl.js"
+                "app/view/override/BsePnl.js",
+                "app/view/BsePnl.js"
             ],
             "className": "BsePnl"
         },
         "ea0cc56c-2c59-4e09-be94-67e8c5fd4225": {
             "paths": [
                 "metadata/controller/BseCtl",
-                "apl/controller/override/BseCtl.js",
-                "apl/controller/BseCtl.js"
+                "app/controller/override/BseCtl.js",
+                "app/controller/BseCtl.js"
             ],
             "className": "BseCtl"
         },
         "4853fff4-1c25-4768-aa94-77562042d72c": {
             "paths": [
                 "metadata/model/EvtGrp",
-                "apl/model/override/EvtGrp.js",
-                "apl/model/EvtGrp.js"
+                "app/model/override/EvtGrp.js",
+                "app/model/EvtGrp.js"
             ],
             "className": "EvtGrp"
         },
         "dea7f12e-d8e2-4da9-a7ac-15489c6820c6": {
             "paths": [
                 "metadata/view/UsrSnI",
-                "apl/view/override/UsrSnI.js",
-                "apl/view/UsrSnI.js"
+                "app/view/override/UsrSnI.js",
+                "app/view/UsrSnI.js"
             ],
             "className": "UsrSnI"
         },
         "9a07307f-adc2-47bc-a52f-f0567ff62669": {
             "paths": [
                 "metadata/controller/UsrSnI",
-                "apl/controller/override/UsrSnI.js",
-                "apl/controller/UsrSnI.js"
+                "app/controller/override/UsrSnI.js",
+                "app/controller/UsrSnI.js"
             ],
             "className": "UsrSnI"
         },
         "57047684-5cef-4016-b5f0-a00904e51bfe": {
             "paths": [
                 "metadata/store/EvtGrp",
-                "apl/store/override/EvtGrp.js",
-                "apl/store/EvtGrp.js"
+                "app/store/override/EvtGrp.js",
+                "app/store/EvtGrp.js"
             ],
             "className": "EvtGrp"
         },
         "18fd8123-bf65-419a-806f-c44c71e1e977": {
             "paths": [
                 "metadata/store/Evt",
-                "apl/store/override/Evt.js",
-                "apl/store/Evt.js"
+                "app/store/override/Evt.js",
+                "app/store/Evt.js"
             ],
             "className": "Evt"
         },
         "f6e205ea-7453-4d5a-9a5d-47bc653bfbc9": {
             "paths": [
                 "metadata/model/Evt",
-                "apl/model/override/Evt.js",
-                "apl/model/Evt.js"
+                "app/model/override/Evt.js",
+                "app/model/Evt.js"
             ],
             "className": "Evt"
+        },
+        "36ed1815-1b01-4c9d-b033-7af32c366b1e": {
+            "paths": [
+                "metadata/controller/Evt",
+                "app/controller/override/Evt.js",
+                "app/controller/Evt.js"
+            ],
+            "className": "Evt"
+        },
+        "fce4b2af-5656-41d9-8b9a-63ec56009834": {
+            "paths": [
+                "metadata/view/EvtGrpWdw",
+                "app/view/override/EvtGrpWdw.js",
+                "app/view/EvtGrpWdw.js"
+            ],
+            "className": "EvtGrpWdw"
+        },
+        "133135e3-978a-4a30-ac7d-1b8940bd57d0": {
+            "paths": [
+                "metadata/controller/EvtGrp",
+                "app/controller/override/EvtGrp.js",
+                "app/controller/EvtGrp.js"
+            ],
+            "className": "EvtGrp"
+        },
+        "ba20169e-22f1-43af-bca3-ce958d8f27f3": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "b209d9ac-c13c-4efd-87a0-ab88c3f1d6c7": {
+            "paths": [
+                "metadata/view/EvtGrpLst",
+                "app/view/override/EvtGrpLst.js",
+                "app/view/EvtGrpLst.js"
+            ],
+            "className": "EvtGrpLst"
+        },
+        "5c689a71-3783-47d0-8cae-b80f5ff36049": {
+            "paths": [
+                "metadata/view/EvtLst",
+                "app/view/override/EvtLst.js",
+                "app/view/EvtLst.js"
+            ],
+            "className": "EvtLst"
+        },
+        "889e5f87-c6f8-42af-a883-4f0f02a1365d": {
+            "paths": [
+                "metadata/store/IvtTyp",
+                "app/store/override/IvtTyp.js",
+                "app/store/IvtTyp.js"
+            ],
+            "className": "IvtTyp"
+        },
+        "b6f16df9-2ee0-4c10-ae75-bb8d2c71781b": {
+            "paths": [
+                "metadata/model/LstVlu",
+                "app/model/override/LstVlu.js",
+                "app/model/LstVlu.js"
+            ],
+            "className": "LstVlu"
         }
     },
     "viewOrderMap": {
         "view": [
             "7b6f98d7-c9eb-4cec-a2f4-49e736d4e67f",
-            "dea7f12e-d8e2-4da9-a7ac-15489c6820c6"
+            "dea7f12e-d8e2-4da9-a7ac-15489c6820c6",
+            "fce4b2af-5656-41d9-8b9a-63ec56009834",
+            "b209d9ac-c13c-4efd-87a0-ab88c3f1d6c7",
+            "5c689a71-3783-47d0-8cae-b80f5ff36049"
         ],
         "store": [
             "57047684-5cef-4016-b5f0-a00904e51bfe",
-            "18fd8123-bf65-419a-806f-c44c71e1e977"
+            "18fd8123-bf65-419a-806f-c44c71e1e977",
+            "889e5f87-c6f8-42af-a883-4f0f02a1365d"
         ],
         "controller": [
             "ea0cc56c-2c59-4e09-be94-67e8c5fd4225",
-            "9a07307f-adc2-47bc-a52f-f0567ff62669"
+            "9a07307f-adc2-47bc-a52f-f0567ff62669",
+            "133135e3-978a-4a30-ac7d-1b8940bd57d0",
+            "36ed1815-1b01-4c9d-b033-7af32c366b1e"
         ],
         "model": [
             "4853fff4-1c25-4768-aa94-77562042d72c",
-            "f6e205ea-7453-4d5a-9a5d-47bc653bfbc9"
+            "f6e205ea-7453-4d5a-9a5d-47bc653bfbc9",
+            "b6f16df9-2ee0-4c10-ae75-bb8d2c71781b"
         ],
         "resource": [
-            "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82"
+            "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82",
+            "ba20169e-22f1-43af-bca3-ce958d8f27f3"
         ],
         "app": [
             "application"

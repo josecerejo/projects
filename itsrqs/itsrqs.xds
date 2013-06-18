@@ -1,0 +1,48 @@
+{
+    "name": "ITSRqs",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://localhost/itsrqs",
+        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/itsrqs",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000501,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "21b87bf8-64f7-43eb-975b-89a53dff7ac6": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "0e232f2a-7fad-4517-a57e-8d6464ea4afd": {
+            "paths": [
+                "metadata/view/VewPrt",
+                "app/view/override/VewPrt.js",
+                "app/view/VewPrt.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "VewPrt"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "0e232f2a-7fad-4517-a57e-8d6464ea4afd"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "21b87bf8-64f7-43eb-975b-89a53dff7ac6"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

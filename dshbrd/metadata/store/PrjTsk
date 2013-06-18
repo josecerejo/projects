@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PrjTsk",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "PrjTsk",
         "storeId": "PrjTsk",
-        "model": "PrjTsk"
+        "designer|userClassName": "PrjTsk"
     },
-    "id": "ExtBox1-ext-gen13070",
     "designerId": "e53f7d4b-9840-4c26-8795-454fcd68de7e",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/PrjTsk.php"
             },
             "designerId": "d33e6c3c-3fda-4856-a42e-b3fc8fba227c",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "idProperty": "task_id",
                         "root": "Dta",
                         "successProperty": "Scs",

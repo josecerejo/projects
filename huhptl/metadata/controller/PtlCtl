@@ -1,0 +1,82 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PtlCtl"
+    },
+    "designerId": "20958e09-0243-4be4-9846-f895885207d1",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DaBBtnClk",
+                "implHandler": [
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(0);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[text=Dashboard]"
+            },
+            "designerId": "1791c3e7-809a-43f6-b020-8e04eb72c66e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AfrRnr",
+                "implHandler": [
+                    "var TabNme;\r",
+                    "var URL = decodeURIComponent(document.URL).split('?');\r",
+                    "\r",
+                    "if (URL.length > 1) {\r",
+                    "    var PrmLst = Ext.Object.fromQueryString(URL[1]);\r",
+                    "\r",
+                    "    Ext.Object.each(Ext.Object.fromQueryString(URL[1]), function(Key, Vlu) {\r",
+                    "        if (Ext.util.Format.lowercase(Key) == 'strpge') {\r",
+                    "            TabNme = Ext.util.Format.lowercase(Vlu);\r",
+                    "        }\r",
+                    "\r",
+                    "    });\r",
+                    "}\r",
+                    "\r",
+                    "if (TabNme) {\r",
+                    "    HuhPtl.getApplication().getController('SlsPrdCtl').ShwPnl(null,TabNme);\r",
+                    "}"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "#CrdDck"
+            },
+            "designerId": "9f84f2ea-1cc9-4195-9d5a-01e935bda239"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "HuhPtl",
+                "selector": "#HuhPtl",
+                "xtype": "huhptl"
+            },
+            "designerId": "0f52a655-986b-4143-bdc9-2d9455d63f35"
+        }
+    ]
+}

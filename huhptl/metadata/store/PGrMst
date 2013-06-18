@@ -1,0 +1,60 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "PGrMst",
+        "storeId": "PGrMst",
+        "designer|userClassName": "PGrMst"
+    },
+    "designerId": "a04fa5b8-d998-4f91-a149-905dbdf721fa",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/PGrMst.php"
+            },
+            "designerId": "b0be4eb9-7859-4bb0-ac5a-2c9550df9c74",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "bdf56851-b818-453d-9ba2-bc738615d676"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "PRDGRPHIE",
+                "designer|displayName": "PrdGrpHie"
+            },
+            "designerId": "31518248-70e1-4133-816e-8bcd0c20211a"
+        }
+    ]
+}

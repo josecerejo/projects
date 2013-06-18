@@ -1,28 +1,27 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "AplPrf",
-        "designer|userAlias": "aplprf",
         "height": 417,
         "id": "AplPrfWdw",
         "minHeight": 355,
         "width": 303,
+        "designer|userClassName": "AplPrf",
+        "designer|userAlias": "aplprf",
         "autoScroll": true,
         "layout": "fit",
         "manageHeight": null,
         "title": "Prefrences",
         "modal": true
     },
-    "id": "ExtBox1-ext-gen3936",
     "designerId": "59bfeec8-e414-434e-a76d-ff96e2ade2b8",
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -31,9 +30,8 @@
             "userConfig": {
                 "container|align": "stretch",
                 "container|padding": 10,
-                "designer|userClassName": "MyForm5",
-                "designer|displayName": "PrfFrm",
                 "border": 0,
+                "designer|displayName": "PrfFrm",
                 "layout": "vbox",
                 "bodyPadding": null,
                 "title": null
@@ -41,7 +39,7 @@
             "designerId": "62d0b38e-61cf-4df0-9303-e3b746910344",
             "cn": [
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -51,7 +49,6 @@
                         "layout|flex": null,
                         "layout|margins": null,
                         "container|align": "stretch",
-                        "designer|userClassName": "MyFieldSet4",
                         "layout": "vbox",
                         "collapsible": true,
                         "title": "Dashboard"
@@ -59,7 +56,7 @@
                     "designerId": "560b44e1-440e-41d5-8a30-d77e25896050",
                     "cn": [
                         {
-                            "type": "fieldcontainer",
+                            "type": "Ext.form.FieldContainer",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -68,9 +65,8 @@
                             "userConfig": {
                                 "layout|flex": 1,
                                 "container|align": "stretch",
-                                "designer|userClassName": "MyFieldContainer5",
-                                "designer|displayName": "Tabs",
                                 "height": null,
+                                "designer|displayName": "Tabs",
                                 "layout": "vbox",
                                 "fieldLabel": "Tabs",
                                 "labelSeparator": " ",
@@ -79,65 +75,61 @@
                             "designerId": "c9af98f5-e0de-4cd0-96fd-8245d147af2c",
                             "cn": [
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyCheckbox9",
                                         "designer|displayName": "Jobs",
-                                        "name": "JobTab",
                                         "fieldLabel": null,
+                                        "name": "JobTab",
                                         "boxLabel": "Jobs"
                                     },
                                     "designerId": "7065ad0a-660f-44ab-92f8-f83eee4ab4e1"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyCheckbox5",
                                         "designer|displayName": "Documentation",
-                                        "name": "DocTab",
                                         "fieldLabel": null,
+                                        "name": "DocTab",
                                         "boxLabel": "Documentation"
                                     },
                                     "designerId": "4f115ea2-2c1f-4101-9325-673fac9ad112"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyCheckbox7",
                                         "designer|displayName": "Links",
-                                        "name": "LnkTab",
                                         "fieldLabel": null,
+                                        "name": "LnkTab",
                                         "boxLabel": "Links"
                                     },
                                     "designerId": "1e293ec9-8815-48a5-8247-73a844d854ff"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyCheckbox6",
                                         "designer|displayName": "Cognos",
-                                        "name": "CogTab",
                                         "fieldLabel": null,
+                                        "name": "CogTab",
                                         "boxLabel": "Cognos"
                                     },
                                     "designerId": "90397901-5962-49b2-92fd-66ba15867049"
@@ -147,7 +139,7 @@
                     ]
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -157,16 +149,14 @@
                         "layout|flex": null,
                         "layout|margins": null,
                         "container|align": "stretch",
-                        "designer|userClassName": "MyFieldSet3",
                         "layout": "vbox",
-                        "checkboxToggle": false,
                         "collapsible": true,
                         "title": "Tracking Panel"
                     },
                     "designerId": "00db2e90-b842-4751-878c-2a1f501957b9",
                     "cn": [
                         {
-                            "type": "fieldcontainer",
+                            "type": "Ext.form.FieldContainer",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -175,11 +165,9 @@
                             "userConfig": {
                                 "layout|flex": null,
                                 "container|align": "stretchmax",
-                                "designer|userClassName": "MyFieldContainer6",
-                                "designer|displayName": "Tabs",
-                                "height": null,
                                 "saveDelay": 50,
-                                "autoScroll": false,
+                                "height": null,
+                                "designer|displayName": "Tabs",
                                 "layout": "vbox",
                                 "fieldLabel": "Tabs",
                                 "labelSeparator": " ",
@@ -188,7 +176,7 @@
                             "designerId": "07e87dd5-c272-4d0a-9478-4e2fcbc93307",
                             "cn": [
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -196,16 +184,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": null,
-                                        "designer|userClassName": "MyCheckbox8",
                                         "designer|displayName": "Objects",
-                                        "name": "ObjTab",
                                         "fieldLabel": null,
+                                        "name": "ObjTab",
                                         "boxLabel": "Objects"
                                     },
                                     "designerId": "22d72b2b-18a8-41f4-9a46-e8fd2a9d7b7b"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -213,16 +200,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": null,
-                                        "designer|userClassName": "MyCheckbox10",
                                         "designer|displayName": "Moves",
-                                        "name": "MveTab",
                                         "fieldLabel": null,
+                                        "name": "MveTab",
                                         "boxLabel": "Moves"
                                     },
                                     "designerId": "fed0b23f-936d-440d-b83c-119d86f671f3"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -230,16 +216,15 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": null,
-                                        "designer|userClassName": "MyCheckbox11",
                                         "designer|displayName": "Project",
-                                        "name": "PrjTab",
                                         "fieldLabel": null,
+                                        "name": "PrjTab",
                                         "boxLabel": "Project"
                                     },
                                     "designerId": "ef31a038-0022-4eff-a91f-c7c34733ad2f"
                                 },
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -247,11 +232,10 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": null,
-                                        "designer|userClassName": "MyCheckbox12",
                                         "designer|displayName": "Task",
-                                        "name": "TskTab",
                                         "fieldLabel": null,
                                         "labelWidth": null,
+                                        "name": "TskTab",
                                         "boxLabel": "Tasks"
                                     },
                                     "designerId": "b5554fa7-3177-48e8-970c-c445cdb144d0"
@@ -259,7 +243,7 @@
                             ]
                         },
                         {
-                            "type": "fieldcontainer",
+                            "type": "Ext.form.FieldContainer",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -268,27 +252,25 @@
                             "userConfig": {
                                 "layout|flex": null,
                                 "container|align": "stretch",
-                                "designer|userClassName": "MyFieldContainer7",
-                                "designer|displayName": "Settings",
                                 "height": null,
                                 "width": 400,
+                                "designer|displayName": "Settings",
                                 "layout": "vbox",
                                 "fieldLabel": null
                             },
                             "designerId": "8afafb9e-8ee9-45e2-b205-bdaeba617a6b",
                             "cn": [
                                 {
-                                    "type": "checkboxfield",
+                                    "type": "Ext.form.field.Checkbox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyCheckbox13",
                                         "designer|displayName": "Autosave",
-                                        "name": "AtoSve",
                                         "fieldLabel": null,
+                                        "name": "AtoSve",
                                         "boxLabel": "Autosave on selection change"
                                     },
                                     "designerId": "20b273e2-e685-4ec6-b148-ea22d589f5a3"
@@ -298,7 +280,7 @@
                     ]
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -306,7 +288,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": 1,
-                        "designer|userClassName": "MyFieldSet4",
                         "collapsed": true,
                         "collapsible": true,
                         "title": "Documentation Panel"
@@ -316,7 +297,7 @@
             ]
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
@@ -324,13 +305,12 @@
             "codeClass": null,
             "userConfig": {
                 "dock": "bottom",
-                "designer|userClassName": "MyToolbar3",
                 "designer|displayName": "Toolbar"
             },
             "designerId": "a750f989-8d2a-4e30-b255-6f3bb0b24341",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -338,13 +318,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton9",
                         "text": "Save"
                     },
                     "designerId": "7fc8414b-33f6-4bd4-af02-5d01f41b1590"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -352,7 +331,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton9",
                         "text": "Cancel"
                     },
                     "designerId": "73b7a0f0-c0af-4a69-bd8d-b4b7f13314ad"

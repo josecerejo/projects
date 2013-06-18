@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PrjDtl",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "PrjDtl",
         "storeId": "PrjDtl",
-        "model": "PrjDtl"
+        "designer|userClassName": "PrjDtl"
     },
-    "id": "ExtBox1-ext-gen32822",
     "designerId": "f9903136-e118-4aec-b56e-7d8869c24cd6",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/PrjDtl.php"
             },
             "designerId": "83320a56-6718-48a1-bdbb-dba5f2ceeac4",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "idProperty": "project_id",
                         "root": "Dta",
                         "successProperty": "Scs",

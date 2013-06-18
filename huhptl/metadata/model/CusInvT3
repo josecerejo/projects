@@ -1,0 +1,274 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CusInvT3"
+    },
+    "designerId": "ea44ffb5-360c-455f-928f-c3392b328081",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "YRS"
+            },
+            "designerId": "1f290f92-dce9-4f01-b546-e27044b50ea4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTH",
+                "type": "int"
+            },
+            "designerId": "d9c3200d-6191-4d0d-b425-0e0d97730140"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTHNME"
+            },
+            "designerId": "24b0b9bc-92eb-45c9-bbb4-af0385843470"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "BUSCDE"
+            },
+            "designerId": "a528b792-b858-488d-bc54-b3a9d6a3f5b2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "TYPDES"
+            },
+            "designerId": "dcf08f02-22e0-41b5-b747-5e0092c925b1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDATR"
+            },
+            "designerId": "5df25b87-3402-44f8-8f70-5616d5127aee",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "convert",
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "implHandler": [
+                            "if (v) {\r",
+                            "    if (Ext.String.trim(v) === '') {\r",
+                            "        v = '*blank';\r",
+                            "    }\r",
+                            "    return Ext.String.trim(v);\r",
+                            "}\r",
+                            "else {\r",
+                            "    return v;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "5b238f58-c3e0-44df-974d-9df2d3aae411"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PRDATRDES"
+            },
+            "designerId": "14467424-97cc-4519-9b9a-76773d366c6c",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "convert",
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "implHandler": [
+                            "if (v) {\r",
+                            "    if (Ext.String.trim(v) === '') {\r",
+                            "        v = '*blank';\r",
+                            "    }\r",
+                            "    return Ext.String.trim(v);\r",
+                            "}\r",
+                            "else {\r",
+                            "    return v;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "9b6a0497-37f3-494d-8880-da0d105c44db"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDACT",
+                "type": "float"
+            },
+            "designerId": "86c1a4d2-59a6-4d49-b5b1-c87d857a2f87"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDBUDPRO",
+                "type": "float"
+            },
+            "designerId": "dec25477-40fb-4135-918f-563fc02f1287"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDVAR",
+                "type": "float"
+            },
+            "designerId": "2e8234bb-6468-4d3b-9897-fd3cd6c0cece",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "convert",
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "implHandler": [
+                            "if (rec.get('MTDBUDPRO') > 0) {\r",
+                            "    return (Math.floor((rec.get('MTDACT') / rec.get('MTDBUDPRO')) * 10000)) / 100;\r",
+                            "}\r",
+                            "else {\r",
+                            "    return 9999999;\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "ec55bcb4-2137-420d-a307-ce5a98687d6a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDOOR",
+                "type": "float"
+            },
+            "designerId": "0d31fdb7-d97d-4b0c-88ca-aa0706ab4ef7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDTOT",
+                "type": "float"
+            },
+            "designerId": "f2761476-be30-45b1-a10b-15a1d27c3c55"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDBUD",
+                "type": "float"
+            },
+            "designerId": "e65fd66a-6402-465e-b093-07ce81dd3c99"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "MTDACTPRI",
+                "type": "float"
+            },
+            "designerId": "bbdd1e69-99b9-4b44-86c3-2c0a25a07ec7"
+        }
+    ]
+}

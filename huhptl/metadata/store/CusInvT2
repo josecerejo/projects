@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "CusInv",
+        "storeId": "CusInvT2",
+        "designer|userClassName": "CusInvT2"
+    },
+    "designerId": "742db34f-5f33-4cf3-9ce2-f4f20248ee13",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/CusInvT2.php"
+            },
+            "designerId": "c1c86873-bbf7-42e4-af56-43bfa9fcd7e4",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "3cdd653f-d4f5-4b43-a16b-81c93cfa7ad2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "YRS",
+                "root": null,
+                "designer|displayName": "Yrs"
+            },
+            "designerId": "4cb0ecff-5292-41be-bddd-8b8caff3c7f4"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "MTH",
+                "designer|displayName": "Mth"
+            },
+            "designerId": "103eea2a-f3d6-4863-8029-e995459262bc"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "PRDATR",
+                "designer|displayName": "PrdAtr"
+            },
+            "designerId": "443ebdc1-01d0-4996-8208-8c6a6be2e119"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "TYP",
+                "designer|displayName": "Typ"
+            },
+            "designerId": "55c6d2ec-28ff-4f7f-bf35-a0c04924debb"
+        }
+    ]
+}

@@ -1,25 +1,24 @@
 {
-    "type": "panel",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CogPnl",
-        "designer|userAlias": "cogpnl",
         "border": 0,
         "id": null,
         "itemId": null,
+        "designer|userClassName": "CogPnl",
+        "designer|userAlias": "cogpnl",
         "layout": "border",
         "closeAction": null,
         "title": "Cognos"
     },
-    "id": "ExtBox1-ext-gen23087",
     "designerId": "4f2954eb-06e3-440d-9e9e-c0ad3f36461f",
     "cn": [
         {
-            "type": "treepanel",
+            "type": "Ext.tree.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -29,9 +28,8 @@
                 "layout|flex": 1,
                 "layout|region": "west",
                 "layout|split": true,
-                "designer|userClassName": "MyTreePanel1",
-                "designer|displayName": "FlrLst",
                 "width": 150,
+                "designer|displayName": "FlrLst",
                 "title": null,
                 "store": "CogDir",
                 "rootVisible": false,
@@ -40,17 +38,16 @@
             "designerId": "7d207627-252d-448d-a59c-fd462be954ff",
             "cn": [
                 {
-                    "type": "treeview",
+                    "type": "Ext.tree.View",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTreeView1",
-                        "designer|displayName": "Folders",
                         "border": false,
-                        "itemId": "CogDir"
+                        "itemId": "CogDir",
+                        "designer|displayName": "Folders"
                     },
                     "configAlternates": {
                         "border": "boolean"
@@ -58,74 +55,70 @@
                     "designerId": "b2ab39f4-3ccb-43f9-9fc9-b63eb1acc909"
                 },
                 {
-                    "type": "treecolumn",
+                    "type": "Ext.tree.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTreeColumn",
-                        "designer|displayName": "FleNme",
                         "width": 47,
+                        "designer|displayName": "FleNme",
                         "dataIndex": "FleNme",
-                        "flex": 1,
-                        "text": "File"
+                        "text": "File",
+                        "flex": 1
                     },
                     "designerId": "ffb926ac-7b77-48a8-b6f4-b871a03978d6"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn43",
                         "designer|displayName": "FleTyp",
                         "dataIndex": "FleTyp",
-                        "flex": 1,
-                        "text": "Type"
+                        "text": "Type",
+                        "flex": 1
                     },
                     "designerId": "326783a6-e2b1-4ee9-8269-e35ae47c162e"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn44",
                         "designer|displayName": "FleSze",
                         "dataIndex": "FleSze",
-                        "flex": 1,
-                        "text": "Size"
+                        "text": "Size",
+                        "flex": 1
                     },
                     "designerId": "ee3d019f-00a5-48ed-82c7-565342b13136"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn45",
                         "designer|displayName": "LasMod",
                         "dataIndex": "LasMod",
-                        "flex": 1,
-                        "text": "Date Modified"
+                        "text": "Date Modified",
+                        "flex": 1
                     },
                     "designerId": "b9952056-d564-410b-9190-00555a25e119"
                 }
             ]
         },
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -136,7 +129,6 @@
                 "layout|region": "center",
                 "layout|split": true,
                 "container|align": "stretch",
-                "designer|userClassName": "MyForm5",
                 "designer|displayName": "TxtFleVew",
                 "layout": "vbox",
                 "bodyPadding": 5,
@@ -145,7 +137,7 @@
             "designerId": "4d9c08ea-11aa-4a87-8421-e6c288cad567",
             "cn": [
                 {
-                    "type": "displayfield",
+                    "type": "Ext.form.field.Display",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -153,18 +145,17 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyDisplayField13",
                         "designer|displayName": "FleNme",
-                        "fieldStyle": "font-weight: bold",
-                        "name": "FleNme",
                         "fieldLabel": null,
                         "labelSeparator": null,
-                        "labelWidth": null
+                        "labelWidth": null,
+                        "name": "FleNme",
+                        "fieldStyle": "font-weight: bold"
                     },
                     "designerId": "224e95e4-8a71-41e9-8c2b-9964550d0b1f"
                 },
                 {
-                    "type": "textareafield",
+                    "type": "Ext.form.field.TextArea",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -172,12 +163,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": 1,
-                        "designer|userClassName": "MyTextArea3",
                         "designer|displayName": "FleTxt",
-                        "fieldStyle": "font-family:Courier",
+                        "fieldLabel": null,
                         "name": "FleTxt",
-                        "readOnly": true,
-                        "fieldLabel": null
+                        "fieldStyle": "font-family:Courier",
+                        "readOnly": true
                     },
                     "designerId": "68392e36-213a-40cf-8bcc-68e0ccaaf6e2"
                 }

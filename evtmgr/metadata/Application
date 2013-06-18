@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,24 +8,30 @@
     "userConfig": {
         "models": [
             "Evt",
-            "EvtGrp"
+            "EvtGrp",
+            "LstVlu"
         ],
         "stores": [
             "Evt",
-            "EvtGrp"
+            "EvtGrp",
+            "IvtTyp"
         ],
         "views": [
             "UsrSnI",
-            "BsePnl"
+            "BsePnl",
+            "EvtGrp",
+            "EvtGrpLst",
+            "EvtLst"
         ],
-        "appFolder": "apl",
-        "name": "EvtMgr",
+        "appFolder": null,
         "controllers": [
             "BseCtl",
-            "UsrSnI"
-        ]
+            "UsrSnI",
+            "Evt",
+            "EvtGrp"
+        ],
+        "name": "EvtMgr"
     },
-    "id": "ExtBox1-ext-gen1587",
     "designerId": "application",
     "cn": [
         {
@@ -36,9 +42,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
+                    "Ext.syncRequire([\"Ext.ux.RowExpander\"]);\r",
+                    "\r",
                     "Ext.getDoc().dom.title = 'amps | Events - Event Manager'; \r",
                     "var BsePnl = Ext.create('EvtMgr.view.BsePnl', {\r",
                     "    renderTo: Ext.getBody()\r",
@@ -51,6 +58,7 @@
                     "    success: function(RspJSN){\r",
                     "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
                     "        if (Rsp.Scs === true) {\r",
+                    "            this.getController('EvtGrp').LodSto(Rsp.AccIdn);\r",
                     "        }\r",
                     "        else {\r",
                     "            var UsrSnI = Ext.create('EvtMgr.view.UsrSnI', {\r",
@@ -63,7 +71,9 @@
                     "    failure: function(){\r",
                     "        console.log('Load Error-php');\r",
                     "    }\r",
-                    "});"
+                    "});\r",
+                    "\r",
+                    ""
                 ]
             },
             "designerId": "6afad2c9-baef-48f4-a666-dacc292351ee"

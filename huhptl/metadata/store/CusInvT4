@@ -1,0 +1,74 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": false,
+        "model": "CusInvT4",
+        "storeId": "CusInvT4",
+        "designer|userClassName": "CusInvT4",
+        "groupField": "BUSCDE"
+    },
+    "designerId": "a111a276-94f3-4f8b-a7fd-3b748f2fe73b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/CusInvT4.php"
+            },
+            "designerId": "4fb2befe-99c0-43fc-83b9-7ebe2490ff70",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "d3e38e9d-2b74-467a-88e9-01068b99a6fc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "BUSCDE",
+                "designer|displayName": "BusCde"
+            },
+            "designerId": "42264b5f-9c9c-4723-b7ee-40462bc35d82"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "PRTATRDES",
+                "designer|displayName": "PrtAtrDes"
+            },
+            "designerId": "d8e6b7b8-b60e-49e2-9b92-2a53a27408f7"
+        }
+    ]
+}

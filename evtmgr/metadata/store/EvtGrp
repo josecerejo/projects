@@ -1,46 +1,57 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EvtGrp",
-        "designer|userAlias": "evtgrp",
+        "autoSync": true,
+        "model": "EvtGrp",
         "storeId": "Evt",
-        "model": "EvtGrp"
+        "designer|userClassName": "EvtGrp",
+        "designer|userAlias": "evtgrp"
     },
-    "id": "ExtBox1-ext-gen2122",
     "designerId": "57047684-5cef-4016-b5f0-a00904e51bfe",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "Ttl",
+                "designer|displayName": "Srt"
+            },
+            "designerId": "34ae5808-6912-482d-b9f1-33fd3de56703"
+        },
+        {
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "designer|displayName": "Pxy",
                 "url": "data/EvtGrp.php"
             },
             "designerId": "336de96c-9d6a-46a7-9f27-4709ba30fd91",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
-                        "designer|displayName": "DtaRdr",
                         "root": "Dta",
                         "successProperty": "Scs",
-                        "totalProperty": "Ttl"
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "DtaRdr"
                     },
                     "designerId": "ce8b64ff-c911-4bce-9a3b-1731ccedef6d"
                 }

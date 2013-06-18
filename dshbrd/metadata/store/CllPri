@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CllPri",
-        "autoLoad": true,
-        "autoSync": false,
+        "autoLoad": false,
+        "model": "CllPri",
         "storeId": "CllPri",
-        "model": "CllPri"
+        "designer|userClassName": "CllPri"
     },
-    "id": "ExtBox1-ext-gen7548",
     "designerId": "5339d4aa-01b0-4f52-ba91-ebbe0a7b4be9",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/CllPri.php"
             },
             "designerId": "d5e768ff-503f-466a-8dd8-6481bab9c848",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

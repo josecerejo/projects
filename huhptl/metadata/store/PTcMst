@@ -1,0 +1,60 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "PTcMst",
+        "storeId": "PTcMst",
+        "designer|userClassName": "PTcMst"
+    },
+    "designerId": "c6df3c6b-529c-4515-ad5c-804b6e703d15",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Pxy",
+                "url": "data/PTcMst.php"
+            },
+            "designerId": "924a248a-8770-46ec-b1be-d72777b1a4be",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "root": "Dta",
+                        "successProperty": "Scs",
+                        "totalProperty": "Ttl",
+                        "designer|displayName": "Rdr"
+                    },
+                    "designerId": "7f7ec853-735f-4f5f-87ff-b93baa6041bf"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "PRDTCHHIE",
+                "designer|displayName": "PrdTchHie"
+            },
+            "designerId": "9a25465e-ff7e-4329-98e1-0627de430f87"
+        }
+    ]
+}

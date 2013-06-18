@@ -1,39 +1,36 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CllCls",
-        "idProperty": "Idn"
+        "idProperty": "Idn",
+        "designer|userClassName": "CllCls"
     },
-    "id": "ExtBox1-ext-gen64630",
     "designerId": "9dc2131a-0107-4b7b-9048-c286a67c81c7",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField22",
                 "name": "CllCls"
             },
             "designerId": "d01ca1c7-0269-4a47-b8cc-dfabb81337e0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField23",
                 "name": "Des"
             },
             "designerId": "b50bfd08-432e-4da7-84ca-d127182617f7"

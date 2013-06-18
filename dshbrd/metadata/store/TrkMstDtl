@@ -1,42 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkMstDtl",
         "autoLoad": false,
-        "autoSync": false,
+        "model": "TrkMst",
         "storeId": "TrkMstDtl",
-        "model": "TrkMst"
+        "designer|userClassName": "TrkMstDtl"
     },
-    "id": "ExtBox1-ext-gen2910",
     "designerId": "55cdb12d-703c-4ed5-b177-0dd4f21333da",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/TrkMst.php"
             },
             "designerId": "b74c3810-07b5-46a5-8155-09090f8dc668",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"

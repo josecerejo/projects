@@ -6,9 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "basePath": "http://localhost/extjs/",
-        "debug": true
+        "designer|userClassName": "Library",
+        "basePath": "../../extjs/",
+        "debug": true,
+        "theme": "neptune"
     },
-    "id": "ExtBox1-ext-gen1595",
     "designerId": "4bdd9dc2-01d2-4c07-ac05-27a3462fdb82"
 }

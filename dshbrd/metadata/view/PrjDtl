@@ -1,23 +1,21 @@
 {
-    "type": "form",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "border": 0,
         "designer|userClassName": "PrjDtl",
         "designer|userAlias": "prjdtl",
-        "border": 0,
         "bodyPadding": 10,
-        "title": null,
-        "titleCollapse": false
+        "title": null
     },
-    "id": "ExtBox1-ext-gen8901",
     "designerId": "e02e143b-ba44-4afa-a668-d64ed7d08eb5",
     "cn": [
         {
-            "type": "displayfield",
+            "type": "Ext.form.field.Display",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -25,17 +23,16 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
-                "designer|userClassName": "MyDisplayField5",
                 "autoRender": null,
-                "name": "project_id",
-                "value": null,
                 "fieldLabel": "Id",
-                "labelWidth": null
+                "labelWidth": null,
+                "name": "project_id",
+                "value": null
             },
             "designerId": "c71b57a3-5b1e-4119-ac27-6aba715c7c8a"
         },
         {
-            "type": "displayfield",
+            "type": "Ext.form.field.Display",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -43,16 +40,15 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
-                "designer|userClassName": "MyDisplayField6",
-                "name": "project_name",
-                "value": null,
                 "fieldLabel": "Name",
-                "labelWidth": null
+                "labelWidth": null,
+                "name": "project_name",
+                "value": null
             },
             "designerId": "10f5823b-8982-4693-9f30-f347b18e7209"
         },
         {
-            "type": "displayfield",
+            "type": "Ext.form.field.Display",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -60,16 +56,15 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
-                "designer|userClassName": "MyDisplayField7",
-                "name": "project_summary",
-                "value": null,
                 "fieldLabel": "Summary",
-                "labelWidth": null
+                "labelWidth": null,
+                "name": "project_summary",
+                "value": null
             },
             "designerId": "496e4519-c752-45ab-a809-90314716c3c4"
         },
         {
-            "type": "displayfield",
+            "type": "Ext.form.field.Display",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -77,15 +72,14 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
-                "designer|userClassName": "MyDisplayField8",
+                "fieldLabel": "Project Manager",
                 "name": "project_manager",
-                "value": null,
-                "fieldLabel": "Project Manager"
+                "value": null
             },
             "designerId": "3b64d6db-657a-40bc-9ae4-a9ad0d2fc94e"
         },
         {
-            "type": "displayfield",
+            "type": "Ext.form.field.Display",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -93,10 +87,9 @@
             "codeClass": null,
             "userConfig": {
                 "layout|anchor": "100%",
-                "designer|userClassName": "MyDisplayField9",
+                "fieldLabel": "Completion Date",
                 "name": "actual_finish",
-                "value": null,
-                "fieldLabel": "Completion Date"
+                "value": null
             },
             "designerId": "3283f6fc-44b5-40c1-966b-21d893fa9d3b"
         }

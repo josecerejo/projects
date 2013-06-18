@@ -1,65 +1,60 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CllCtg",
-        "idProperty": "Idn"
+        "idProperty": "Idn",
+        "designer|userClassName": "CllCtg"
     },
-    "id": "ExtBox1-ext-gen5334",
     "designerId": "ea9144bb-3b82-4c40-8416-e8c1ced349d7",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField28",
                 "name": "Idn"
             },
             "designerId": "ea021a01-1b4f-4b02-83a9-7fbdbd502d2a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField22",
                 "name": "CllCtg"
             },
             "designerId": "a4e2e974-7c8f-451e-87d5-921f029facc6"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField23",
                 "name": "Des"
             },
             "designerId": "7d137c54-1b2a-4c9c-b37f-9e2b35702fd2"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyField24",
                 "name": "CllTyp"
             },
             "designerId": "7ab03132-1778-4d66-922d-06f6f0483de3"

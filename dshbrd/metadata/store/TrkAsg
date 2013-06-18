@@ -1,43 +1,39 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "TrkAsg",
         "autoLoad": false,
-        "autoSync": false,
-        "storeId": "TrkAsg",
         "model": "TrkAsg",
+        "storeId": "TrkAsg",
+        "designer|userClassName": "TrkAsg",
         "groupField": "AsgNme"
     },
-    "id": "ExtBox1-ext-gen49243",
     "designerId": "5145b36e-9297-44cf-8ec6-163f80bdc0d9",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "data/TrkAsg.php"
             },
             "designerId": "94eb2d55-d6da-4157-9708-6928de57c025",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "root": "Dta",
                         "successProperty": "Scs",
                         "totalProperty": "Ttl"
@@ -47,14 +43,13 @@
             ]
         },
         {
-            "type": "sorter",
+            "type": "Ext.util.Sorter",
             "reference": {
                 "name": "sorters",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter1",
                 "property": "AsgNme"
             },
             "designerId": "e2979015-cd72-45c2-ae75-3bfbb7538336"

@@ -1,20 +1,24 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DshBrdCtl",
         "stores": [
-            "TrkMstLst",
-            "TrkMstFlt",
             "AplPrf",
-            "JobInf"
-        ]
+            "CllCls",
+            "CllCtg",
+            "CllSts",
+            "CllPri",
+            "CllTyp",
+            "JobInf",
+            "TrkMstFlt",
+            "TrkMstLst"
+        ],
+        "designer|userClassName": "DshBrdCtl"
     },
-    "id": "ExtBox1-ext-gen2860",
     "designerId": "f5047437-198b-4e2f-9057-4e45efdf4588",
     "cn": [
         {
@@ -25,7 +29,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TabChg",
                 "fn": "TabChg",
                 "implHandler": [
                     "Btn = tabPanel.up('viewport').down('toolbar').getComponent('FltBtn');\r",
@@ -63,7 +66,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TBrRfr",
                 "fn": "TBrRfr",
                 "implHandler": [
                     "var Tab = button.up('viewport').down('tabpanel').getActiveTab();\r",
@@ -93,7 +95,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TBrFlt",
                 "fn": "TBrFlt",
                 "implHandler": [
                     "var Tab = button.up('viewport').down('tabpanel').getActiveTab();\r",
@@ -130,7 +131,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "PrfCnl",
                 "fn": "PrfCnl",
                 "implHandler": [
                     "button.up('window').close();"
@@ -150,7 +150,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "PrfSve",
                 "fn": "PrfSve",
                 "implHandler": [
                     "var Sto = this.getAplPrfStore();\r",
@@ -184,7 +183,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MnuClk",
                 "fn": "MnuClk",
                 "implHandler": [
                     "switch(item.text) {\r",
@@ -222,7 +220,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -230,7 +227,7 @@
                 "implHandler": [
                     "this.getAplPrfStore().on({\r",
                     "    scope: this,\r",
-                    "    load : this.AplPrfLod\r",
+                    "    load : this.LodAplPrf\r",
                     "});"
                 ]
             },
@@ -244,17 +241,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "SetTab",
                 "fn": "SetTab",
                 "designer|params": [
                     "Sto"
                 ],
                 "implHandler": [
                     "var DshBrdTab = this.getDshBrd().down('tabpanel'),\r",
-                    "TrkPnlTab = this.getTrkPnl().down('tabpanel'),\r",
-                    "Dta = Sto.first().getData(),\r",
-                    "DshBrdAcvTab = DshBrdTab.getActiveTab(),\r",
-                    "TrkPnlAcvTab = TrkPnlTab.getActiveTab();\r",
+                    "    TrkPnlTab = this.getTrkPnl().down('tabpanel'),\r",
+                    "    Dta = Sto.first().getData(),\r",
+                    "    DshBrdAcvTab = DshBrdTab.getActiveTab(),\r",
+                    "    TrkPnlAcvTab = TrkPnlTab.getActiveTab();\r",
                     "\r",
                     "Ext.Array.each(Sto.getProxy().getModel().getFields(), function(Fld) {\r",
                     "    if (Dta[Fld.name]) {\r",
@@ -292,8 +288,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "AplPrfLod",
-                "fn": "AplPrfLod",
+                "fn": "LodAplPrf",
                 "designer|params": [
                     "Sto"
                 ],
@@ -321,6 +316,26 @@
             "designerId": "e58a1965-121f-46d2-a012-995b388dc1c3"
         },
         {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodSto",
+                "implHandler": [
+                    "this.getCllClsStore().load();\r",
+                    "this.getCllCtgStore().load();\r",
+                    "this.getCllPriStore().load();\r",
+                    "this.getCllStsStore().load();\r",
+                    "this.getCllTypStore().load();\r",
+                    "this.getTrkMstLstStore().load();"
+                ]
+            },
+            "designerId": "bbac3845-1b59-4169-b1e4-05679c63ac69"
+        },
+        {
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -328,7 +343,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkPnl",
                 "ref": "TrkPnl",
                 "selector": "trkpnl"
             },
@@ -342,7 +356,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "AplPrf",
                 "ref": "AplPrf",
                 "selector": "aplprf"
             },
@@ -356,7 +369,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "DshBrd",
                 "forceCreate": null,
                 "ref": "DshBrd",
                 "selector": "dshbrd",
@@ -372,7 +384,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "TrkMstLst",
                 "ref": "TrkMstLst",
                 "selector": "trkmstlst"
             },

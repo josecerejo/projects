@@ -1,17 +1,16 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "CogPnlCtl",
         "stores": [
             "FleInf"
-        ]
+        ],
+        "designer|userClassName": "CogPnlCtl"
     },
-    "id": "ExtBox1-ext-gen4161",
     "designerId": "bae5e77f-77f6-4499-9c65-e81507fece78",
     "cn": [
         {
@@ -22,7 +21,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -44,7 +42,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "FleInfLod",
                 "fn": "FleInfLod",
                 "designer|params": [
                     "Sto"
@@ -71,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CogPnl",
                 "ref": "CogPnl",
                 "selector": "cogpnl"
             },
@@ -85,7 +81,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "CogDirClk",
                 "fn": "CogDirClk",
                 "implHandler": [
                     "if(record.get('FleTyp') != 'File Folder') {\r",

@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.panel.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,19 +7,17 @@
     "codeClass": null,
     "userConfig": {
         "container|align": "stretch",
+        "border": null,
         "designer|userClassName": "TrkAtc",
         "designer|userAlias": "trkatc",
-        "designer|displayName": "TrkAtc",
-        "border": null,
         "layout": "vbox",
         "bodyBorder": null,
         "title": null
     },
-    "id": "ExtBox1-ext-gen21206",
     "designerId": "f8b7b8b7-5e7e-4ec1-9886-dc5af01f820a",
     "cn": [
         {
-            "type": "container",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -29,14 +27,13 @@
                 "layout|flex": 1,
                 "container|align": "stretch",
                 "container|padding": null,
-                "designer|userClassName": "MyContainer6",
                 "designer|displayName": "TrkAtc",
                 "layout": "hbox"
             },
             "designerId": "b4601e86-3832-4123-855c-a14243faad3a",
             "cn": [
                 {
-                    "type": "gridpanel",
+                    "type": "Ext.grid.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -45,9 +42,8 @@
                     "userConfig": {
                         "layout|flex": 1,
                         "layout|margins": null,
-                        "designer|userClassName": "MyGridPanel8",
-                        "designer|displayName": "TrkAtcLst",
                         "border": 0,
+                        "designer|displayName": "TrkAtcLst",
                         "bodyBorder": null,
                         "title": null,
                         "store": "TrkAtc"
@@ -55,38 +51,36 @@
                     "designerId": "3c76cc77-b35b-4331-b583-8c96b25de81b",
                     "cn": [
                         {
-                            "type": "gridview",
+                            "type": "Ext.grid.View",
                             "reference": {
                                 "name": "viewConfig",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyGridView4",
-                                "designer|displayName": "TrkAtcLst",
-                                "margin": null
+                                "margin": null,
+                                "designer|displayName": "TrkAtcLst"
                             },
                             "designerId": "5e16c844-ed6a-4822-bb8a-3a3068378e23"
                         },
                         {
-                            "type": "gridcolumn",
+                            "type": "Ext.grid.column.Column",
                             "reference": {
                                 "name": "columns",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyColumn40",
                                 "dataIndex": "AtcLnk",
-                                "flex": 1,
-                                "text": "Attachment"
+                                "text": "Attachment",
+                                "flex": 1
                             },
                             "designerId": "7ad9f257-827c-4fe8-b70d-7eaa4cb76b5c"
                         }
                     ]
                 },
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -95,14 +89,13 @@
                     "userConfig": {
                         "layout|flex": 1,
                         "container|align": "stretch",
-                        "designer|userClassName": "MyContainer7",
                         "designer|displayName": "TrkAtcFrm",
                         "layout": "vbox"
                     },
                     "designerId": "63080a9c-f304-4718-8b14-9389f37c18bb",
                     "cn": [
                         {
-                            "type": "form",
+                            "type": "Ext.form.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -113,9 +106,8 @@
                                 "layout|margins": "5 5 5 5",
                                 "container|align": "stretch",
                                 "container|padding": null,
-                                "designer|userClassName": "MyForm4",
-                                "designer|displayName": "TrkAtcInf",
                                 "border": null,
+                                "designer|displayName": "TrkAtcInf",
                                 "layout": "vbox",
                                 "bodyPadding": 10,
                                 "title": null
@@ -123,41 +115,39 @@
                             "designerId": "b7cb2699-b5d4-4949-b3b6-b528ddc8e425",
                             "cn": [
                                 {
-                                    "type": "displayfield",
+                                    "type": "Ext.form.field.Display",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyDisplayField14",
                                         "designer|displayName": null,
-                                        "name": "AtcNme",
-                                        "value": null,
                                         "fieldLabel": "File Name",
                                         "labelSeparator": " ",
-                                        "labelWidth": 70
+                                        "labelWidth": 70,
+                                        "name": "AtcNme",
+                                        "value": null
                                     },
                                     "designerId": "1563139c-1e55-4ad1-a3cd-56e7b0fdf623"
                                 },
                                 {
-                                    "type": "textfield",
+                                    "type": "Ext.form.field.Text",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyTextField2",
-                                        "name": "AtcDes",
                                         "fieldLabel": "Description",
                                         "labelSeparator": " ",
-                                        "labelWidth": 70
+                                        "labelWidth": 70,
+                                        "name": "AtcDes"
                                     },
                                     "designerId": "1fbc57f8-abaa-4f5b-bd15-f6459518b944"
                                 },
                                 {
-                                    "type": "displayfield",
+                                    "type": "Ext.form.field.Display",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -165,17 +155,16 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": null,
-                                        "designer|userClassName": "MyDisplayField16",
-                                        "name": "AtcLnk",
-                                        "value": null,
                                         "fieldLabel": "Link",
                                         "labelSeparator": " ",
-                                        "labelWidth": 70
+                                        "labelWidth": 70,
+                                        "name": "AtcLnk",
+                                        "value": null
                                     },
                                     "designerId": "d7c5e9ce-f3ed-4545-8c56-426cfd59aff5"
                                 },
                                 {
-                                    "type": "toolbar",
+                                    "type": "Ext.toolbar.Toolbar",
                                     "reference": {
                                         "name": "dockedItems",
                                         "type": "array"
@@ -183,13 +172,12 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "layout|flex": 1,
-                                        "dock": "bottom",
-                                        "designer|userClassName": "MyToolbar5"
+                                        "dock": "bottom"
                                     },
                                     "designerId": "a26c3db9-a62a-4064-b4b5-fc54aba87981",
                                     "cn": [
                                         {
-                                            "type": "button",
+                                            "type": "Ext.button.Button",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -197,14 +185,13 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "layout|flex": null,
-                                                "designer|userClassName": "MyButton12",
                                                 "designer|displayName": null,
                                                 "text": "Save"
                                             },
                                             "designerId": "bc31bfd1-83dc-4bec-a110-8e06389c81b5"
                                         },
                                         {
-                                            "type": "button",
+                                            "type": "Ext.button.Button",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -212,7 +199,6 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "layout|flex": null,
-                                                "designer|userClassName": "MyButton13",
                                                 "text": "Delete"
                                             },
                                             "designerId": "3ef5017d-ddcd-40c3-a698-0c864bdddde5"
@@ -222,7 +208,7 @@
                             ]
                         },
                         {
-                            "type": "panel",
+                            "type": "Ext.panel.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -232,8 +218,6 @@
                                 "plugins": null,
                                 "layout|flex": 0.5,
                                 "layout|margins": null,
-                                "designer|userClassName": "MyPanel18",
-                                "designer|displayName": "AtcDrp",
                                 "border": null,
                                 "height": null,
                                 "html": [
@@ -242,7 +226,7 @@
                                 "id": null,
                                 "itemId": "AtcDrp",
                                 "padding": 5,
-                                "styleHtmlContent": null,
+                                "designer|displayName": "AtcDrp",
                                 "bodyBorder": false,
                                 "bodyPadding": null
                             },
