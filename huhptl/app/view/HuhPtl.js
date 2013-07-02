@@ -1315,6 +1315,11 @@ Ext.define('HuhPtl.view.HuhPtl', {
                                                     ]
                                                 },
                                                 {
+                                                    xtype: 'button',
+                                                    itemId: 'DwnLodBtn',
+                                                    text: 'Download to Excel'
+                                                },
+                                                {
                                                     xtype: 'hiddenfield',
                                                     height: 150,
                                                     fieldLabel: 'Label',

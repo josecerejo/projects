@@ -327,6 +327,91 @@ Ext.define('HuhPtl.controller.SlsPrdCtl', {
         this.UpdPnl(true,true);
     },
 
+    DwnLodBtnClk: function(button, e, eOpts) {
+        var Frm = this.getOptFrm().getForm();
+        var DspPnlFlg = Frm.findField('DspPnlFlg');
+        var HieSelTab = this.getOptFrm().down('tabpanel').getActiveTab();
+        var SlsPrdTab = Ext.getCmp('SlsPrdPnl').down('tabpanel').getActiveTab();
+        var TblFun;
+
+        Frm.updateRecord();
+        var Rcd = Frm.getRecord();
+
+        if (SlsPrdTab.title == 'Product') {
+            Ext.Ajax.request({
+                url: 'data/CusInvT3.php',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    PrdTch: Rcd.get('PrdTch'),
+                    PrdGrp: Rcd.get('PrdGrp'),
+                    PrdSubGrp: Rcd.get('PrdSubGrp'),
+                    PrdSiz: Rcd.get('PrdSiz'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    DwnLod: true
+                }
+            });
+        }
+        else if (SlsPrdTab.title == 'Sales') {
+            Ext.Ajax.request({
+                url: 'data/CusInvT6.php',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    DivIdn: Rcd.get('DivIdn'),
+                    BusSeg: Rcd.get('BusSeg'),
+                    RgnCde: Rcd.get('RgnCde'),
+                    AcMCde: Rcd.get('AcMCde'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    DwnLod: true
+                }
+            });
+        }
+        else if (SlsPrdTab.title == 'Customer') {
+            TblFun = 'CUSINVT4';
+            if (HieSelTab.title == 'Sales') {
+                TblFun = 'CUSINVT7';
+            }
+
+            Ext.Ajax.request({
+                url: 'data/CusInvT4.php',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    PrdTch: Rcd.get('PrdTch'),
+                    PrdGrp: Rcd.get('PrdGrp'),
+                    PrdSubGrp: Rcd.get('PrdSubGrp'),
+                    PrdSiz: Rcd.get('PrdSiz'),
+                    DivIdn: Rcd.get('DivIdn'),
+                    BusSeg: Rcd.get('BusSeg'),
+                    RgnCde: Rcd.get('RgnCde'),
+                    AcMCde: Rcd.get('AcMCde'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    TblFun: TblFun,
+                    DwnLod: true
+                },
+                success: function(Rsp){
+                    var Txt = Rsp.responseText;
+                }
+            });
+        }
+    },
+
     init: function(application) {
         this.getPTcMstStore().on({
             scope: this,
@@ -410,6 +495,9 @@ Ext.define('HuhPtl.controller.SlsPrdCtl', {
             },
             "#SlsPrdPnl tabpanel[itemId=HieSel]": {
                 tabchange: this.ChgTabHie
+            },
+            "#SlsPrdPnl button[itemId=DwnLodBtn]": {
+                click: this.DwnLodBtnClk
             }
         });
     },
@@ -441,7 +529,12 @@ Ext.define('HuhPtl.controller.SlsPrdCtl', {
         else {
             var Dte = new Date();
             Yrs = Dte.getFullYear();
-            Mth = Dte.getMonth() + 1;
+            if (Dte.getDate() == 1) {
+                Mth = Dte.getMonth();
+            }
+            else {
+                Mth = Dte.getMonth() + 1;
+            }
         }
 
         Frm.findField('DspPnlFlg').setValue(false);
@@ -473,7 +566,7 @@ Ext.define('HuhPtl.controller.SlsPrdCtl', {
         this.UpdPnl(true,true);
     },
 
-    UpdPnl: function(UpdHie, UpdCus) {
+    UpdPnl: function(UpdHie, UpdCus, DwnLod) {
         var Frm = this.getOptFrm().getForm();
         var DspPnlFlg = Frm.findField('DspPnlFlg');
         var HieSelTab = this.getOptFrm().down('tabpanel').getActiveTab();
@@ -626,6 +719,91 @@ Ext.define('HuhPtl.controller.SlsPrdCtl', {
                 //        Ext.getCmp('prdhiegph').tab.hide();
                 Ext.getCmp('slshie').tab.show();
             }
+        }
+    },
+
+    DwnLod: function() {
+        var Frm = this.getOptFrm().getForm();
+        var DspPnlFlg = Frm.findField('DspPnlFlg');
+        var HieSelTab = this.getOptFrm().down('tabpanel').getActiveTab();
+        var SlsPrdTab = Ext.getCmp('SlsPrdPnl').down('tabpanel').getActiveTab();
+        var TblFun;
+
+        Frm.updateRecord();
+        var Rcd = Frm.getRecord();
+
+        if (SlsPrdTab.title == 'Product') {
+            Ext.Ajax.request({
+                url: 'CUSINVT3',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    PrdTch: Rcd.get('PrdTch'),
+                    PrdGrp: Rcd.get('PrdGrp'),
+                    PrdSubGrp: Rcd.get('PrdSubGrp'),
+                    PrdSiz: Rcd.get('PrdSiz'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    DwnLod: true
+                }
+            });
+        }
+        else if (SlsPrdTab.title == 'Sales') {
+            Ext.Ajax.request({
+                url: 'CUSINVT6',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    DivIdn: Rcd.get('DivIdn'),
+                    BusSeg: Rcd.get('BusSeg'),
+                    RgnCde: Rcd.get('RgnCde'),
+                    AcMCde: Rcd.get('AcMCde'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    DwnLod: true
+                }
+            });
+        }
+        else if (SlsPrdTab.title == 'Customer') {
+            TblFun = 'CUSINVT4';
+            if (HieSelTab.title == 'Sales') {
+                TblFun = 'CUSINVT7';
+            }
+
+            Ext.Ajax.request({
+                url: 'CUSINVT4',
+                params: { 
+                    ShwCG: Rcd.get('ShwCG'),
+                    ShwFS: Rcd.get('ShwFS'),
+                    ShwRT: Rcd.get('ShwRT'),
+                    BegMth: Ext.Date.getMonthNumber(Rcd.get('BegMth')) + 1,
+                    BegYrs: Rcd.get('BegYrs'),
+                    EndMth: Ext.Date.getMonthNumber(Rcd.get('EndMth')) + 1,
+                    EndYrs: Rcd.get('EndYrs'),
+                    PrdTch: Rcd.get('PrdTch'),
+                    PrdGrp: Rcd.get('PrdGrp'),
+                    PrdSubGrp: Rcd.get('PrdSubGrp'),
+                    PrdSiz: Rcd.get('PrdSiz'),
+                    DivIdn: Rcd.get('DivIdn'),
+                    BusSeg: Rcd.get('BusSeg'),
+                    RgnCde: Rcd.get('RgnCde'),
+                    AcMCde: Rcd.get('AcMCde'),
+                    DspVlu: Rcd.get('DspVlu'),
+                    TblFun: TblFun,
+                    DwnLod: true
+                },
+                success: function(Rsp){
+                    var Txt = Rsp.responseText;
+                }
+            });
         }
     },
 

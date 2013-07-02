@@ -3381,6 +3381,21 @@
                                             ]
                                         },
                                         {
+                                            "type": "Ext.button.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": null,
+                                                "itemId": "DwnLodBtn",
+                                                "designer|displayName": null,
+                                                "text": "Download to Excel"
+                                            },
+                                            "designerId": "ce06e1e8-f3d2-42d1-aa13-3b96678ebafb"
+                                        },
+                                        {
                                             "type": "Ext.form.field.Hidden",
                                             "reference": {
                                                 "name": "items",
