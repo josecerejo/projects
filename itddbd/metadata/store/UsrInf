@@ -1,0 +1,28 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "UsrInf",
+        "storeId": "UsrInf",
+        "designer|userClassName": "UsrInf"
+    },
+    "designerId": "af55f0af-3665-4e83-852e-9e765c8e4161",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "UsrInf"
+            },
+            "designerId": "376ad0a4-1ecf-4dff-b714-4bc9ae6fe1be"
+        }
+    ]
+}

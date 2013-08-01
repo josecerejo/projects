@@ -1,0 +1,329 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "CusInvT1",
+            "CusInvT2"
+        ],
+        "designer|userClassName": "SlsQdrCtl"
+    },
+    "designerId": "37421d1b-e677-498e-bbf1-11cb8787bf43",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LgdRnr",
+                "implHandler": [
+                    "var Cmp = component,\r",
+                    "    BusCde = Cmp.itemId,\r",
+                    "    Clr1 = '#f0a50a',\r",
+                    "    Clr2 = '#ffdd99';\r",
+                    "\r",
+                    "if (BusCde == 'FS') {\r",
+                    "    Clr1 = '#c20024';\r",
+                    "    Clr2 = '#ff6680';\r",
+                    "}\r",
+                    "else if (BusCde == 'RT') {\r",
+                    "    Clr1 = '#2044ba';\r",
+                    "    Clr2 = '#7e95e7';\r",
+                    "}\r",
+                    "\r",
+                    "this.LodLgd(Cmp.getEl(),BusCde,Clr1,Clr2, 'SlsQdrLgd' + BusCde);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.container.Container",
+                "designer|controlQuery": "#SlsQdrPnl container[itemId=Lgd] container"
+            },
+            "designerId": "87452834-9bbd-44d9-8e60-41ff30764fc2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "BsePnlRnr",
+                "implHandler": [
+                    "Ext.Function.defer(function() {\r",
+                    "    this.RfrSls('');\r",
+                    "}, 1500, this);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "BsePnl",
+                "designer|controlQuery": "#BsePnl"
+            },
+            "designerId": "3cf8da02-024b-4c9d-abfc-a0c6ed850b85"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SlsWdwClk",
+                "implHandler": [
+                    "if (tool.type == 'maximize') {\r",
+                    "    tool.setType('minimize');\r",
+                    "    Ext.getCmp('FinQdrPnl').hide();\r",
+                    "    Ext.getCmp('QdrBtm').hide();\r",
+                    "}\r",
+                    "else {\r",
+                    "    tool.setType('maximize');\r",
+                    "    Ext.getCmp('FinQdrPnl').show();\r",
+                    "    Ext.getCmp('QdrBtm').show();\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.panel.Tool",
+                "designer|controlQuery": "tool[itemId=SlsWdw]"
+            },
+            "designerId": "03437e10-7666-4f51-84df-a30ff444a554"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "BusCdeChg",
+                "implHandler": [
+                    "if (newValue == 'Consumer Goods')  {\r",
+                    "    newValue = 'CG';\r",
+                    "}\r",
+                    "else if (newValue == 'Foodservice')  {\r",
+                    "    newValue = 'FS';\r",
+                    "}\r",
+                    "\r",
+                    "else if (newValue == 'Retail')  {\r",
+                    "    newValue = 'RT';\r",
+                    "}\r",
+                    "else {\r",
+                    "    newValue = '';\r",
+                    "}\r",
+                    "\r",
+                    "this.RfrSls(newValue);"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "combobox [itemId=BusCde]"
+            },
+            "designerId": "5754a8ee-7f96-45cd-9ca5-9eeff017601f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "PrsAxsEvt",
+                "designer|params": [
+                    "Lbl",
+                    "Evt",
+                    "Opt"
+                ],
+                "implHandler": [
+                    "var Elm = Ext.get(Lbl.id);\r",
+                    "\r",
+                    "if (Evt.type == 'mouseover') {\r",
+                    "    Elm.set({\r",
+                    "        fill: 'red'\r",
+                    "    });\r",
+                    "}\r",
+                    "else if (Evt.type == 'mouseout') {\r",
+                    "    Elm.set({\r",
+                    "        fill: 'black'\r",
+                    "    });\r",
+                    "}\r",
+                    "else if (Evt.type == 'click') {\r",
+                    "    var Rcd = Ext.create('Ptl.model.SlsPrdOpt');\r",
+                    "    var Frm = Ext.getCmp('SlsPrdPnl').down('form').getForm();\r",
+                    "    var MthFllNme = ['January','February','March','April','May','June','July','August','September','October','November','December'];\r",
+                    "    var Mth = Ext.Date.getMonthNumber(Lbl.text.substr(0,3)) + 1;\r",
+                    "    var Yrs = 2000+Number(Lbl.text.substr(4,2));\r",
+                    "    var Typ = Lbl.text.slice(-6);\r",
+                    "    var ShwAct = (Typ == 'Actual') ? true : false;\r",
+                    "    var ShwBud = (Typ == 'Budget') ? true : false;\r",
+                    "    var DspCht = Frm.findField('DspCht');\r",
+                    "\r",
+                    "    DspCht.setValue(false);\r",
+                    "    Rcd.set('ShwCG',true);\r",
+                    "    Rcd.set('ShwFS',true);\r",
+                    "    Rcd.set('ShwRT',true);\r",
+                    "    Rcd.set('BegMth',MthFllNme[Mth-1]);\r",
+                    "    Rcd.set('BegYrs',Yrs);\r",
+                    "    Rcd.set('EndMth',MthFllNme[Mth-1]);\r",
+                    "    Rcd.set('EndYrs',Yrs);\r",
+                    "    Rcd.set('PrdTch','*ALL');\r",
+                    "    Rcd.set('ShwAct',ShwAct);\r",
+                    "    Rcd.set('ShwBud',ShwBud);\r",
+                    "    Rcd.set('ProBud',true);\r",
+                    "    Frm.loadRecord(Rcd);\r",
+                    "\r",
+                    "    Ext.getCmp('CrdDck').getLayout().setActiveItem(1);\r",
+                    "    Ext.Function.defer(function() {\r",
+                    "        DspCht.setValue(true);\r",
+                    "        Ptl.getApplication().getController('SlsPrdCtl').UpdCht(true,true);\r",
+                    "    }, 250, this);\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "60c43639-191e-44e2-bd30-07ccdfb0b62d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LodLgd",
+                "designer|params": [
+                    "Elm",
+                    "BusCde",
+                    "ActClr",
+                    "BudClr",
+                    "Idn"
+                ],
+                "implHandler": [
+                    "var Ctl = this;\r",
+                    "var Lgd = Ext.create('Ext.draw.Component', {\r",
+                    "    renderTo: Elm,\r",
+                    "    width: 265,\r",
+                    "    height: 15,\r",
+                    "    background: 'white',\r",
+                    "    //    border: 1,\r",
+                    "    //    style: {\r",
+                    "    //        borderColor: 'black',\r",
+                    "    //        borderStyle: 'solid'\r",
+                    "    //    },\r",
+                    "    items: [\r",
+                    "    {\r",
+                    "        type: 'rect',\r",
+                    "        x: 45,\r",
+                    "        y: 0,\r",
+                    "        width: 6,\r",
+                    "        height: 6,\r",
+                    "        fill: ActClr\r",
+                    "    },\r",
+                    "    {\r",
+                    "        type: \"text\",\r",
+                    "        x: 55,\r",
+                    "        y: 4,\r",
+                    "        text: \"Actual\",\r",
+                    "        fill: 'black',\r",
+                    "        font: '10px Arial'\r",
+                    "\r",
+                    "    },\r",
+                    "    {\r",
+                    "        type: 'rect',\r",
+                    "        x: 95,\r",
+                    "        y: 0,\r",
+                    "        width: 6,\r",
+                    "        height: 6,\r",
+                    "        fill: BudClr\r",
+                    "    },\r",
+                    "    {\r",
+                    "        type: \"text\",\r",
+                    "        x: 105,\r",
+                    "        y: 4,\r",
+                    "        text: \"Budget\",\r",
+                    "        fill: 'black',\r",
+                    "        font: '10px Arial'\r",
+                    "\r",
+                    "    }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "/*\r",
+                    "Lgd.getEl().on('click', function(Evt,Elm){\r",
+                    "Ctl.RfrSls(BusCde);\r",
+                    "}, Lgd);\r",
+                    "\r",
+                    "Lgd.getEl().on('mouseenter', function(Evt,Elm){\r",
+                    "var Slc = '#' + Idn + ' > svg > rect';\r",
+                    "Ext.select(Slc).each (function(Obj, ObjLst, Idx) {\r",
+                    "if (Idx === 1) {\r",
+                    "var Elm = Ext.get(Obj.dom.id);\r",
+                    "Elm.set({\r",
+                    "fill: 'beige'\r",
+                    "});\r",
+                    "}\r",
+                    "});\r",
+                    "}, Lgd);\r",
+                    "\r",
+                    "Lgd.getEl().on('mouseleave', function(Evt,Elm){\r",
+                    "var Slc = '#' + Idn + ' > svg > rect';\r",
+                    "Ext.select(Slc).each (function(Obj, ObjLst, Idx) {\r",
+                    "if (Idx === 1) {\r",
+                    "var Elm = Ext.get(Obj.dom.id);\r",
+                    "Elm.set({\r",
+                    "fill: 'white'\r",
+                    "});\r",
+                    "}\r",
+                    "});\r",
+                    "}, Lgd);\r",
+                    "*/"
+                ]
+            },
+            "designerId": "072b7b5e-c587-48ea-b838-a03147f21496"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "RfrSls",
+                "designer|params": [
+                    "BusCde"
+                ],
+                "implHandler": [
+                    "var EndDte = new Date(),\r",
+                    "    EndMth = EndDte.getMonth() + 1,\r",
+                    "    EndYrs = EndDte.getFullYear(),\r",
+                    "    BegDte = Ext.Date.add(EndDte, Ext.Date.MONTH, -12),\r",
+                    "    BegMth = BegDte.getMonth() + 1,\r",
+                    "    BegYrs = BegDte.getFullYear();\r",
+                    "\r",
+                    "this.getCusInvT1Store().load({\r",
+                    "    params: { \r",
+                    "        BusCde: BusCde,\r",
+                    "        BegMth: BegMth,\r",
+                    "        BegYrs: BegYrs,\r",
+                    "        EndMth: EndMth,\r",
+                    "        EndYrs: EndYrs\r",
+                    "    }\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "designerId": "71aad39b-7e68-49e1-a420-0fe753c21ad3"
+        }
+    ]
+}

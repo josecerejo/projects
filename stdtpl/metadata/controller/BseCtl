@@ -1,0 +1,59 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BseCtl",
+        "designer|userAlias": "bsectl"
+    },
+    "designerId": "9a4c607f-70dd-4a90-a6de-adacb848c90b",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "IniDsp",
+                "implHandler": [
+                    "this.getBsePnl().down('panel').show();\r",
+                    "this.getBsePnl().down('toolbar').show();var TabNme;\r",
+                    "\r",
+                    "var URL = decodeURIComponent(document.URL).split('?');\r",
+                    "\r",
+                    "if (URL.length > 1) {\r",
+                    "    Ext.Object.each(Ext.Object.fromQueryString(URL[1]), function(Key, Vlu) {\r",
+                    "        if (Ext.util.Format.lowercase(Key) == 'strpge') {\r",
+                    "            StrPge = Ext.util.Format.lowercase(Vlu);\r",
+                    "        }\r",
+                    "        if (Ext.util.Format.lowercase(Key) == 'tabnme') {\r",
+                    "            TabNme = Ext.util.Format.lowercase(Vlu);\r",
+                    "        }\r",
+                    "\r",
+                    "    });\r",
+                    "}"
+                ]
+            },
+            "designerId": "25bfe608-d799-4855-a27c-0e016c3f0616"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BsePnl",
+                "selector": "bsepnl",
+                "xtype": "bsepnl"
+            },
+            "designerId": "9d416e7d-6b9b-43e6-ae98-d18089fc6abb"
+        }
+    ]
+}

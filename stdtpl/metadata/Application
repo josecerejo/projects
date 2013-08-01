@@ -1,0 +1,82 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "UsrInf"
+        ],
+        "stores": [
+            "UsrInf"
+        ],
+        "controllers": [
+            "BseCtl",
+            "UsrAutCtl"
+        ],
+        "name": "App"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var Sto = Ext.data.StoreManager.lookup('UsrInf'); \r",
+                    "var Rcd;\r",
+                    "var UsrCrl;\r",
+                    "\r",
+                    "Ext.getDoc().dom.title = 'Huhtamaki Standard Template'; \r",
+                    "var BsePnl = Ext.create('App.view.BsePnl', {\r",
+                    "    renderTo: Ext.getBody()\r",
+                    "});\r",
+                    "BsePnl.show();\r",
+                    "BsePnl.down('panel').hide();\r",
+                    "BsePnl.down('toolbar').hide();\r",
+                    "\r",
+                    "Sto.load();\r",
+                    "Rcd = Sto.first();\r",
+                    "if (Rcd) {\r",
+                    "    UsrCrl = Rcd.get('UsrCrl');\r",
+                    "}\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    scope: this,\r",
+                    "    url: '../shared/ChkCrl.php',\r",
+                    "    method: 'post',\r",
+                    "    params: {\r",
+                    "        UsrNme: '',\r",
+                    "        Pwd: '',\r",
+                    "        UsrCrl: UsrCrl\r",
+                    "    },    \r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.success === true) {\r",
+                    "            App.getApplication().getController('UsrAutCtl').ChkAut(Rsp.UsrNme,UsrCrl);\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            var UsrSnI = Ext.create('App.view.UsrSnI', {\r",
+                    "                renderTo: Ext.getBody()\r",
+                    "            });\r",
+                    "\r",
+                    "            UsrSnI.show();\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a89bb06a-a39e-47a3-8128-a97233c1e103"
+        }
+    ]
+}

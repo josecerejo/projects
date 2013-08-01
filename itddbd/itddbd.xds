@@ -1,0 +1,105 @@
+{
+    "name": "itddbd",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "http://localhost/itddbd",
+        "exportPath": "C:/Program Files/Zend/Apache2/htdocs/itddbd",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "ext42",
+    "topInstanceFileMap": {
+        "fba73088-7d92-4f37-98cb-377419c87389": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "76f51232-f401-4fb8-bcdb-ea5bb6293ce5": {
+            "paths": [
+                "metadata/view/BsePnl",
+                "app/view/override/BsePnl.js",
+                "app/view/BsePnl.js",
+                "app/view/Viewport.js"
+            ],
+            "className": "BsePnl"
+        },
+        "9a4c607f-70dd-4a90-a6de-adacb848c90b": {
+            "paths": [
+                "metadata/controller/BseCtl",
+                "app/controller/override/BseCtl.js",
+                "app/controller/BseCtl.js"
+            ],
+            "className": "BseCtl"
+        },
+        "fa1d65e5-87d7-458a-900f-a4b7505e2722": {
+            "paths": [
+                "metadata/controller/UsrAutCtl",
+                "app/controller/override/UsrAutCtl.js",
+                "app/controller/UsrAutCtl.js"
+            ],
+            "className": "UsrAutCtl"
+        },
+        "29755056-f6af-43e1-ae7e-c7545fec7329": {
+            "paths": [
+                "metadata/view/UsrSnI",
+                "app/view/override/UsrSnI.js",
+                "app/view/UsrSnI.js"
+            ],
+            "className": "UsrSnI"
+        },
+        "cc4ff323-0171-44f7-8a79-245492400d54": {
+            "paths": [
+                "metadata/view/AutErr",
+                "app/view/override/AutErr.js",
+                "app/view/AutErr.js"
+            ],
+            "className": "AutErr"
+        },
+        "af55f0af-3665-4e83-852e-9e765c8e4161": {
+            "paths": [
+                "metadata/store/UsrInf",
+                "app/store/override/UsrInf.js",
+                "app/store/UsrInf.js"
+            ],
+            "className": "UsrInf"
+        },
+        "6039f538-a923-4348-b288-ad197fc2f2be": {
+            "paths": [
+                "metadata/model/UsrInf",
+                "app/model/override/UsrInf.js",
+                "app/model/UsrInf.js"
+            ],
+            "className": "UsrInf"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "76f51232-f401-4fb8-bcdb-ea5bb6293ce5",
+            "29755056-f6af-43e1-ae7e-c7545fec7329",
+            "cc4ff323-0171-44f7-8a79-245492400d54"
+        ],
+        "store": [
+            "af55f0af-3665-4e83-852e-9e765c8e4161"
+        ],
+        "controller": [
+            "9a4c607f-70dd-4a90-a6de-adacb848c90b",
+            "fa1d65e5-87d7-458a-900f-a4b7505e2722"
+        ],
+        "model": [
+            "6039f538-a923-4348-b288-ad197fc2f2be"
+        ],
+        "resource": [
+            "fba73088-7d92-4f37-98cb-377419c87389"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

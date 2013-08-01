@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "resources/ptl.css"
+    },
+    "designerId": "ba769002-1e04-47e8-b0d3-12a28653abd2"
+}

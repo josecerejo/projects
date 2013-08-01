@@ -1,0 +1,247 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "UsrInf"
+        ],
+        "designer|userClassName": "UsrAutCtl",
+        "designer|userAlias": "usrautctl"
+    },
+    "designerId": "fa1d65e5-87d7-458a-900f-a4b7505e2722",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AfrRnd",
+                "implHandler": [
+                    "component.down('label[itemId=ErrMsg]').setVisible(false);\r",
+                    "component.getForm().findField('UsrNme').focus(false,200);"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.form.Panel",
+                "designer|controlQuery": "usrsni panel"
+            },
+            "designerId": "6aa16a3c-b36d-4b3a-af98-44a510ecccce"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SnIBtnClk",
+                "implHandler": [
+                    "var AutLst = {Sls:true,Fin:true,Opr:true,Sup:true};\r",
+                    "var Btn = button;\r",
+                    "var Frm = Btn.up('form').getForm();\r",
+                    "var SveCrl = Frm.findField('SveCrl').getValue();\r",
+                    "var ErrMsg = Btn.nextSibling('label[itemId=ErrMsg]');\r",
+                    "\r",
+                    "if (Frm.isValid()) {\r",
+                    "    Frm.submit({\r",
+                    "        scope: this,\r",
+                    "        success: function(Frm, Acn) {\r",
+                    "            var Sto = Ext.data.StoreManager.lookup('UsrInf'); \r",
+                    "            var Rcd = Sto.load().first();\r",
+                    "            var UsrCrl = Acn.result.UsrCrl;\r",
+                    "            if (SveCrl){\r",
+                    "                if (!Rcd) {\r",
+                    "                    Rcd = Ext.create('App.model.UsrInf');\r",
+                    "                    Rcd.set('UsrCrl',UsrCrl);\r",
+                    "                    Sto.add(Rcd);\r",
+                    "                    Sto.sync();\r",
+                    "                }\r",
+                    "                else {\r",
+                    "                    Rcd.set('UsrCrl',UsrCrl);\r",
+                    "                    Sto.update(Rcd);\r",
+                    "                    Sto.sync();\r",
+                    "                }\r",
+                    "            }\r",
+                    "\r",
+                    "            this.ChkAut(Frm.findField('UsrNme').getValue(),UsrCrl);\r",
+                    "            Btn.up('window').close();\r",
+                    "        },\r",
+                    "        failure: function(Frm, Acn) {\r",
+                    "            ErrMsg.setVisible(true);\r",
+                    "        }\r",
+                    "    });\r",
+                    "}\r",
+                    "else {\r",
+                    "    ErrMsg.setVisible(true);\r",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "usrsni form button[itemId=SnIBtn]"
+            },
+            "designerId": "4d5a78e0-5510-46a3-bfc9-89e7d1764ff9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SnOBtnClk",
+                "implHandler": [
+                    "var Sto = Ext.data.StoreManager.lookup('UsrInf'); \r",
+                    "Sto.removeAll();\r",
+                    "Sto.sync(); \r",
+                    "\r",
+                    "this.getBsePnl().down('panel').hide();\r",
+                    "this.getBsePnl().down('toolbar').hide();\r",
+                    "\r",
+                    "var UsrSnI = Ext.create('App.view.UsrSnI', {\r",
+                    "    renderTo: Ext.getBody()\r",
+                    "});\r",
+                    "\r",
+                    "UsrSnI.show();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "bsepnl toolbar button[text=Sign Off]"
+            },
+            "designerId": "955bfd56-1083-4b44-bbce-6c79d145ab15"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SpcKey",
+                "implHandler": [
+                    "if (e.keyCode == Ext.EventObject.ENTER) {\r",
+                    "    this.SnIBtnClk(field.up('form').down('button[itemId=SnIBtn]'));\r",
+                    "}"
+                ],
+                "name": "specialkey",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "usrsni textfield"
+            },
+            "designerId": "3dfd5129-8956-49ad-a6c0-735973196751"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "TxtFldChg",
+                "implHandler": [
+                    "field.up('panel').down('label[itemId=ErrMsg]').setVisible(false);"
+                ],
+                "name": "change",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.Text",
+                "designer|controlQuery": "usrsni textfield"
+            },
+            "designerId": "18a2c8ea-52c5-4632-ba3d-e8bf1059b35e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ChkAut",
+                "designer|params": [
+                    "UsrNme",
+                    "UsrCrl"
+                ],
+                "implHandler": [
+                    "var PgmNme = 'PHPITDDBD';\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    scope: this,\r",
+                    "    url: '../shared/ChkAut.php',\r",
+                    "    method: 'post',\r",
+                    "    params: {\r",
+                    "        UsrCrl: UsrCrl,\r",
+                    "        PgmNme: PgmNme\r",
+                    "    },    \r",
+                    "    success: function(RspJSN){\r",
+                    "        Rsp = Ext.JSON.decode(RspJSN.responseText);\r",
+                    "        if (Rsp.success === true) {\r",
+                    "            var AutLst = {Sls:true,Fin:true,Opr:true,Sup:true};\r",
+                    "            App.getApplication().getController('BseCtl').IniDsp(AutLst);\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            var AutErr = Ext.create('App.view.AutErr', {\r",
+                    "                renderTo: Ext.getBody()\r",
+                    "            });\r",
+                    "\r",
+                    "            Frm = AutErr.down('form');\r",
+                    "            Frm.down('container').update('<div style=\"text-align:center\"><p><b>' + UsrNme + '</b> is not authorized to the IT Dashboard</p><p>Please submit an IT Request for access to <b>' + PgmNme + '</b></p>');\r",
+                    "\r",
+                    "            AutErr.show();\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(){\r",
+                    "        console.log('Load Error-php');\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "121ccbd7-31aa-4675-98d0-92dc1362987c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BsePnl",
+                "selector": "bsepnl",
+                "xtype": "bsepnl"
+            },
+            "designerId": "b3788ab7-1e22-4c70-889c-32d0559dbd96"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "AutErrBtnClk",
+                "implHandler": [
+                    "button.up('window').close();\r",
+                    "this.SnOBtnClk(button, e, eOpts);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "auterr form button[itemId=AutErrBtn]"
+            },
+            "designerId": "7f5fb3cc-ab65-44bf-a44e-bf0d9c711527"
+        }
+    ]
+}

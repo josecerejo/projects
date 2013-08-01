@@ -1,0 +1,122 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PtlCtl"
+    },
+    "designerId": "20958e09-0243-4be4-9846-f895885207d1",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "DaBBtnClk",
+                "implHandler": [
+                    "button.up('viewport').down('panel').getLayout().setActiveItem(0);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "button[text=Dashboard]"
+            },
+            "designerId": "1791c3e7-809a-43f6-b020-8e04eb72c66e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "IniDsp",
+                "designer|params": [
+                    "AutLst"
+                ],
+                "implHandler": [
+                    "var TabNme;\r",
+                    "var URL = decodeURIComponent(document.URL).split('?');\r",
+                    "\r",
+                    "if (URL.length > 1) {\r",
+                    "    var PrmLst = Ext.Object.fromQueryString(URL[1]);\r",
+                    "\r",
+                    "    Ext.Object.each(Ext.Object.fromQueryString(URL[1]), function(Key, Vlu) {\r",
+                    "        if (Ext.util.Format.lowercase(Key) == 'strpge') {\r",
+                    "            StrPge = Ext.util.Format.lowercase(Vlu);\r",
+                    "        }\r",
+                    "        if (Ext.util.Format.lowercase(Key) == 'tabnme') {\r",
+                    "            TabNme = Ext.util.Format.lowercase(Vlu);\r",
+                    "        }\r",
+                    "\r",
+                    "    });\r",
+                    "}\r",
+                    "\r",
+                    "if (AutLst.Sls === true) {\r",
+                    "    if (StrPge == 'sls') {\r",
+                    "        Ext.getCmp('SlsQdrPnl').show();\r",
+                    "        if (TabNme) {\r",
+                    "            Ptl.getApplication().getController('SlsPrdCtl').ShwPnl(null,TabNme);\r",
+                    "        }\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    Ext.getCmp('SlsQdrPnl').hide();\r",
+                    "}\r",
+                    "\r",
+                    "if (AutLst.Fin === true) {\r",
+                    "    if (StrPge == 'fin') {\r",
+                    "        Ext.getCmp('FinQdrPnl').show();\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    Ext.getCmp('FinQdrPnl').hide();\r",
+                    "}\r",
+                    "\r",
+                    "if (AutLst.Opr === true) {\r",
+                    "    if (StrPge == 'opr') {\r",
+                    "        Ext.getCmp('OprQdrPnl').show();\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    Ext.getCmp('OprQdrPnl').hide();\r",
+                    "}\r",
+                    "\r",
+                    "if (AutLst.Sup === true) {\r",
+                    "    if (StrPge == 'sup') {\r",
+                    "        Ext.getCmp('SupQdrPnl').show();\r",
+                    "    }\r",
+                    "}\r",
+                    "else {\r",
+                    "    Ext.getCmp('SupQdrPnl').hide();\r",
+                    "}\r",
+                    "\r",
+                    "this.getBsePnl().down('panel').show();\r",
+                    "this.getBsePnl().down('toolbar').show();"
+                ]
+            },
+            "designerId": "b09e2ea2-ee85-400f-ae81-ae59f2a8681f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "BsePnl",
+                "selector": "bsepnl",
+                "xtype": "bsepnl"
+            },
+            "designerId": "1952653b-321a-4f35-bb93-e764530a875b"
+        }
+    ]
+}

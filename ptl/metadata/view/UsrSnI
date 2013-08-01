@@ -1,0 +1,187 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "height": 153,
+        "hidden": false,
+        "itemId": null,
+        "maxWidth": null,
+        "width": 380,
+        "designer|userClassName": "UsrSnI",
+        "designer|userAlias": "usrsni",
+        "layout": "vbox",
+        "closable": false,
+        "title": "Sign In",
+        "modal": true
+    },
+    "designerId": "caf18aa1-8854-486f-8d63-ec105768e423",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "border": 0,
+                "height": null,
+                "id": null,
+                "itemId": null,
+                "maxWidth": 500,
+                "minWidth": null,
+                "width": 500,
+                "designer|displayName": "UsrSnIFrm",
+                "defaults": [
+                    "{\r",
+                    "    labelWidth: 75,\r",
+                    "    labelSeparator: ' ',\r",
+                    "    enableKeyEvents:true\r",
+                    "}"
+                ],
+                "layout": "vbox",
+                "bodyPadding": 10,
+                "title": null,
+                "url": "../shared/ChkCrl.php"
+            },
+            "designerId": "52d40273-9f5d-40a1-9dd0-b6d045b00296",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": null,
+                        "fieldLabel": "User Name",
+                        "labelSeparator": null,
+                        "labelWidth": null,
+                        "name": "UsrNme",
+                        "enableKeyEvents": null,
+                        "vtype": "alphanum"
+                    },
+                    "designerId": "e22e238c-6006-4516-a646-3ff1ff8cba26"
+                },
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": null,
+                        "fieldLabel": "Password",
+                        "labelSeparator": null,
+                        "labelWidth": null,
+                        "name": "Pwd",
+                        "inputType": "password",
+                        "enableKeyEvents": null,
+                        "vtype": null
+                    },
+                    "designerId": "5f35a8aa-45c0-43ae-8154-1831b7664e38"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "dock": "bottom",
+                        "designer|displayName": "TBr",
+                        "defaults": [
+                            "{\r",
+                            "    minWidth: 50\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "8d77083d-bd99-4015-85d0-93389b66f80f",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "id": null,
+                                "itemId": "SbmBtn",
+                                "maxWidth": 60,
+                                "designer|displayName": "Submit",
+                                "href": null,
+                                "text": "Sign In"
+                            },
+                            "designerId": "54ec4eb7-85f8-406d-81c2-baeecd065604"
+                        },
+                        {
+                            "type": "Ext.toolbar.Fill",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|displayName": "RgtAln"
+                            },
+                            "designerId": "dc9b52eb-3bb6-442a-82d0-6c6417786297"
+                        },
+                        {
+                            "type": "Ext.form.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "layout|margins": "0 8 0 0",
+                                "html": "Please correct fields highlighted in <span style=\"color:red\">red</span>",
+                                "itemId": "ErrMsg",
+                                "padding": "",
+                                "style": "{font-size: 12px;}",
+                                "text": null
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "eb531a4c-d03b-4f14-8f89-996f2e8f414f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "designer|displayName": "SveCrl",
+                        "fieldLabel": " ",
+                        "name": "SveCrl",
+                        "boxLabel": "Remember me on this computer",
+                        "boxLabelAlign": null,
+                        "checked": true
+                    },
+                    "designerId": "a38db738-3d43-4077-8f3d-27fb9b287418"
+                }
+            ]
+        }
+    ]
+}

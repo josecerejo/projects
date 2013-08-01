@@ -1,0 +1,97 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretch",
+        "height": 156,
+        "hidden": false,
+        "itemId": null,
+        "maxWidth": null,
+        "width": 380,
+        "designer|userClassName": "AutErr",
+        "designer|userAlias": "auterr",
+        "layout": "vbox",
+        "title": "Authorization Error",
+        "titleAlign": "center",
+        "modal": true
+    },
+    "designerId": "cc4ff323-0171-44f7-8a79-245492400d54",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "container|align": "stretch",
+                "height": 121,
+                "designer|displayName": "Frm",
+                "layout": "vbox",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "ca3c3848-f647-4f74-a896-c192ebc90502",
+            "cn": [
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "height": 71,
+                        "html": null,
+                        "designer|displayName": "ErrMsg"
+                    },
+                    "configAlternates": {
+                        "style": "string",
+                        "html": "string"
+                    },
+                    "designerId": "321f8250-a939-4b13-96b1-453f642c45ce"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "container|align": "center",
+                        "container|pack": "center",
+                        "designer|displayName": "BtnCtr",
+                        "layout": "vbox"
+                    },
+                    "designerId": "e2300dfc-2a5c-4cfd-95e0-e8a6af06eacc",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "itemId": "AutErrBtn",
+                                "width": 245,
+                                "text": "click here to sign in with another user name"
+                            },
+                            "designerId": "34351396-23ee-4a9d-bb71-3a692504865f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
